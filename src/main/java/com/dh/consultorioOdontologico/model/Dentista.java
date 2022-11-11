@@ -9,6 +9,6 @@ public class Dentista {
 
     private String nome;
     private String sobrenome;
-    private int matriculaCadastro;
+    private int matricula;
 
 }
