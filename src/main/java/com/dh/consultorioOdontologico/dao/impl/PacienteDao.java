@@ -1,6 +1,7 @@
 package com.dh.consultorioOdontologico.dao.impl;
 
 import com.dh.consultorioOdontologico.dao.IDao;
+import com.dh.consultorioOdontologico.dao.configuracaoJDBC.ConfiguracaoJDBC;
 import com.dh.consultorioOdontologico.model.Paciente;
 import org.apache.log4j.Logger;
 
@@ -9,10 +10,17 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class PacienteDao implements IDao<Paciente> {
-    public static Connection getConnection() throws SQLException, ClassNotFoundException {
+
+    private ConfiguracaoJDBC configuracaoJDBC;
+
+    private Connection getConnection() throws ClassNotFoundException, SQLException {
+        configuracaoJDBC = new ConfiguracaoJDBC("org.h2.Driver", "jdbc:h2:~/CONSULTORIO_ODONTOLOGICO;AUTO_SERVER=TRUE;INIT=RUNSCRIPT FROM 'create.sql'", "sa","");
+        return configuracaoJDBC.getConnection();
+    }
+    /*public static Connection getConnection() throws SQLException, ClassNotFoundException {
         Class.forName("org.h2.Driver");
         return DriverManager.getConnection("jdbc:h2:~/paciente;AUTO_SERVER=TRUE;INIT=RUNSCRIPT FROM 'create.sql'", "sa", "");
-    }
+    }*/
 
     static final Logger logger = Logger.getLogger(PacienteDao.class);
 
@@ -29,7 +37,7 @@ public class PacienteDao implements IDao<Paciente> {
     }
 
     @Override
-    public Paciente excluir(Paciente paciente) {
-        return null;
+    public void excluir(Paciente paciente) {
+
     }
 }
