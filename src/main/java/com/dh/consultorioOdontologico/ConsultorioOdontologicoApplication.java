@@ -42,7 +42,7 @@ public class ConsultorioOdontologicoApplication {
 		paciente.setNome("Felipe");
 		pacienteService.modificar(paciente);
 
-		pacienteService.excluir(paciente);
+		//pacienteService.excluir(paciente);
 	}
 
 

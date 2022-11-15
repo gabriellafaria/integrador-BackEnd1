@@ -34,7 +34,7 @@ public class EnderecoDao implements IDao<Endereco> {
             logger.info("Conexão com o banco de dados encerrada.");
             connection.close();
         }
-        return null;
+        return endereco;
     }
 
     @Override
