@@ -10,11 +10,8 @@ import java.sql.*;
 public class DentistaDao implements IDao<Dentista> {
 
     static final Logger logger = Logger.getLogger(DentistaDao.class);
-    private ConfiguracaoJDBC configuracaoJDBC;
-    private Connection getConnection() throws SQLException, ClassNotFoundException {
-        configuracaoJDBC = new ConfiguracaoJDBC("org.h2.Driver","jdbc:h2:~/CONSULTORIO_ODONTOLOGICO;AUTO_SERVER=TRUE;INIT=RUNSCRIPT FROM 'create.sql'", "sa", "");
-        return configuracaoJDBC.getConnection();
-    }
+
+    private ConfiguracaoJDBC configuracaoJDBC = new ConfiguracaoJDBC();
 
     @Override
     public Dentista cadastrar(Dentista dentista) throws SQLException {
@@ -22,7 +19,7 @@ public class DentistaDao implements IDao<Dentista> {
         Connection connection = null;
         try{
             logger.info("Abrindo conexão com o banco.");
-            connection = getConnection();
+            connection = configuracaoJDBC.getConnectionH2();
             Statement statement = connection.createStatement();
             statement.execute(DENTISTA_INSERT, Statement.RETURN_GENERATED_KEYS);
             ResultSet resultSet = statement.getGeneratedKeys();
@@ -53,7 +50,7 @@ public class DentistaDao implements IDao<Dentista> {
 
         try{
             logger.info("Abrindo conexão com o banco para excluir um dentista.");
-            connection = getConnection();
+            connection = configuracaoJDBC.getConnectionH2();
             Statement statement = connection.createStatement();
             statement.execute(SQL_DELETE_DENTISTA);
             System.out.println("Dentista exclído com sucesso!");

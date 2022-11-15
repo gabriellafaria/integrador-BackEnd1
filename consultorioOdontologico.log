@@ -27,3 +27,197 @@
 13/11/22 17:06 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:55 - Abrindo conexão com o banco para excluir um dentista.
 13/11/22 17:06 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:60 - Dentista excluído do banco.
 13/11/22 17:06 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:66 - Conexão com o banco encerrada.
+14/11/22 20:27 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:29 - Conexão com o banco de dados aberta.
+14/11/22 20:27 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:37 - Erro no cadastro de endereço.
+14/11/22 20:27 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:40 - Conexão com o banco de dados encerrada.
+14/11/22 20:28 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:29 - Conexão com o banco de dados aberta.
+14/11/22 20:28 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:37 - Erro no cadastro de endereço.
+14/11/22 20:28 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:40 - Conexão com o banco de dados encerrada.
+14/11/22 20:30 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:29 - Conexão com o banco de dados aberta.
+14/11/22 20:30 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:40 - Conexão com o banco de dados encerrada.
+14/11/22 20:50 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:23 - Conexão com o banco de dados aberta.
+14/11/22 20:50 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:31 - Erro no cadastro de endereço.
+14/11/22 20:50 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 20:50 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:23 - Conexão com o banco de dados aberta.
+14/11/22 20:50 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:31 - Erro no cadastro de endereço.
+14/11/22 20:50 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 20:51 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:23 - Conexão com o banco de dados aberta.
+14/11/22 20:51 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:31 - Erro no cadastro de endereço.
+14/11/22 20:51 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 20:51 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:23 - Conexão com o banco de dados aberta.
+14/11/22 20:51 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:31 - Erro no cadastro de endereço.
+14/11/22 20:51 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 20:53 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:23 - Conexão com o banco de dados aberta.
+14/11/22 20:53 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:31 - Erro no cadastro de endereço.
+14/11/22 20:53 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 20:54 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:23 - Conexão com o banco de dados aberta.
+14/11/22 20:54 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:31 - Erro no cadastro de endereço.
+14/11/22 20:54 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 20:55 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:23 - Conexão com o banco de dados aberta.
+14/11/22 20:55 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 20:55 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:22 - Conexão com o banco de dados aberta.
+14/11/22 20:55 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:31 - Erro no cadastro do paciente.
+14/11/22 20:55 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:01 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:23 - Conexão com o banco de dados aberta, para inserir o endereço.
+14/11/22 21:01 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:01 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:22 - Conexão com o banco de dados aberta, para inserir o paciente.
+14/11/22 21:01 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:31 - Erro no cadastro do paciente.
+14/11/22 21:01 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:02 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:23 - Conexão com o banco de dados aberta, para inserir o endereço.
+14/11/22 21:02 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:02 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:22 - Conexão com o banco de dados aberta, para inserir o paciente.
+14/11/22 21:02 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:31 - Erro no cadastro do paciente.
+14/11/22 21:02 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:04 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:23 - Conexão com o banco de dados aberta, para inserir o endereço.
+14/11/22 21:04 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:04 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:23 - Conexão com o banco de dados aberta, para inserir o endereço.
+14/11/22 21:04 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:05 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:23 - Conexão com o banco de dados aberta, para inserir o endereço.
+14/11/22 21:05 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:05 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:22 - Conexão com o banco de dados aberta, para inserir o paciente.
+14/11/22 21:05 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:31 - Erro no cadastro do paciente.
+14/11/22 21:05 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:08 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:23 - Conexão com o banco de dados aberta, para inserir o endereço.
+14/11/22 21:08 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:08 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:22 - Conexão com o banco de dados aberta, para inserir o paciente.
+14/11/22 21:08 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:31 - Erro no cadastro do paciente.
+14/11/22 21:08 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:10 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:23 - Conexão com o banco de dados aberta, para inserir o endereço.
+14/11/22 21:10 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:10 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:22 - Conexão com o banco de dados aberta, para inserir o paciente.
+14/11/22 21:10 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:31 - Erro no cadastro do paciente.
+14/11/22 21:10 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:11 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:23 - Conexão com o banco de dados aberta, para inserir o endereço.
+14/11/22 21:11 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:11 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:22 - Conexão com o banco de dados aberta, para inserir o paciente.
+14/11/22 21:11 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:31 - Erro no cadastro do paciente.
+14/11/22 21:11 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:11 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:23 - Conexão com o banco de dados aberta, para inserir o endereço.
+14/11/22 21:11 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:11 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:22 - Conexão com o banco de dados aberta, para inserir o paciente.
+14/11/22 21:11 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:29 - Paciente Gabriella salvo no banco de dados.
+14/11/22 21:11 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:12 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:23 - Conexão com o banco de dados aberta, para inserir o endereço.
+14/11/22 21:12 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:12 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:22 - Conexão com o banco de dados aberta, para inserir o paciente.
+14/11/22 21:12 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:29 - Paciente Gabriella salvo no banco de dados.
+14/11/22 21:12 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:13 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:23 - Conexão com o banco de dados aberta, para inserir o endereço.
+14/11/22 21:13 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:13 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:22 - Conexão com o banco de dados aberta, para inserir o paciente.
+14/11/22 21:13 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:29 - Paciente Gabriella salvo no banco de dados.
+14/11/22 21:13 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:13 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:45 - Conexão aberta, atualizando o nome do paciente: Felipe
+14/11/22 21:13 [main] ERROR com.dh.consultorioOdontologico.dao.impl.PacienteDao:51 - Erro ao modificar o nome do paciente.
+14/11/22 21:13 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:54 - Fechando a conexão.
+14/11/22 21:14 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:23 - Conexão com o banco de dados aberta, para inserir o endereço.
+14/11/22 21:14 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:14 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:22 - Conexão com o banco de dados aberta, para inserir o paciente.
+14/11/22 21:14 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:29 - Paciente Gabriella salvo no banco de dados.
+14/11/22 21:14 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:14 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:45 - Conexão aberta, atualizando o nome do paciente: Felipe
+14/11/22 21:14 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:49 - Atualizado o nome do paciente para: Felipe
+14/11/22 21:14 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:54 - Fechando a conexão.
+14/11/22 21:16 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:23 - Conexão com o banco de dados aberta, para inserir o endereço.
+14/11/22 21:16 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:16 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:22 - Conexão com o banco de dados aberta, para inserir o paciente.
+14/11/22 21:16 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:29 - Paciente Gabriella salvo no banco de dados, com o id = 5.
+14/11/22 21:16 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:16 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:45 - Conexão aberta, atualizando o nome do paciente: Felipe
+14/11/22 21:16 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:49 - Atualizado o nome do paciente.
+14/11/22 21:16 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:54 - Fechando a conexão.
+14/11/22 21:16 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:65 - Conexão com o banco de dados aberta.
+14/11/22 21:16 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:69 - Paciente deletado do banco
+14/11/22 21:16 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:74 - Conexão com o banco de dados encerrada.
+14/11/22 21:25 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:23 - Conexão com o banco de dados aberta, para inserir o endereço.
+14/11/22 21:25 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:25 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:22 - Conexão com o banco de dados aberta, para inserir o paciente.
+14/11/22 21:25 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:29 - Paciente Gabriella salvo no banco de dados, com o id = 6.
+14/11/22 21:25 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:25 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:45 - Conexão aberta, atualizando o nome do paciente: Felipe
+14/11/22 21:25 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:49 - Atualizado o nome do paciente.
+14/11/22 21:25 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:54 - Fechando a conexão.
+14/11/22 21:25 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:65 - Conexão com o banco de dados aberta.
+14/11/22 21:25 [main] ERROR com.dh.consultorioOdontologico.dao.impl.PacienteDao:71 - Erro ao excluir o paciente
+14/11/22 21:25 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:74 - Conexão com o banco de dados encerrada.
+14/11/22 21:26 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:23 - Conexão com o banco de dados aberta, para inserir o endereço.
+14/11/22 21:26 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:26 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:22 - Conexão com o banco de dados aberta, para inserir o paciente.
+14/11/22 21:26 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:29 - Paciente Gabriella salvo no banco de dados, com o id = 7.
+14/11/22 21:26 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:26 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:45 - Conexão aberta, atualizando o nome do paciente: Felipe
+14/11/22 21:26 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:49 - Atualizado o nome do paciente.
+14/11/22 21:26 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:54 - Fechando a conexão.
+14/11/22 21:26 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:65 - Conexão com o banco de dados aberta.
+14/11/22 21:26 [main] ERROR com.dh.consultorioOdontologico.dao.impl.PacienteDao:71 - Erro ao excluir o paciente
+14/11/22 21:26 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:74 - Conexão com o banco de dados encerrada.
+14/11/22 21:26 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:23 - Conexão com o banco de dados aberta, para inserir o endereço.
+14/11/22 21:26 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:26 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:22 - Conexão com o banco de dados aberta, para inserir o paciente.
+14/11/22 21:26 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:29 - Paciente Gabriella salvo no banco de dados, com o id = 8.
+14/11/22 21:26 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:26 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:45 - Conexão aberta, atualizando o nome do paciente: Felipe
+14/11/22 21:26 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:49 - Atualizado o nome do paciente.
+14/11/22 21:26 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:54 - Fechando a conexão.
+14/11/22 21:26 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:65 - Conexão com o banco de dados aberta.
+14/11/22 21:26 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:69 - Paciente deletado do banco
+14/11/22 21:26 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:74 - Conexão com o banco de dados encerrada.
+14/11/22 21:28 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:23 - Conexão com o banco de dados aberta, para inserir o endereço.
+14/11/22 21:28 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:28 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:22 - Conexão com o banco de dados aberta, para inserir o paciente.
+14/11/22 21:28 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:29 - Paciente Gabriella salvo no banco de dados, com o id = 9.
+14/11/22 21:28 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:28 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:45 - Conexão aberta, atualizando o nome do paciente: Felipe
+14/11/22 21:28 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:49 - Atualizado o nome do paciente.
+14/11/22 21:28 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:54 - Fechando a conexão.
+14/11/22 21:28 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:65 - Conexão com o banco de dados aberta.
+14/11/22 21:28 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:68 - Deletando paciente com o id: 9 e endereco de id: 18
+14/11/22 21:28 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:70 - Paciente deletado do banco
+14/11/22 21:28 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:75 - Conexão com o banco de dados encerrada.
+14/11/22 21:30 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:23 - Conexão com o banco de dados aberta, para inserir o endereço.
+14/11/22 21:30 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:31 - Erro no cadastro de endereço.
+14/11/22 21:30 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:30 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:23 - Conexão com o banco de dados aberta, para inserir o endereço.
+14/11/22 21:30 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:31 - Erro no cadastro de endereço.
+14/11/22 21:30 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:32 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:23 - Conexão com o banco de dados aberta, para inserir o endereço.
+14/11/22 21:32 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:31 - Erro no cadastro de endereço.
+14/11/22 21:32 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:33 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:23 - Conexão com o banco de dados aberta, para inserir o endereço.
+14/11/22 21:33 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:31 - Erro no cadastro de endereço.
+14/11/22 21:33 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:34 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:23 - Conexão com o banco de dados aberta, para inserir o endereço.
+14/11/22 21:34 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:31 - Erro no cadastro de endereço.
+14/11/22 21:34 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:36 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:23 - Conexão com o banco de dados aberta, para inserir o endereço.
+14/11/22 21:36 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:31 - Erro no cadastro de endereço.
+14/11/22 21:36 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:38 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:23 - Conexão com o banco de dados aberta, para inserir o endereço.
+14/11/22 21:38 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:31 - Erro no cadastro de endereço.
+14/11/22 21:38 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:39 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:23 - Conexão com o banco de dados aberta, para inserir o endereço.
+14/11/22 21:39 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:31 - Erro no cadastro de endereço.
+14/11/22 21:39 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:43 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:23 - Conexão com o banco de dados aberta, para inserir o endereço.
+14/11/22 21:43 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:31 - Erro no cadastro de endereço.
+14/11/22 21:43 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:44 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:23 - Conexão com o banco de dados aberta, para inserir o endereço.
+14/11/22 21:44 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:31 - Erro no cadastro de endereço.
+14/11/22 21:44 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:34 - Conexão com o banco de dados encerrada.
+14/11/22 21:45 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:21 - Abrindo conexão com o banco.
+14/11/22 21:45 [main] ERROR com.dh.consultorioOdontologico.dao.impl.DentistaDao:31 - Erro no cadastro do dentista.
+14/11/22 21:45 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:35 - Fechando conexão com o banco de dados.
+14/11/22 21:45 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:21 - Abrindo conexão com o banco.
+14/11/22 21:45 [main] ERROR com.dh.consultorioOdontologico.dao.impl.DentistaDao:31 - Erro no cadastro do dentista.
+14/11/22 21:45 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:35 - Fechando conexão com o banco de dados.
+14/11/22 21:45 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:21 - Abrindo conexão com o banco.
+14/11/22 21:45 [main] ERROR com.dh.consultorioOdontologico.dao.impl.DentistaDao:31 - Erro no cadastro do dentista.
+14/11/22 21:45 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:35 - Fechando conexão com o banco de dados.
+14/11/22 21:45 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:21 - Abrindo conexão com o banco.
+14/11/22 21:45 [main] ERROR com.dh.consultorioOdontologico.dao.impl.DentistaDao:31 - Erro no cadastro do dentista.
+14/11/22 21:45 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:35 - Fechando conexão com o banco de dados.
+14/11/22 21:45 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:52 - Abrindo conexão com o banco para excluir um dentista.
+14/11/22 21:45 [main] ERROR com.dh.consultorioOdontologico.dao.impl.DentistaDao:59 - Erro ao excluir dentista do banco.
+14/11/22 21:46 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:21 - Abrindo conexão com o banco.
+14/11/22 21:46 [main] ERROR com.dh.consultorioOdontologico.dao.impl.DentistaDao:31 - Erro no cadastro do dentista.
+14/11/22 21:46 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:35 - Fechando conexão com o banco de dados.
