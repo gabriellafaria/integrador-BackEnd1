@@ -322,3 +322,75 @@
 15/11/22 08:52 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:45 - Conexão aberta, atualizando o nome do paciente: Felipe
 15/11/22 08:52 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:49 - Atualizado o nome do paciente.
 15/11/22 08:52 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:54 - Fechando a conexão.
+15/11/22 12:08 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:21 - Abrindo conexão com o banco.
+15/11/22 12:08 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:29 - Dentista Felipe salvo no banco.
+15/11/22 12:08 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:35 - Fechando conexão com o banco de dados.
+15/11/22 12:08 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:23 - Conexão com o banco de dados aberta, para inserir o endereço.
+15/11/22 12:08 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:34 - Conexão com o banco de dados encerrada.
+15/11/22 12:08 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:22 - Conexão com o banco de dados aberta, para inserir o paciente.
+15/11/22 12:08 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:29 - Paciente Gabriella salvo no banco de dados, com o id = 1.
+15/11/22 12:08 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:34 - Conexão com o banco de dados encerrada.
+15/11/22 12:09 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:21 - Abrindo conexão com o banco.
+15/11/22 12:09 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:29 - Dentista Felipe salvo no banco.
+15/11/22 12:09 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:35 - Fechando conexão com o banco de dados.
+15/11/22 12:09 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:23 - Conexão com o banco de dados aberta, para inserir o endereço.
+15/11/22 12:09 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:34 - Conexão com o banco de dados encerrada.
+15/11/22 12:09 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:22 - Conexão com o banco de dados aberta, para inserir o paciente.
+15/11/22 12:09 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:29 - Paciente Gabriella salvo no banco de dados, com o id = 2.
+15/11/22 12:09 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:34 - Conexão com o banco de dados encerrada.
+15/11/22 12:09 [main]  INFO com.dh.consultorioOdontologico.dao.impl.ConsultaDao:23 - Conexão com o banco de dados aberta para cadastro da consulta.
+15/11/22 12:09 [main]  INFO com.dh.consultorioOdontologico.dao.impl.ConsultaDao:30 - Consulta cadastrada com o id: 1
+15/11/22 12:09 [main]  INFO com.dh.consultorioOdontologico.dao.impl.ConsultaDao:35 - Conexão com o banco de dados encerrada.
+15/11/22 12:13 [main]  INFO com.dh.consultorioOdontologico.dao.impl.ConsultaDao:46 - Conexão com o banco de dados aberta para atualização da consulta
+15/11/22 12:13 [main]  INFO com.dh.consultorioOdontologico.dao.impl.ConsultaDao:52 - Erro ao atualizar a consulta
+15/11/22 12:13 [main]  INFO com.dh.consultorioOdontologico.dao.impl.ConsultaDao:55 - Conexão com o banco de dados encerrada.
+15/11/22 12:15 [main]  INFO com.dh.consultorioOdontologico.dao.impl.ConsultaDao:46 - Conexão com o banco de dados aberta para atualização da consulta
+15/11/22 12:15 [main]  INFO com.dh.consultorioOdontologico.dao.impl.ConsultaDao:50 - Atualizada a data da consulta para: 2022-12-10
+15/11/22 12:15 [main]  INFO com.dh.consultorioOdontologico.dao.impl.ConsultaDao:55 - Conexão com o banco de dados encerrada.
+15/11/22 12:20 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:21 - Abrindo conexão com o banco.
+15/11/22 12:20 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:29 - Dentista Felipe salvo no banco.
+15/11/22 12:20 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:35 - Fechando conexão com o banco de dados.
+15/11/22 12:20 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:23 - Conexão com o banco de dados aberta, para inserir o endereço.
+15/11/22 12:20 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:34 - Conexão com o banco de dados encerrada.
+15/11/22 12:20 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:22 - Conexão com o banco de dados aberta, para inserir o paciente.
+15/11/22 12:20 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:29 - Paciente Gabriella salvo no banco de dados, com o id = 1.
+15/11/22 12:20 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:34 - Conexão com o banco de dados encerrada.
+15/11/22 12:20 [main]  INFO com.dh.consultorioOdontologico.dao.impl.ConsultaDao:23 - Conexão com o banco de dados aberta para cadastro da consulta.
+15/11/22 12:20 [main]  INFO com.dh.consultorioOdontologico.dao.impl.ConsultaDao:30 - Consulta cadastrada com o id: 1
+15/11/22 12:20 [main]  INFO com.dh.consultorioOdontologico.dao.impl.ConsultaDao:35 - Conexão com o banco de dados encerrada.
+15/11/22 12:30 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:21 - Abrindo conexão com o banco.
+15/11/22 12:30 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:29 - Dentista Felipe salvo no banco.
+15/11/22 12:30 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:35 - Fechando conexão com o banco de dados.
+15/11/22 12:30 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:23 - Conexão com o banco de dados aberta, para inserir o endereço.
+15/11/22 12:30 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:34 - Conexão com o banco de dados encerrada.
+15/11/22 12:30 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:22 - Conexão com o banco de dados aberta, para inserir o paciente.
+15/11/22 12:30 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:29 - Paciente Gabriella salvo no banco de dados, com o id = 2.
+15/11/22 12:30 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:34 - Conexão com o banco de dados encerrada.
+15/11/22 12:30 [main]  INFO com.dh.consultorioOdontologico.dao.impl.ConsultaDao:23 - Conexão com o banco de dados aberta para cadastro da consulta.
+15/11/22 12:30 [main]  INFO com.dh.consultorioOdontologico.dao.impl.ConsultaDao:30 - Consulta cadastrada com o id: 2
+15/11/22 12:30 [main]  INFO com.dh.consultorioOdontologico.dao.impl.ConsultaDao:35 - Conexão com o banco de dados encerrada.
+15/11/22 12:30 [main]  INFO com.dh.consultorioOdontologico.dao.impl.ConsultaDao:46 - Conexão com o banco de dados aberta para atualização da consulta
+15/11/22 12:30 [main]  INFO com.dh.consultorioOdontologico.dao.impl.ConsultaDao:50 - Atualizada a data da consulta para: 2022-12-05T13:30
+15/11/22 12:30 [main]  INFO com.dh.consultorioOdontologico.dao.impl.ConsultaDao:55 - Conexão com o banco de dados encerrada.
+15/11/22 12:30 [main]  INFO com.dh.consultorioOdontologico.dao.impl.ConsultaDao:66 - Conexão com o bando de dados aberta para exlusão da consulta.
+15/11/22 12:30 [main]  INFO com.dh.consultorioOdontologico.dao.impl.ConsultaDao:69 - Deletando consulta com o id: 2
+15/11/22 12:30 [main]  INFO com.dh.consultorioOdontologico.dao.impl.ConsultaDao:71 - Consulta delatada com sucesso.
+15/11/22 12:30 [main]  INFO com.dh.consultorioOdontologico.dao.impl.ConsultaDao:76 - Conexão com o bando de dados encerrada.
+15/11/22 12:31 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:21 - Abrindo conexão com o banco.
+15/11/22 12:31 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:29 - Dentista Felipe salvo no banco.
+15/11/22 12:31 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:35 - Fechando conexão com o banco de dados.
+15/11/22 12:31 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:23 - Conexão com o banco de dados aberta, para inserir o endereço.
+15/11/22 12:31 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:34 - Conexão com o banco de dados encerrada.
+15/11/22 12:31 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:22 - Conexão com o banco de dados aberta, para inserir o paciente.
+15/11/22 12:31 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:29 - Paciente Gabriella salvo no banco de dados, com o id = 3.
+15/11/22 12:31 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:34 - Conexão com o banco de dados encerrada.
+15/11/22 12:31 [main]  INFO com.dh.consultorioOdontologico.dao.impl.ConsultaDao:23 - Conexão com o banco de dados aberta para cadastro da consulta.
+15/11/22 12:31 [main]  INFO com.dh.consultorioOdontologico.dao.impl.ConsultaDao:30 - Consulta cadastrada com o id: 3
+15/11/22 12:31 [main]  INFO com.dh.consultorioOdontologico.dao.impl.ConsultaDao:35 - Conexão com o banco de dados encerrada.
+15/11/22 12:31 [main]  INFO com.dh.consultorioOdontologico.dao.impl.ConsultaDao:46 - Conexão com o banco de dados aberta para atualização da consulta
+15/11/22 12:31 [main]  INFO com.dh.consultorioOdontologico.dao.impl.ConsultaDao:50 - Atualizada a data da consulta para: 2022-12-05T13:30
+15/11/22 12:31 [main]  INFO com.dh.consultorioOdontologico.dao.impl.ConsultaDao:55 - Conexão com o banco de dados encerrada.
+15/11/22 12:31 [main]  INFO com.dh.consultorioOdontologico.dao.impl.ConsultaDao:66 - Conexão com o bando de dados aberta para exlusão da consulta.
+15/11/22 12:31 [main]  INFO com.dh.consultorioOdontologico.dao.impl.ConsultaDao:69 - Deletando consulta com o id: 3
+15/11/22 12:31 [main]  INFO com.dh.consultorioOdontologico.dao.impl.ConsultaDao:71 - Consulta delatada com sucesso.
+15/11/22 12:31 [main]  INFO com.dh.consultorioOdontologico.dao.impl.ConsultaDao:76 - Conexão com o bando de dados encerrada.
