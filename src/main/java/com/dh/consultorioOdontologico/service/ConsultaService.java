@@ -20,4 +20,9 @@ public class ConsultaService {
     public void excluir(Consulta consulta) throws SQLException{
         consultaIDao.excluir(consulta);
     }
+
+    public Consulta buscarTodos() throws SQLException{
+        ConsultaDao consultaDao= new ConsultaDao();
+        return consultaDao.buscarTodos();
+    }
 }

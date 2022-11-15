@@ -23,14 +23,14 @@ public class ConsultorioOdontologicoApplication {
 		SpringApplication.run(ConsultorioOdontologicoApplication.class, args);
 
 		Dentista dentista1 = new Dentista("Felipe", "Stefani", 6);
-		/*Dentista dentista2 = new Dentista("Gabriela", "Faria", 3);
-		Dentista dentista3 = new Dentista("Mariana", "Orsi", 7);
-		Dentista dentista4 = new Dentista("Maria", "Bonifacio", 8);*/
+//		Dentista dentista2 = new Dentista("Gabriela", "Faria", 3);
+//		Dentista dentista3 = new Dentista("Mariana", "Orsi", 7);
+//		Dentista dentista4 = new Dentista("Maria", "Bonifacio", 8);
 		DentistaService dentistaService = new DentistaService();
 		dentistaService.cadastrar(dentista1);
-	/*	dentistaService.cadastrar(dentista2);
-		dentistaService.cadastrar(dentista3);
-		dentistaService.cadastrar(dentista4);*/
+//	    dentistaService.cadastrar(dentista2);
+//		dentistaService.cadastrar(dentista3);
+//		dentistaService.cadastrar(dentista4);
 
 		//dentistaService.excluir(dentista1);
 
@@ -53,7 +53,9 @@ public class ConsultorioOdontologicoApplication {
 		consulta.setDataConsulta(LocalDateTime.of(2022,12,05,13,30));
 		consultaService.modificar(consulta);
 
-		consultaService.excluir(consulta);
+		//consultaService.excluir(consulta);
+
+		consultaService.buscarTodos();
 	}
 
 

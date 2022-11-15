@@ -77,4 +77,26 @@ public class ConsultaDao implements IDao<Consulta> {
             connection.close();
         }
     }
+
+    public Consulta buscarTodos() throws SQLException {
+        String SQLSELECT = "SELECT Consulta.id, Consulta.data_consulta, Paciente.nome, Dentista.nome FROM Consulta " +
+                "INNER JOIN Paciente ON Paciente.id = Consulta.id_paciente " +
+                "INNER JOIN Dentista ON Dentista.id = Consulta.id_dentista";
+        Connection connection = null;
+        try{
+            logger.info("Conexão com o bando de dados aberta para buscar as consultas.");
+            connection = configuracaoJDBC.getConnectionH2();
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(SQLSELECT);
+            while (resultSet.next())
+                System.out.println("Consulta id: " + resultSet.getInt(1) + ", no horário: " + resultSet.getTimestamp(2) + ", do paciente: " + resultSet.getString(3) + ", com o dentista: " + resultSet.getString(4));
+        } catch (Exception e){
+            logger.error("Erro ao buscar todas as consultas.");
+            e.printStackTrace();
+        } finally {
+            logger.info("Conexão com o bando de dados encerrada.");
+            connection.close();
+        }
+        return null;
+    }
 }
