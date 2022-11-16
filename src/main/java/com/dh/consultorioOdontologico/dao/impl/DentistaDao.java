@@ -6,6 +6,8 @@ import com.dh.consultorioOdontologico.model.Dentista;
 import org.apache.log4j.Logger;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DentistaDao implements IDao<Dentista> {
 
@@ -61,6 +63,29 @@ public class DentistaDao implements IDao<Dentista> {
         }finally {
             connection.close();
             logger.info("Conexão com o banco encerrada.");
+        }
+    }
+
+    public void buscarTodos() throws SQLException{
+        //List<String> listaDentistas = new ArrayList<>();
+        String BUSCAR_DENTISTAS = String.format("SELECT * FROM DENTISTA;");
+        Connection connection = null;
+        try{
+            logger.info("Abrindo conexão com o banco para trazer lista de dentistas cadastrados.");
+            connection = configuracaoJDBC.getConnectionH2();
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(BUSCAR_DENTISTAS);
+            while (resultSet.next()){
+                System.out.println(resultSet.getString("nome") + " " +
+                                    resultSet.getString("sobrenome") + " - matrícula: " +
+                                    resultSet.getInt("matricula"));
+            }
+        } catch (Exception e){
+            logger.warn("Erro de conexão com o banco ao executar listagem de dentistas.");
+            e.printStackTrace();
+        } finally {
+            logger.info("Fechando conexão com o banco de dados.");
+            connection.close();
         }
     }
 }
