@@ -20,8 +20,8 @@ public class DentistaService {
         dentistaIDao.excluir(dentista);
     }
 
-    public void buscarDentistas() throws SQLException{
+    public List<Dentista> buscarDentistas() throws SQLException{
         DentistaDao dentistaDao = new DentistaDao();
-        dentistaDao.buscarTodos();
+        return dentistaDao.buscarTodos();
     }
 }

@@ -12,8 +12,8 @@ import java.util.List;
 public class DentistaDao implements IDao<Dentista> {
 
     static final Logger logger = Logger.getLogger(DentistaDao.class);
-
     private ConfiguracaoJDBC configuracaoJDBC = new ConfiguracaoJDBC();
+    private List<Dentista> listaDentistas = new ArrayList<>();
 
     @Override
     public Dentista cadastrar(Dentista dentista) throws SQLException {
@@ -66,8 +66,7 @@ public class DentistaDao implements IDao<Dentista> {
         }
     }
 
-    public void buscarTodos() throws SQLException{
-        //List<String> listaDentistas = new ArrayList<>();
+    public List<Dentista> buscarTodos() throws SQLException{
         String BUSCAR_DENTISTAS = String.format("SELECT * FROM DENTISTA;");
         Connection connection = null;
         try{
@@ -76,9 +75,9 @@ public class DentistaDao implements IDao<Dentista> {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(BUSCAR_DENTISTAS);
             while (resultSet.next()){
-                System.out.println(resultSet.getString("nome") + " " +
-                                    resultSet.getString("sobrenome") + " - matrícula: " +
-                                    resultSet.getInt("matricula"));
+                Dentista dentista = new Dentista(resultSet.getInt("id"), resultSet.getString("nome"),
+                        resultSet.getString("sobrenome"), resultSet.getInt("matricula"));
+                listaDentistas.add(dentista);
             }
         } catch (Exception e){
             logger.warn("Erro de conexão com o banco ao executar listagem de dentistas.");
@@ -86,6 +85,8 @@ public class DentistaDao implements IDao<Dentista> {
         } finally {
             logger.info("Fechando conexão com o banco de dados.");
             connection.close();
+            System.out.println(listaDentistas);
+            return listaDentistas;
         }
     }
 }
