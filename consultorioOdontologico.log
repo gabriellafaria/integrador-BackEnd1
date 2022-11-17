@@ -568,3 +568,18 @@
 15/11/22 14:36 [main]  INFO com.dh.consultorioOdontologico.dao.impl.ConsultaDao:98 - Conexão com o bando de dados encerrada.
 15/11/22 14:41 [main]  INFO com.dh.consultorioOdontologico.dao.impl.ConsultaDao:87 - Conexão com o bando de dados aberta para buscar as consultas.
 15/11/22 14:41 [main]  INFO com.dh.consultorioOdontologico.dao.impl.ConsultaDao:97 - Conexão com o bando de dados encerrada.
+15/11/22 20:29 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:23 - Conexão com o banco de dados aberta, para inserir o endereço.
+15/11/22 20:29 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:34 - Conexão com o banco de dados encerrada.
+15/11/22 20:29 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:23 - Conexão com o banco de dados aberta, para inserir o endereço.
+15/11/22 20:29 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:34 - Conexão com o banco de dados encerrada.
+15/11/22 20:30 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:23 - Conexão com o banco de dados aberta, para inserir o endereço.
+15/11/22 20:30 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:34 - Conexão com o banco de dados encerrada.
+15/11/22 20:30 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:45 - Abrindo conexão com o banco de dados para atualizar o endereço do id: 16
+15/11/22 20:30 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:49 - Endereço atualizado, rua Rua I numero 325 cidade Belo Horizonte estado MG
+15/11/22 20:30 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:54 - Encerrando conexão com o banco de dados.
+15/11/22 20:59 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:45 - Abrindo conexão com o banco de dados para atualizar o endereço do id: 0
+15/11/22 20:59 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:49 - Endereço atualizado, rua Rua I numero 325 cidade Belo Horizonte estado MG
+15/11/22 20:59 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:54 - Encerrando conexão com o banco de dados.
+15/11/22 20:59 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:65 - Conexão com o banco de dados aberta.
+15/11/22 20:59 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:69 - Endereço do id: 0deletado do banco de dados.
+15/11/22 20:59 [main]  INFO com.dh.consultorioOdontologico.dao.impl.EnderecoDao:74 - Conexão com o banco de dados encerrada.

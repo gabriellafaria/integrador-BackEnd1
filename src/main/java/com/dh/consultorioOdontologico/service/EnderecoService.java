@@ -13,6 +13,10 @@ public class EnderecoService {
         return enderecoIDao.cadastrar(endereco);
     }
 
+    public Endereco modificar(Endereco endereco) throws SQLException {
+        return enderecoIDao.modificar(endereco);
+    }
+
     public void excluir(Endereco endereco) throws SQLException {
         enderecoIDao.excluir(endereco);
     }
