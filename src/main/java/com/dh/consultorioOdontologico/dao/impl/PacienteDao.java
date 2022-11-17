@@ -7,6 +7,7 @@ import com.dh.consultorioOdontologico.model.Paciente;
 import org.apache.log4j.Logger;
 
 import java.sql.*;
+import java.util.Optional;
 
 public class PacienteDao implements IDao<Paciente> {
     private ConfiguracaoJDBC configuracaoJDBC = new ConfiguracaoJDBC();
@@ -59,7 +60,7 @@ public class PacienteDao implements IDao<Paciente> {
 
     @Override
     public void excluir(Paciente paciente) throws SQLException {
-        String SQLDELETE = String.format("DELETE FROM paciente WHERE id = '%d'; DELETE FROM endereco WHERE id = '%d'", paciente.getId(), paciente.getIdEndereco());
+        String SQLDELETE = String.format("DELETE FROM paciente WHERE id = '%d'", paciente.getId());
         Connection connection = null;
         try{
             logger.info("Conexão com o banco de dados aberta.");
