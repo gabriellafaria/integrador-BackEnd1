@@ -19,4 +19,9 @@ public class DentistaService {
         DentistaDao dentistaDao = new DentistaDao();
         return dentistaDao.buscarTodos();
     }
+
+    public List<Dentista> buscarDentistaPorMatricula(Integer matricula) throws SQLException {
+        DentistaDao dentistaDao = new DentistaDao();
+        return dentistaDao.buscarPorMatricula(matricula);
+    }
 }

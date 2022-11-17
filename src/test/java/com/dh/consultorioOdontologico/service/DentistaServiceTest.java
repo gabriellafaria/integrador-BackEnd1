@@ -12,12 +12,14 @@ class DentistaServiceTest {
 
     Dentista felipe = new Dentista("Felipe", "Stefani", 123);
     Dentista gabriella = new Dentista("Gabriella", "Faria", 456);
+    Dentista evertin = new Dentista("Evertin", "Silva", 71);
     DentistaService dentistaService = new DentistaService();
 
     @Test
     public void cadastrarDentista() throws SQLException {
         dentistaService.cadastrar(felipe);
         dentistaService.cadastrar(gabriella);
+        dentistaService.cadastrar(evertin);
     }
 
     @Test
@@ -25,4 +27,8 @@ class DentistaServiceTest {
         dentistaService.buscarDentistas();
     }
 
+    @Test
+    public void buscarDentistaPorMatricula() throws SQLException {
+        dentistaService.buscarDentistaPorMatricula(71);
+    }
 }
