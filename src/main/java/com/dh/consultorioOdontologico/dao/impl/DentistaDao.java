@@ -73,7 +73,36 @@ public class DentistaDao implements IDao<Dentista> {
             logger.info("Fechando conexão com o banco de dados.");
             connection.close();
             System.out.println(listaDentistas);
-            return listaDentistas;
         }
+        return listaDentistas;
+    }
+
+    public List<Dentista> buscarPorMatricula(Integer matricula) throws SQLException{
+        List dentista = new ArrayList<Dentista>();
+        String BUSCAR_DENTISTA = String.format("SELECT * FROM DENTISTA WHERE MATRICULA = '%s'", matricula);
+        Connection connection = null;
+        try{
+            logger.info("Abrindo conexão com o banco de dados para trazer um dentista.");
+            connection = configuracaoJDBC.getConnectionH2();
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(BUSCAR_DENTISTA);
+            if(resultSet.next()){
+                dentista.add(new Dentista(
+                        resultSet.getInt("id"),
+                        resultSet.getString("nome"),
+                        resultSet.getString("sobrenome"),
+                        resultSet.getInt("matricula")
+                ));
+                logger.info("Dentista encontrado com sucesso");
+                System.out.println(dentista);
+            }
+        } catch (Exception e){
+            logger.warn("Algo de errado ocorreu com a conexão ao tentar trazer o dentista.");
+            e.printStackTrace();
+        }finally {
+            logger.info("Fechando conexão com o banco de dados!");
+            connection.close();
+        }
+        return dentista;
     }
 }
