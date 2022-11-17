@@ -15,11 +15,6 @@ public class DentistaService {
         return dentistaIDao.cadastrar(dentista);
     }
 
-    public void excluir(Dentista dentista) throws  SQLException {
-        IDao<Dentista> dentistaIDao = new DentistaDao();
-        dentistaIDao.excluir(dentista);
-    }
-
     public List<Dentista> buscarDentistas() throws SQLException{
         DentistaDao dentistaDao = new DentistaDao();
         return dentistaDao.buscarTodos();
