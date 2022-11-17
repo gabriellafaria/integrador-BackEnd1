@@ -7,9 +7,12 @@ import com.dh.consultorioOdontologico.model.Paciente;
 import org.apache.log4j.Logger;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class PacienteDao implements IDao<Paciente> {
     private ConfiguracaoJDBC configuracaoJDBC = new ConfiguracaoJDBC();
+    private List<Paciente> pacientes = new ArrayList<>();
 
     static final Logger logger = Logger.getLogger(PacienteDao.class);
 
@@ -39,14 +42,14 @@ public class PacienteDao implements IDao<Paciente> {
 
     @Override
     public Paciente modificar(Paciente paciente) throws SQLException {
-        String SQLUPDATE = String.format("UPDATE paciente SET nome = '%s' WHERE id = '%s'", paciente.getNome(), paciente.getId());
+        String SQLUPDATE = String.format("UPDATE paciente SET (nome, sobrenome, rg, data_registro, id_endereco) = ('%s', '%s', '%s', '%s', '%s') WHERE id = '%s'", paciente.getNome(), paciente.getSobrenome(), paciente.getRg(), paciente.getDataRegistro(), paciente.getIdEndereco() ,paciente.getId());
         Connection connection = null;
         try {
-            logger.info("Conexão aberta, atualizando o nome do paciente: " + paciente.getNome());
+            logger.info("Conexão aberta, atualizando o paciente: " + paciente.getNome());
             connection = configuracaoJDBC.getConnectionH2();
             Statement statement = connection.createStatement();
             statement.execute(SQLUPDATE);
-            logger.info("Atualizado o nome do paciente.");
+            logger.info("Atualizado o paciente " + paciente.getNome() + paciente.getSobrenome());
         } catch (Exception e){
             logger.error("Erro ao modificar o nome do paciente.");
             e.printStackTrace();
@@ -75,5 +78,28 @@ public class PacienteDao implements IDao<Paciente> {
             logger.info("Conexão com o banco de dados encerrada.");
             connection.close();
         }
+    }
+
+    public List<Paciente> buscarTodos() throws SQLException{
+        String SQLSELECT = "SELECT paciente.id, paciente.nome, paciente.sobrenome, paciente.rg, paciente.data_registro, paciente.id_endereco, endereco.rua, endereco.numero, endereco.cidade, endereco.sigla_estado FROM paciente" +
+                " INNER JOIN endereco ON endereco.id = paciente.id_endereco";
+        Connection connection = null;
+        try {
+            logger.info("Conexão com o banco de dados aberta para consulta dos pacientes.");
+            connection = configuracaoJDBC.getConnectionH2();
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(SQLSELECT);
+            while (resultSet.next()){
+                System.out.println("Paciente id: " + resultSet.getInt(1) + ", nome " + resultSet.getString(2) + resultSet.getString(3) + " cadastrado em " + resultSet.getTimestamp(5) + " rg " + resultSet.getString(4) + " com o endereco na " + resultSet.getString(7) + " numero " + resultSet.getInt(8) + ".");
+                pacientes.add(new Paciente(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3), resultSet.getInt(6), resultSet.getString(4), resultSet.getTimestamp(5).toLocalDateTime().toLocalDate()));
+            }
+        }catch (Exception e){
+            logger.error("Erro na buisca dos pancientes.");
+            e.printStackTrace();
+        } finally {
+            logger.info("Encerrando a conexão com o banco de dados.");
+            connection.close();
+        }
+        return pacientes;
     }
 }

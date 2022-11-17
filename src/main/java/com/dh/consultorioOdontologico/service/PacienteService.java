@@ -5,6 +5,7 @@ import com.dh.consultorioOdontologico.dao.impl.PacienteDao;
 import com.dh.consultorioOdontologico.model.Paciente;
 
 import java.sql.SQLException;
+import java.util.List;
 
 public class PacienteService {
     private IDao<Paciente> pacienteIDao = new PacienteDao();
@@ -19,6 +20,11 @@ public class PacienteService {
 
     public void excluir(Paciente paciente) throws SQLException {
         pacienteIDao.excluir(paciente);
+    }
+
+    public List<Paciente> buscarTodos() throws SQLException{
+        PacienteDao pacienteDao = new PacienteDao();
+        return pacienteDao.buscarTodos();
     }
 
 }
