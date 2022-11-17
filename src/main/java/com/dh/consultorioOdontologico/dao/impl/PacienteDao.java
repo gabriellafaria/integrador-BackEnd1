@@ -7,7 +7,6 @@ import com.dh.consultorioOdontologico.model.Paciente;
 import org.apache.log4j.Logger;
 
 import java.sql.*;
-import java.util.Optional;
 
 public class PacienteDao implements IDao<Paciente> {
     private ConfiguracaoJDBC configuracaoJDBC = new ConfiguracaoJDBC();
