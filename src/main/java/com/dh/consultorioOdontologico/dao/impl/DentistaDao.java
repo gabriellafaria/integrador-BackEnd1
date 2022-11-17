@@ -59,9 +59,12 @@ public class DentistaDao implements IDao<Dentista> {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(BUSCAR_DENTISTAS);
             while (resultSet.next()){
-                Dentista dentista = new Dentista(resultSet.getInt("id"), resultSet.getString("nome"),
-                        resultSet.getString("sobrenome"), resultSet.getInt("matricula"));
-                listaDentistas.add(dentista);
+                listaDentistas.add(new Dentista(
+                        resultSet.getInt("id"),
+                        resultSet.getString("nome"),
+                        resultSet.getString("sobrenome"),
+                        resultSet.getInt("matricula")
+                ));
             }
         } catch (Exception e){
             logger.warn("Erro de conexão com o banco ao executar listagem de dentistas.");
