@@ -15,9 +15,12 @@ import java.sql.SQLException;
 public class ConsultaController {
     ConsultaService consultaService = new ConsultaService();
 
+    @PutMapping()
+    public Consulta alterarConsulta(@RequestBody Consulta consulta) throws SQLException {
+        return consultaService.modificar(consulta);
+
     @PostMapping()
     public Consulta post(@RequestBody Consulta consulta) throws SQLException {
         return consultaService.cadastrar(consulta);
     }
-
 }

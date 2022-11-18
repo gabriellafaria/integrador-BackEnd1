@@ -15,6 +15,11 @@ public class DentistaService {
         return dentistaIDao.cadastrar(dentista);
     }
 
+    public Dentista modificar(Dentista dentista) throws SQLException{
+        IDao<Dentista> dentistaIDao = new DentistaDao();
+        return dentistaIDao.modificar(dentista);
+    }
+
     public List<Dentista> buscarDentistas() throws SQLException{
         DentistaDao dentistaDao = new DentistaDao();
         return dentistaDao.buscarTodos();
