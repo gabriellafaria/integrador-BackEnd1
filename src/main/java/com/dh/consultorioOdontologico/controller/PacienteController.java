@@ -7,6 +7,8 @@ import com.dh.consultorioOdontologico.dao.impl.PacienteDao;
 import com.dh.consultorioOdontologico.service.ConsultaService;
 import org.springframework.web.bind.annotation.*;
 import java.sql.SQLException;
+import java.util.List;
+
 import com.dh.consultorioOdontologico.model.Endereco;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,9 +21,14 @@ import java.sql.SQLException;
 public class PacienteController {
     PacienteService pacienteService = new PacienteService();
 
+    @GetMapping()
+    public List<Paciente> buscarTodos() throws SQLException {
+        return pacienteService.buscarTodos();
+    }
     @DeleteMapping()
     public void excluirPaciente(@RequestBody Paciente paciente) throws SQLException {
         pacienteService.excluir(paciente);
+
     }
 
     @PutMapping("/{id}")
