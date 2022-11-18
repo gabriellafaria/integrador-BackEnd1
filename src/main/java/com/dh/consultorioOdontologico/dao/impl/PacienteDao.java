@@ -57,7 +57,7 @@ public class PacienteDao implements IDao<Paciente> {
             logger.info("Fechando a conexão.");
             connection.close();
         }
-        return null;
+        return paciente;
     }
 
     @Override

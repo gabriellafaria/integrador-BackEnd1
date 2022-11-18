@@ -15,6 +15,7 @@ public class PacienteService {
     }
 
     public Paciente modificar(Paciente paciente) throws SQLException {
+        System.out.println();
         return pacienteIDao.modificar(paciente);
     }
 
