@@ -8,6 +8,7 @@ import java.time.LocalDate;
 
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class Paciente {
     private int id;
     private String nome;
