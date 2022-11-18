@@ -568,7 +568,92 @@
 15/11/22 14:36 [main]  INFO com.dh.consultorioOdontologico.dao.impl.ConsultaDao:98 - Conexão com o bando de dados encerrada.
 15/11/22 14:41 [main]  INFO com.dh.consultorioOdontologico.dao.impl.ConsultaDao:87 - Conexão com o bando de dados aberta para buscar as consultas.
 15/11/22 14:41 [main]  INFO com.dh.consultorioOdontologico.dao.impl.ConsultaDao:97 - Conexão com o bando de dados encerrada.
-17/11/22 17:04 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:88 - Conexão com o banco de dados aberta para consulta dos pacientes.
-17/11/22 17:04 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:100 - Encerrando a conexão com o banco de dados.
-17/11/22 17:05 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:88 - Conexão com o banco de dados aberta para consulta dos pacientes.
-17/11/22 17:05 [main]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:100 - Encerrando a conexão com o banco de dados.
+17/11/22 12:37 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:57 - Abrindo conexão com o banco para trazer lista de dentistas cadastrados.
+17/11/22 12:37 [main]  WARN com.dh.consultorioOdontologico.dao.impl.DentistaDao:70 - Erro de conexão com o banco ao executar listagem de dentistas.
+17/11/22 12:37 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:73 - Fechando conexão com o banco de dados.
+17/11/22 12:37 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:23 - Abrindo conexão com o banco.
+17/11/22 12:37 [main] ERROR com.dh.consultorioOdontologico.dao.impl.DentistaDao:33 - Erro no cadastro do dentista.
+17/11/22 12:37 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:37 - Fechando conexão com o banco de dados.
+17/11/22 12:37 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:23 - Abrindo conexão com o banco.
+17/11/22 12:37 [main] ERROR com.dh.consultorioOdontologico.dao.impl.DentistaDao:33 - Erro no cadastro do dentista.
+17/11/22 12:37 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:37 - Fechando conexão com o banco de dados.
+17/11/22 12:37 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:23 - Abrindo conexão com o banco.
+17/11/22 12:37 [main] ERROR com.dh.consultorioOdontologico.dao.impl.DentistaDao:33 - Erro no cadastro do dentista.
+17/11/22 12:37 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:37 - Fechando conexão com o banco de dados.
+17/11/22 12:37 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:85 - Abrindo conexão com o banco de dados para trazer um dentista.
+17/11/22 12:37 [main]  WARN com.dh.consultorioOdontologico.dao.impl.DentistaDao:98 - Algo de errado ocorreu com a conexão ao tentar trazer o dentista.
+17/11/22 12:37 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:101 - Fechando conexão com o banco de dados!
+17/11/22 12:37 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:57 - Abrindo conexão com o banco para trazer lista de dentistas cadastrados.
+17/11/22 12:37 [main]  WARN com.dh.consultorioOdontologico.dao.impl.DentistaDao:70 - Erro de conexão com o banco ao executar listagem de dentistas.
+17/11/22 12:37 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:73 - Fechando conexão com o banco de dados.
+17/11/22 12:37 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:23 - Abrindo conexão com o banco.
+17/11/22 12:37 [main] ERROR com.dh.consultorioOdontologico.dao.impl.DentistaDao:33 - Erro no cadastro do dentista.
+17/11/22 12:37 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:37 - Fechando conexão com o banco de dados.
+17/11/22 12:37 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:23 - Abrindo conexão com o banco.
+17/11/22 12:37 [main] ERROR com.dh.consultorioOdontologico.dao.impl.DentistaDao:33 - Erro no cadastro do dentista.
+17/11/22 12:37 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:37 - Fechando conexão com o banco de dados.
+17/11/22 12:37 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:23 - Abrindo conexão com o banco.
+17/11/22 12:37 [main] ERROR com.dh.consultorioOdontologico.dao.impl.DentistaDao:33 - Erro no cadastro do dentista.
+17/11/22 12:37 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:37 - Fechando conexão com o banco de dados.
+17/11/22 12:37 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:85 - Abrindo conexão com o banco de dados para trazer um dentista.
+17/11/22 12:37 [main]  WARN com.dh.consultorioOdontologico.dao.impl.DentistaDao:98 - Algo de errado ocorreu com a conexão ao tentar trazer o dentista.
+17/11/22 12:37 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:101 - Fechando conexão com o banco de dados!
+17/11/22 12:39 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:57 - Abrindo conexão com o banco para trazer lista de dentistas cadastrados.
+17/11/22 12:39 [main]  WARN com.dh.consultorioOdontologico.dao.impl.DentistaDao:70 - Erro de conexão com o banco ao executar listagem de dentistas.
+17/11/22 12:39 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:73 - Fechando conexão com o banco de dados.
+17/11/22 12:39 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:23 - Abrindo conexão com o banco.
+17/11/22 12:39 [main] ERROR com.dh.consultorioOdontologico.dao.impl.DentistaDao:33 - Erro no cadastro do dentista.
+17/11/22 12:39 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:37 - Fechando conexão com o banco de dados.
+17/11/22 12:39 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:23 - Abrindo conexão com o banco.
+17/11/22 12:39 [main] ERROR com.dh.consultorioOdontologico.dao.impl.DentistaDao:33 - Erro no cadastro do dentista.
+17/11/22 12:39 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:37 - Fechando conexão com o banco de dados.
+17/11/22 12:39 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:23 - Abrindo conexão com o banco.
+17/11/22 12:39 [main] ERROR com.dh.consultorioOdontologico.dao.impl.DentistaDao:33 - Erro no cadastro do dentista.
+17/11/22 12:39 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:37 - Fechando conexão com o banco de dados.
+17/11/22 12:39 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:85 - Abrindo conexão com o banco de dados para trazer um dentista.
+17/11/22 12:39 [main]  WARN com.dh.consultorioOdontologico.dao.impl.DentistaDao:100 - Algo de errado ocorreu com a conexão ao tentar trazer o dentista.
+17/11/22 12:39 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:103 - Fechando conexão com o banco de dados!
+17/11/22 12:43 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:57 - Abrindo conexão com o banco para trazer lista de dentistas cadastrados.
+17/11/22 12:43 [main]  WARN com.dh.consultorioOdontologico.dao.impl.DentistaDao:70 - Erro de conexão com o banco ao executar listagem de dentistas.
+17/11/22 12:43 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:73 - Fechando conexão com o banco de dados.
+17/11/22 12:43 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:23 - Abrindo conexão com o banco.
+17/11/22 12:43 [main] ERROR com.dh.consultorioOdontologico.dao.impl.DentistaDao:33 - Erro no cadastro do dentista.
+17/11/22 12:43 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:37 - Fechando conexão com o banco de dados.
+17/11/22 12:43 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:23 - Abrindo conexão com o banco.
+17/11/22 12:43 [main] ERROR com.dh.consultorioOdontologico.dao.impl.DentistaDao:33 - Erro no cadastro do dentista.
+17/11/22 12:43 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:37 - Fechando conexão com o banco de dados.
+17/11/22 12:43 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:23 - Abrindo conexão com o banco.
+17/11/22 12:43 [main] ERROR com.dh.consultorioOdontologico.dao.impl.DentistaDao:33 - Erro no cadastro do dentista.
+17/11/22 12:43 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:37 - Fechando conexão com o banco de dados.
+17/11/22 12:43 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:85 - Abrindo conexão com o banco de dados para trazer um dentista.
+17/11/22 12:43 [main]  WARN com.dh.consultorioOdontologico.dao.impl.DentistaDao:100 - Algo de errado ocorreu com a conexão ao tentar trazer o dentista.
+17/11/22 12:43 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:103 - Fechando conexão com o banco de dados!
+17/11/22 12:44 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:57 - Abrindo conexão com o banco para trazer lista de dentistas cadastrados.
+17/11/22 12:44 [main]  WARN com.dh.consultorioOdontologico.dao.impl.DentistaDao:70 - Erro de conexão com o banco ao executar listagem de dentistas.
+17/11/22 12:44 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:73 - Fechando conexão com o banco de dados.
+17/11/22 12:44 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:23 - Abrindo conexão com o banco.
+17/11/22 12:44 [main] ERROR com.dh.consultorioOdontologico.dao.impl.DentistaDao:33 - Erro no cadastro do dentista.
+17/11/22 12:44 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:37 - Fechando conexão com o banco de dados.
+17/11/22 12:44 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:23 - Abrindo conexão com o banco.
+17/11/22 12:44 [main] ERROR com.dh.consultorioOdontologico.dao.impl.DentistaDao:33 - Erro no cadastro do dentista.
+17/11/22 12:44 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:37 - Fechando conexão com o banco de dados.
+17/11/22 12:44 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:23 - Abrindo conexão com o banco.
+17/11/22 12:44 [main] ERROR com.dh.consultorioOdontologico.dao.impl.DentistaDao:33 - Erro no cadastro do dentista.
+17/11/22 12:44 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:37 - Fechando conexão com o banco de dados.
+17/11/22 12:44 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:85 - Abrindo conexão com o banco de dados para trazer um dentista.
+17/11/22 12:44 [main]  WARN com.dh.consultorioOdontologico.dao.impl.DentistaDao:100 - Algo de errado ocorreu com a conexão ao tentar trazer o dentista.
+17/11/22 12:44 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:103 - Fechando conexão com o banco de dados!
+17/11/22 12:47 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:57 - Abrindo conexão com o banco para trazer lista de dentistas cadastrados.
+17/11/22 12:47 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:73 - Fechando conexão com o banco de dados.
+17/11/22 12:47 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:23 - Abrindo conexão com o banco.
+17/11/22 12:47 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:31 - Dentista Felipe salvo no banco.
+17/11/22 12:47 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:37 - Fechando conexão com o banco de dados.
+17/11/22 12:47 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:23 - Abrindo conexão com o banco.
+17/11/22 12:47 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:31 - Dentista Gabriella salvo no banco.
+17/11/22 12:47 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:37 - Fechando conexão com o banco de dados.
+17/11/22 12:47 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:23 - Abrindo conexão com o banco.
+17/11/22 12:47 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:31 - Dentista Evertin salvo no banco.
+17/11/22 12:47 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:37 - Fechando conexão com o banco de dados.
+17/11/22 12:47 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:85 - Abrindo conexão com o banco de dados para trazer um dentista.
+17/11/22 12:47 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:96 - Dentista encontrado com sucesso
+17/11/22 12:47 [main]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:103 - Fechando conexão com o banco de dados!
