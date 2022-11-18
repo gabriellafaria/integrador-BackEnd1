@@ -3,15 +3,21 @@ package com.dh.consultorioOdontologico.dao.impl;
 import com.dh.consultorioOdontologico.dao.IDao;
 import com.dh.consultorioOdontologico.dao.configuracaoJDBC.ConfiguracaoJDBC;
 import com.dh.consultorioOdontologico.model.Consulta;
+import com.dh.consultorioOdontologico.model.Dentista;
+import com.dh.consultorioOdontologico.model.Endereco;
+import com.dh.consultorioOdontologico.model.Paciente;
 import org.apache.log4j.Logger;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ConsultaDao implements IDao<Consulta> {
     private ConfiguracaoJDBC configuracaoJDBC = new ConfiguracaoJDBC();
+    private List<Consulta> consultas = new ArrayList<>();
 
     static final Logger logger = Logger.getLogger(ConsultaDao.class);
 
@@ -78,8 +84,8 @@ public class ConsultaDao implements IDao<Consulta> {
         }
     }
 
-    public Consulta buscarTodos() throws SQLException {
-        String SQLSELECT = "SELECT Consulta.id, Consulta.data_consulta, Paciente.nome, Dentista.nome FROM Consulta " +
+    public List<Consulta> buscarTodos() throws SQLException {
+        String SQLSELECT = "SELECT Consulta.id, Consulta.data_consulta, Consulta.id_paciente, Consulta.id_dentista, Paciente.nome, Dentista.nome FROM Consulta " +
                 "INNER JOIN Paciente ON Paciente.id = Consulta.id_paciente " +
                 "INNER JOIN Dentista ON Dentista.id = Consulta.id_dentista";
         Connection connection = null;
@@ -88,8 +94,10 @@ public class ConsultaDao implements IDao<Consulta> {
             connection = configuracaoJDBC.getConnectionH2();
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(SQLSELECT);
-            while (resultSet.next())
-                System.out.println("Consulta id: " + resultSet.getInt(1) + ", no horário: " + resultSet.getTimestamp(2) + ", do paciente: " + resultSet.getString(3) + ", com o dentista: " + resultSet.getString(4));
+            while (resultSet.next()) {
+                System.out.println("Consulta id: " + resultSet.getInt(1) + ", no horário: " + resultSet.getTimestamp(2) + ", do paciente: " + resultSet.getString(5) + ", com o dentista: " + resultSet.getString(6));
+                consultas.add(new Consulta(resultSet.getInt(1), resultSet.getInt(3), resultSet.getInt(4), resultSet.getTimestamp(2).toLocalDateTime()));
+            }
         } catch (Exception e){
             logger.error("Erro ao buscar todas as consultas.");
             e.printStackTrace();
@@ -97,6 +105,6 @@ public class ConsultaDao implements IDao<Consulta> {
             logger.info("Conexão com o bando de dados encerrada.");
             connection.close();
         }
-        return null;
+        return consultas;
     }
 }
