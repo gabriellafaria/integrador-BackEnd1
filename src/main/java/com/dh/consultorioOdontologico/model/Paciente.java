@@ -23,4 +23,6 @@ public class Paciente {
         this.dataRegistro = dataRegistro;
         this.idEndereco = endereco.getId();
     }
+
+
 }

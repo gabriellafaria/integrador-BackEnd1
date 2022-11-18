@@ -16,6 +16,7 @@ import java.util.List;
 
 public class EnderecoDao implements IDao<Endereco> {
     private ConfiguracaoJDBC configuracaoJDBC = new ConfiguracaoJDBC();
+    private List<Endereco> enderecos = new ArrayList<>();
     static final Logger logger = Logger.getLogger(EnderecoDao.class);
 
     @Override
@@ -30,6 +31,7 @@ public class EnderecoDao implements IDao<Endereco> {
             ResultSet resultSet = statement.getGeneratedKeys();
             if(resultSet.next())
                 endereco.setId(resultSet.getInt(1));
+            logger.info("Endereço cadastrado, id " + endereco.getId() + ", " + endereco.getRua() + " numero " + endereco.getNumero() + " cidade " + endereco.getCidade() + " estado " + endereco.getSiglaEstado() );
         } catch (Exception e){
             logger.info("Erro no cadastro de endereço.");
             e.printStackTrace();
@@ -78,14 +80,14 @@ public class EnderecoDao implements IDao<Endereco> {
             connection.close();
         }
     }
-    List<Endereco> enderecos = new ArrayList<>();
-    public List<Consulta> buscarTodos() throws SQLException {
+    //public static
+    public List<Endereco> buscarTodos() throws SQLException {
         String SQLSELECT = "SELECT * FROM Endereco";
         Connection connection = null;
         try{
             logger.info("Conexão com o bando de dados aberta para buscar as consultas.");
             connection = configuracaoJDBC.getConnectionH2();
-            Statement statement = connection.createStatement();   // rua, numero, cidade, sigla_estado
+            Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(SQLSELECT);
             while (resultSet.next()){
                 System.out.println("Endereço: id " + resultSet.getInt(1) + ", na rua  " + resultSet.getString(2) + ", número " + resultSet.getInt(3) + ", da cidade  " + resultSet.getString(4) + " em " + resultSet.getString(5));
@@ -98,6 +100,6 @@ public class EnderecoDao implements IDao<Endereco> {
             logger.info("Conexão com o bando de dados encerrada.");
             connection.close();
         }
-        return null;
+        return enderecos;
     }
 }
