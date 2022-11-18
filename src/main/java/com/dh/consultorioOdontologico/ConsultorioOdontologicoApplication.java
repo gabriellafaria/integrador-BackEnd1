@@ -27,7 +27,7 @@ public class ConsultorioOdontologicoApplication {
 //		Dentista dentista3 = new Dentista("Mariana", "Orsi", 7);
 //		Dentista dentista4 = new Dentista("Maria", "Bonifacio", 8);
 		DentistaService dentistaService = new DentistaService();
-		dentistaService.cadastrar(dentista1);
+		//dentistaService.cadastrar(dentista1);
 //	    dentistaService.cadastrar(dentista2);
 //		dentistaService.cadastrar(dentista3);
 //		dentistaService.cadastrar(dentista4);
