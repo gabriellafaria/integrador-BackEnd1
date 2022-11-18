@@ -1,6 +1,7 @@
 package com.dh.consultorioOdontologico.controller;
 
 import com.dh.consultorioOdontologico.model.Consulta;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import com.dh.consultorioOdontologico.model.Endereco;
 import com.dh.consultorioOdontologico.service.ConsultaService;
 import org.springframework.web.bind.annotation.*;
@@ -16,6 +17,11 @@ public class ConsultaController {
     @GetMapping()
     public List<Consulta> buscarTodos() throws SQLException {
         return consultaService.buscarTodos();
+    }
+
+    @DeleteMapping()
+    public void excluirConsulta(@RequestBody Consulta consulta) throws SQLException {
+        consultaService.excluir(consulta);
     }
 
     @PutMapping()
