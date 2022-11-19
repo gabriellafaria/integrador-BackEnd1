@@ -14,6 +14,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class ConsultaDao implements IDao<Consulta> {
     private ConfiguracaoJDBC configuracaoJDBC = new ConfiguracaoJDBC();
@@ -82,6 +83,11 @@ public class ConsultaDao implements IDao<Consulta> {
             logger.info("Conexão com o bando de dados encerrada.");
             connection.close();
         }
+    }
+
+    @Override
+    public Optional<Consulta> buscarPorId(int T) throws SQLException {
+        return Optional.empty();
     }
 
     public List<Consulta> buscarTodos() throws SQLException {
