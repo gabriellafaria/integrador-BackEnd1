@@ -1,5 +1,6 @@
 package com.dh.consultorioOdontologico.controller;
 
+import com.dh.consultorioOdontologico.model.Consulta;
 import com.dh.consultorioOdontologico.model.Dentista;
 import com.dh.consultorioOdontologico.service.DentistaService;
 import org.springframework.web.bind.annotation.*;
@@ -26,5 +27,10 @@ public class DentistaController {
     @PostMapping()
     public Dentista post(@RequestBody Dentista dentista) throws SQLException {
         return dentistaService.cadastrar(dentista);
+    }
+
+    @PatchMapping()
+    public Dentista alterarDentistaParcial(@RequestBody Dentista dentista) throws SQLException {
+        return dentistaService.modificar(dentista);
     }
 }
