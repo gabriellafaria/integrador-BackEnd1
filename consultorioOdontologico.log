@@ -711,3 +711,11 @@
 18/11/22 05:49 [main]  INFO com.dh.consultorioOdontologico.dao.impl.ConsultaDao:97 - Conexão com o bando de dados encerrada.
 18/11/22 21:03 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:57 - Abrindo conexão com o banco para trazer lista de dentistas cadastrados.
 18/11/22 21:03 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.dao.impl.DentistaDao:73 - Fechando conexão com o banco de dados.
+19/11/22 14:00 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:113 - Conexão com o banco de dados aberta para consulta dos pacientes.
+19/11/22 14:00 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:125 - Encerrando a conexão com o banco de dados.
+19/11/22 14:03 [http-nio-8080-exec-5]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:113 - Conexão com o banco de dados aberta para consulta dos pacientes.
+19/11/22 14:03 [http-nio-8080-exec-5]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:125 - Encerrando a conexão com o banco de dados.
+19/11/22 14:08 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:114 - Conexão com o banco de dados aberta para consulta dos pacientes.
+19/11/22 14:08 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:126 - Encerrando a conexão com o banco de dados.
+19/11/22 15:31 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:122 - Conexão com o banco de dados aberta para buscar o paciente pelo Id.
+19/11/22 15:31 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.dao.impl.PacienteDao:142 - Encerrando a conexão com o banco de dados.
