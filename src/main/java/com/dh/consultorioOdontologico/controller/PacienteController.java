@@ -31,9 +31,8 @@ public class PacienteController {
 
     }
 
-    @PutMapping("/{id}")
-    public Paciente alterarPaciente(@PathVariable("id")  int id, @RequestBody Paciente paciente) throws SQLException {  //Felipe comment: acho que nao precisa passar o id como PathVariable, pq podemos retirar o id do paciente direto
-        System.out.println();
+    @PutMapping()
+    public Paciente alterarPaciente(@RequestBody Paciente paciente) throws SQLException {  //Felipe comment: acho que nao precisa passar o id como PathVariable, pq podemos retirar o id do paciente direto
         return pacienteService.modificar(paciente);
     }
 

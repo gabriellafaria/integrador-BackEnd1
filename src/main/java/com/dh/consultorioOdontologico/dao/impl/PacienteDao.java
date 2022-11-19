@@ -40,6 +40,12 @@ public class PacienteDao implements IDao<Paciente> {
         return null;
     }
 
+//    @Override
+//    public Paciente modificar(Paciente paciente) throws SQLException {
+//
+//    }
+
+
     @Override
     public Paciente modificar(Paciente paciente) throws SQLException {
         String SQLUPDATE = String.format("UPDATE paciente SET (nome, sobrenome, rg, data_registro, id_endereco) = ('%s', '%s', '%s', '%s', '%s') WHERE id = '%s'", paciente.getNome(), paciente.getSobrenome(), paciente.getRg(), paciente.getDataRegistro(), paciente.getIdEndereco() ,paciente.getId());
