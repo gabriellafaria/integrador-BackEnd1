@@ -1,5 +1,6 @@
 package com.dh.consultorioOdontologico.controller;
 
+import com.dh.consultorioOdontologico.model.Consulta;
 import com.dh.consultorioOdontologico.model.Paciente;
 import com.dh.consultorioOdontologico.service.PacienteService;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -39,5 +40,10 @@ public class PacienteController {
     @PostMapping()
     public Paciente post(@RequestBody Paciente paciente) throws SQLException {
         return pacienteService.cadastrar(paciente);
+    }
+
+    @PatchMapping()
+    public Paciente alterarPacienteParcial(@RequestBody Paciente paciente) throws SQLException {
+        return pacienteService.modificar(paciente);
     }
 }
