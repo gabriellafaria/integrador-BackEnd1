@@ -42,7 +42,22 @@ public class DentistaDao implements IDao<Dentista> {
 
     @Override
     public Dentista modificar(Dentista dentista) throws SQLException {
-        return null;
+        String SQLUPDATE = String.format("UPDATE dentista SET (nome, sobrenome, matricula) = ('%s', '%s', '%s') WHERE id = '%s'", dentista.getNome(), dentista.getSobrenome(), dentista.getMatricula(),dentista.getId());
+        Connection connection = null;
+        try {
+            logger.info("Conexão aberta, atualizando o dentista: " + dentista.getNome());
+            connection = configuracaoJDBC.getConnectionH2();
+            Statement statement = connection.createStatement();
+            statement.execute(SQLUPDATE);
+            logger.info("Atualizado o dentista " + dentista.getNome() + dentista.getSobrenome());
+        } catch (Exception e){
+            logger.error("Erro ao modificar o nome do dentista.");
+            e.printStackTrace();
+        } finally {
+            logger.info("Fechando a conexão.");
+            connection.close();
+        }
+        return dentista;
     }
 
     @Override

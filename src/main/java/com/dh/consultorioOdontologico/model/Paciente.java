@@ -17,13 +17,4 @@ public class Paciente {
     private String rg;
     private LocalDate dataRegistro;
 
-    public Paciente(String nome, String sobrenome, String rg, LocalDate dataRegistro, Endereco endereco) {
-        this.nome = nome;
-        this.sobrenome = sobrenome;
-        this.rg = rg;
-        this.dataRegistro = dataRegistro;
-        this.idEndereco = endereco.getId();
-    }
-
-
 }
