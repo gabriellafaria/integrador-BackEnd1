@@ -12,6 +12,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 
 public class EnderecoDao implements IDao<Endereco> {
@@ -80,6 +81,12 @@ public class EnderecoDao implements IDao<Endereco> {
             connection.close();
         }
     }
+
+    @Override
+    public Optional<Endereco> buscarPorId(int T) throws SQLException {
+        return Optional.empty();
+    }
+
     //public static
     public List<Endereco> buscarTodos() throws SQLException {
         String SQLSELECT = "SELECT * FROM Endereco";

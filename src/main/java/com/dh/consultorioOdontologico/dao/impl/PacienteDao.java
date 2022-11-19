@@ -2,13 +2,14 @@ package com.dh.consultorioOdontologico.dao.impl;
 
 import com.dh.consultorioOdontologico.dao.IDao;
 import com.dh.consultorioOdontologico.dao.configuracaoJDBC.ConfiguracaoJDBC;
-import com.dh.consultorioOdontologico.model.Endereco;
 import com.dh.consultorioOdontologico.model.Paciente;
 import org.apache.log4j.Logger;
 
 import java.sql.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class PacienteDao implements IDao<Paciente> {
     private ConfiguracaoJDBC configuracaoJDBC = new ConfiguracaoJDBC();
@@ -40,31 +41,55 @@ public class PacienteDao implements IDao<Paciente> {
         return null;
     }
 
-//    @Override
-//    public Paciente modificar(Paciente paciente) throws SQLException {
-//
-//    }
-
-
     @Override
     public Paciente modificar(Paciente paciente) throws SQLException {
-        String SQLUPDATE = String.format("UPDATE paciente SET (nome, sobrenome, rg, data_registro, id_endereco) = ('%s', '%s', '%s', '%s', '%s') WHERE id = '%s'", paciente.getNome(), paciente.getSobrenome(), paciente.getRg(), paciente.getDataRegistro(), paciente.getIdEndereco() ,paciente.getId());
         Connection connection = null;
+        String SQLUPDATE = ("UPDATE paciente SET nome = ?, sobrenome = ?, id_endereco = ?, rg = ?, data_registro = ? WHERE id = ?");
+
         try {
-            logger.info("Conexão aberta, atualizando o paciente: " + paciente.getNome());
+            logger.info("Conexão aberta, atualizando o paciente: " + paciente.getNome() + " " + paciente.getSobrenome());
             connection = configuracaoJDBC.getConnectionH2();
-            Statement statement = connection.createStatement();
-            statement.execute(SQLUPDATE);
-            logger.info("Atualizado o paciente " + paciente.getNome() + paciente.getSobrenome());
-        } catch (Exception e){
-            logger.error("Erro ao modificar o nome do paciente.");
+            PreparedStatement preparedStatement = connection.prepareStatement(SQLUPDATE);
+            preparedStatement.setString(1, paciente.getNome());
+            preparedStatement.setString(2, paciente.getSobrenome());
+            preparedStatement.setInt(3, paciente.getIdEndereco());
+            preparedStatement.setString(4,paciente.getRg());
+            preparedStatement.setDate(5, java.sql.Date.valueOf(paciente.getDataRegistro()));
+            preparedStatement.setInt(6,paciente.getId());
+
+            preparedStatement.executeUpdate();
+            logger.info("O paciente " + paciente.getNome() + " " + paciente.getSobrenome() + " foi atualizado!");
+
+        }catch (Exception e){
+            logger.error("Erro ao atualizar o paciente.");
             e.printStackTrace();
-        } finally {
-            logger.info("Fechando a conexão.");
+        }finally {
+            logger.info("Conexão com o banco de dados encerrada.");
             connection.close();
         }
         return paciente;
     }
+
+//    @Override
+//    public Paciente modificar(Paciente paciente) throws SQLException {
+//        String SQLUPDATE = String.format("UPDATE paciente SET (nome, sobrenome, rg, data_registro, id_endereco) = ('%s', '%s', '%s', '%s', '%s') WHERE id = '%s'", paciente.getNome(), paciente.getSobrenome(), paciente.getRg(), paciente.getDataRegistro(), paciente.getIdEndereco() ,paciente.getId());
+//        Connection connection = null;
+//        try {
+//            logger.info("Conexão aberta, atualizando o paciente: " + paciente.getNome());
+//            connection = configuracaoJDBC.getConnectionH2();
+//            Statement statement = connection.createStatement();
+//            statement.execute(SQLUPDATE);
+//            logger.info("Atualizado o paciente " + paciente.getNome() + paciente.getSobrenome());
+//        } catch (Exception e){
+//            logger.error("Erro ao modificar o nome do paciente.");
+//            e.printStackTrace();
+//        } finally {
+//            logger.info("Fechando a conexão.");
+//            connection.close();
+//        }
+//        return paciente;
+//    }
+
 
     @Override
     public void excluir(Paciente paciente) throws SQLException {
@@ -84,6 +109,44 @@ public class PacienteDao implements IDao<Paciente> {
             logger.info("Conexão com o banco de dados encerrada.");
             connection.close();
         }
+    }
+
+    @Override
+    public Optional<Paciente> buscarPorId(int id) throws SQLException {
+        Connection connection = null;
+
+        String SQLBUSCARPORID = "SELECT id, nome, sobrenome, id_endereco, rg, data_registro FROM paciente WHERE id = ?";
+        Paciente paciente = null;
+
+        try {
+            logger.info("Conexão com o banco de dados aberta para buscar o paciente pelo Id.");
+            connection = configuracaoJDBC.getConnectionH2();
+            PreparedStatement preparedStatement = connection.prepareStatement(SQLBUSCARPORID);
+            preparedStatement.setInt(1, id);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()){
+                int idPkey = resultSet.getInt("id");
+                String nome = resultSet.getString("nome");
+                String sobrenome = resultSet.getString("sobrenome");
+                LocalDate dataRegistro = resultSet.getDate("data_registro").toLocalDate();
+                String rg = resultSet.getString("rg");
+                int idEndereco = resultSet.getInt("id_endereco");
+
+                paciente = new Paciente(idPkey, nome, sobrenome, idEndereco, rg, dataRegistro);
+
+                logger.info("O paciente com o id " + paciente.getId() + " foi encontrado!");
+            }
+        }catch (Exception e){
+            logger.error("Erro ao buscar o paciente do id informado.");
+            e.printStackTrace();
+        }finally {
+            logger.info("Encerrando a conexão com o banco de dados.");
+            connection.close();
+        }
+
+        return Optional.ofNullable(paciente);
+
     }
 
     public List<Paciente> buscarTodos() throws SQLException{

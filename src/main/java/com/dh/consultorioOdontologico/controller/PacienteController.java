@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import java.sql.SQLException;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/paciente")
@@ -26,6 +27,12 @@ public class PacienteController {
     public List<Paciente> buscarTodos() throws SQLException {
         return pacienteService.buscarTodos();
     }
+
+    @GetMapping("/{id}")
+    public Optional<Paciente> buscarPacientePorId(@PathVariable("id") int id) throws SQLException {
+        return pacienteService.buscarPorId(id);
+    }
+
     @DeleteMapping()
     public void excluirPaciente(@RequestBody Paciente paciente) throws SQLException {
         pacienteService.excluir(paciente);

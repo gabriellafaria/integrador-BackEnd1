@@ -6,12 +6,17 @@ import com.dh.consultorioOdontologico.model.Paciente;
 
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Optional;
 
 public class PacienteService {
     private IDao<Paciente> pacienteIDao = new PacienteDao();
 
     public Paciente cadastrar(Paciente paciente) throws SQLException {
         return pacienteIDao.cadastrar(paciente);
+    }
+
+    public Optional<Paciente> buscarPorId(int id) throws SQLException {
+        return pacienteIDao.buscarPorId(id);
     }
 
     public Paciente modificar(Paciente paciente) throws SQLException {

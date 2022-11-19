@@ -8,6 +8,7 @@ import org.apache.log4j.Logger;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class DentistaDao implements IDao<Dentista> {
 
@@ -63,6 +64,11 @@ public class DentistaDao implements IDao<Dentista> {
     @Override
     public void excluir(Dentista dentista) throws SQLException {
 
+    }
+
+    @Override
+    public Optional<Dentista> buscarPorId(int T) throws SQLException {
+        return Optional.empty();
     }
 
     public List<Dentista> buscarTodos() throws SQLException{
