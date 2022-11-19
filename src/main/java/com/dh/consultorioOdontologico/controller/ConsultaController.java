@@ -2,7 +2,6 @@ package com.dh.consultorioOdontologico.controller;
 
 import com.dh.consultorioOdontologico.model.Consulta;
 import org.springframework.web.bind.annotation.DeleteMapping;
-import com.dh.consultorioOdontologico.model.Endereco;
 import com.dh.consultorioOdontologico.service.ConsultaService;
 import org.springframework.web.bind.annotation.*;
 
@@ -32,5 +31,10 @@ public class ConsultaController {
     @PostMapping()
     public Consulta post(@RequestBody Consulta consulta) throws SQLException {
         return consultaService.cadastrar(consulta);
+    }
+
+    @PatchMapping()
+    public Consulta alterarConsultaParcial(@RequestBody Consulta consulta) throws SQLException {
+        return consultaService.modificar(consulta);
     }
 }

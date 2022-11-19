@@ -1,5 +1,6 @@
 package com.dh.consultorioOdontologico.controller;
 
+import com.dh.consultorioOdontologico.model.Consulta;
 import com.dh.consultorioOdontologico.model.Endereco;
 import com.dh.consultorioOdontologico.service.EnderecoService;
 import org.springframework.web.bind.annotation.*;
@@ -33,5 +34,10 @@ public class EnderecoController {
     @PostMapping()
     public Endereco post(@RequestBody Endereco endereco) throws SQLException {
         return enderecoService.cadastrar(endereco);
+    }
+
+    @PatchMapping()
+    public Endereco alterarEnderecoParcial(@RequestBody Endereco endereco) throws SQLException {
+        return enderecoService.modificar(endereco);
     }
 }
