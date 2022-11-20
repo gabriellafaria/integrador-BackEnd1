@@ -10,6 +10,7 @@ import com.dh.consultorioOdontologico.model.Dentista;
 
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/endereco")
@@ -19,6 +20,11 @@ public class EnderecoController {
     @GetMapping()
     public List<Endereco> buscarTodos() throws SQLException {
         return enderecoService.buscarTodos();
+    }
+
+    @GetMapping("/{id}")
+    public Optional<Endereco> buscarEnderecoPorId(@PathVariable("id") int id) throws SQLException {
+        return enderecoService.buscarPorId(id);
     }
 
     @DeleteMapping()

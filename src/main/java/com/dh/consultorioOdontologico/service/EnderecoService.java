@@ -8,6 +8,7 @@ import com.dh.consultorioOdontologico.model.Endereco;
 
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Optional;
 
 public class EnderecoService {
     IDao<Endereco> enderecoIDao = new EnderecoDao();
@@ -27,6 +28,11 @@ public class EnderecoService {
     public List<Endereco> buscarTodos() throws SQLException{
         EnderecoDao enderecoDao = new EnderecoDao();
         return enderecoDao.buscarTodos();
+    }
+
+    public Optional<Endereco> buscarPorId(int id) throws SQLException {
+        EnderecoDao enderecoDao = new EnderecoDao();
+        return enderecoDao.buscarPorId(id);
     }
     
 }

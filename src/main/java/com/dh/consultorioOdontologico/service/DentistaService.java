@@ -7,6 +7,7 @@ import com.dh.consultorioOdontologico.model.Dentista;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Optional;
 
 public class DentistaService {
 
@@ -28,5 +29,10 @@ public class DentistaService {
     public List<Dentista> buscarDentistaPorMatricula(Integer matricula) throws SQLException {
         DentistaDao dentistaDao = new DentistaDao();
         return dentistaDao.buscarPorMatricula(matricula);
+    }
+
+    public Optional<Dentista> buscarPorId(int id) throws SQLException {
+        DentistaDao dentistaDao = new DentistaDao();
+        return dentistaDao.buscarPorId(id);
     }
 }

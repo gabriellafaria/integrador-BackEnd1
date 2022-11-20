@@ -134,11 +134,10 @@ public class PacienteDao implements IDao<Paciente> {
                 int idEndereco = resultSet.getInt("id_endereco");
 
                 paciente = new Paciente(idPkey, nome, sobrenome, idEndereco, rg, dataRegistro);
-
                 logger.info("O paciente com o id " + paciente.getId() + " foi encontrado!");
             }
         }catch (Exception e){
-            logger.error("Erro ao buscar o paciente do id informado.");
+            logger.error("Erro ao buscar o paciente do Id informado.");
             e.printStackTrace();
         }finally {
             logger.info("Encerrando a conexão com o banco de dados.");
