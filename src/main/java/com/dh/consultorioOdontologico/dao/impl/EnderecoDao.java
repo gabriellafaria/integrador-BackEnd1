@@ -109,4 +109,23 @@ public class EnderecoDao implements IDao<Endereco> {
         }
         return enderecos;
     }
+
+    public void excluirPorID(int id) throws SQLException {
+        String SQLDELETE = String.format("DELETE FROM endereco WHERE id = '%d'", id);
+        Connection connection = null;
+        try{
+            logger.info("Conexão com o banco de dados aberta.");
+            connection = configuracaoJDBC.getConnectionH2();
+            Statement statement = connection.createStatement();
+            logger.info("Endereco dentista com o id: " + id);
+            statement.execute(SQLDELETE);
+            logger.info("Endereco deletado do banco");
+        } catch (Exception e) {
+            logger.error("Erro ao excluir o endereco");
+            e.printStackTrace();
+        } finally {
+            logger.info("Conexão com o banco de dados encerrada.");
+            connection.close();
+        }
+    }
 }
