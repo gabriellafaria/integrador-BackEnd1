@@ -6,6 +6,7 @@ import com.dh.consultorioOdontologico.model.Consulta;
 
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Optional;
 
 public class ConsultaService {
     IDao<Consulta> consultaIDao = new ConsultaDao();
@@ -27,7 +28,11 @@ public class ConsultaService {
         return consultaDao.buscarTodos();
     }
 
+    public Optional<Consulta> buscarPorId(int id) throws SQLException {
+        return consultaIDao.buscarPorId(id);
+    }
     public void excluir(int id) throws SQLException{
         consultaDao.excluirPorId(id);
+
     }
 }

@@ -9,6 +9,9 @@ import com.dh.consultorioOdontologico.model.Paciente;
 import org.apache.log4j.Logger;
 
 import java.sql.*;
+import java.time.DateTimeException;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -63,7 +66,7 @@ public class ConsultaDao implements IDao<Consulta> {
             logger.info("Conexão com o banco de dados encerrada.");
             connection.close();
         }
-        return null;
+        return consulta;
     }
 
     @Override
@@ -87,8 +90,36 @@ public class ConsultaDao implements IDao<Consulta> {
     }
 
     @Override
-    public Optional<Consulta> buscarPorId(int T) throws SQLException {
-        return Optional.empty();
+    public Optional<Consulta> buscarPorId(int id) throws SQLException {
+        Connection connection = null;
+
+        String SQLBUSCARPORID = "SELECT id, id_paciente, id_dentista, data_consulta FROM consulta WHERE id = ?";
+        Consulta consulta = null;
+
+        try {
+            logger.info("Conexão com o banco de dados aberta para buscar a consulta pelo Id.");
+            connection = configuracaoJDBC.getConnectionH2();
+            PreparedStatement preparedStatement = connection.prepareStatement(SQLBUSCARPORID);
+            preparedStatement.setInt(1,id);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                int idPkey = resultSet.getInt("id");
+                int idPaciente = resultSet.getInt("id_paciente");
+                int idDentista = resultSet.getInt("id_dentista");
+                LocalDateTime dataConsulta = resultSet.getTimestamp("data_consulta").toLocalDateTime();
+
+                consulta = new Consulta(idPkey, idPaciente, idDentista, dataConsulta);
+                logger.info("A consuklta com o id " + consulta.getId() + " foi encontrada");
+            }
+        }catch (Exception e) {
+            logger.error("Erro ao buscar a consulta do Id informado.");
+            e.printStackTrace();
+        }finally {
+            logger.info("Encerrando conexão com o banco de dados.");
+            connection.close();
+        }
+        return Optional.ofNullable(consulta);
     }
 
     public List<Consulta> buscarTodos() throws SQLException {
