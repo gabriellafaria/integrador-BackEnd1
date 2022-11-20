@@ -113,4 +113,23 @@ public class ConsultaDao implements IDao<Consulta> {
         }
         return consultas;
     }
+
+    public void excluirPorId(int id) throws SQLException {
+        String SQLDELETE = String.format("DELETE FROM Consulta WHERE id = '%d'", id);
+        Connection connection = null;
+        try{
+            logger.info("Conexão com o bando de dados aberta para exlusão da consulta.");
+            connection = configuracaoJDBC.getConnectionH2();
+            Statement statement = connection.createStatement();
+            logger.info("Deletando consulta com o id: " + id);
+            statement.execute(SQLDELETE);
+            logger.info("Consulta delatada com sucesso.");
+        } catch (Exception e){
+            logger.error("Erro ao exluir a consulta");
+            e.printStackTrace();
+        } finally {
+            logger.info("Conexão com o bando de dados encerrada.");
+            connection.close();
+        }
+    }
 }
