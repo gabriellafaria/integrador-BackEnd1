@@ -66,6 +66,25 @@ public class DentistaDao implements IDao<Dentista> {
 
     }
 
+    public void excluirPorID(int id) throws SQLException {
+        String SQLDELETE = String.format("DELETE FROM dentista WHERE id = '%d'", id);
+        Connection connection = null;
+        try{
+            logger.info("Conexão com o banco de dados aberta.");
+            connection = configuracaoJDBC.getConnectionH2();
+            Statement statement = connection.createStatement();
+            logger.info("Deletando dentista com o id: " + id);
+            statement.execute(SQLDELETE);
+            logger.info("Dentista deletado do banco");
+        } catch (Exception e) {
+            logger.error("Erro ao excluir o dentista");
+            e.printStackTrace();
+        } finally {
+            logger.info("Conexão com o banco de dados encerrada.");
+            connection.close();
+        }
+    }
+
     @Override
     public Optional<Dentista> buscarPorId(int T) throws SQLException {
         return Optional.empty();
