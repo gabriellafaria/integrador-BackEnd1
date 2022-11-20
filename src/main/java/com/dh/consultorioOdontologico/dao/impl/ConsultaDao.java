@@ -47,13 +47,17 @@ public class ConsultaDao implements IDao<Consulta> {
 
     @Override
     public Consulta modificar(Consulta consulta) throws SQLException {
-        String SQLUPDATE = String.format("UPDATE consulta SET data_consulta = '%s' WHERE id = '%s'", consulta.getDataConsulta(), consulta.getId());
+        String SQLUPDATE = ("UPDATE consulta SET id_paciente = ?, id_dentista = ?, data_consulta = ? WHERE id = ?");
         Connection connection = null;
         try{
             logger.info("Conexão com o banco de dados aberta para atualização da consulta");
             connection = configuracaoJDBC.getConnectionH2();
-            Statement statement = connection.createStatement();
-            statement.execute(SQLUPDATE);
+            PreparedStatement prepStatement = connection.prepareStatement(SQLUPDATE);
+            prepStatement.setInt(1, consulta.getIdPaciente());
+            prepStatement.setInt(2, consulta.getIdDentista());
+            prepStatement.setString(3, consulta.getDataConsulta().toString());
+            prepStatement.setInt(4, consulta.getId());
+            prepStatement.executeUpdate();
             logger.info("Atualizada a data da consulta para: " + consulta.getDataConsulta());
         } catch (Exception e){
             logger.info("Erro ao atualizar a consulta");
@@ -140,5 +144,24 @@ public class ConsultaDao implements IDao<Consulta> {
             connection.close();
         }
         return consultas;
+    }
+
+    public void excluirPorId(int id) throws SQLException {
+        String SQLDELETE = String.format("DELETE FROM Consulta WHERE id = '%d'", id);
+        Connection connection = null;
+        try{
+            logger.info("Conexão com o bando de dados aberta para exlusão da consulta.");
+            connection = configuracaoJDBC.getConnectionH2();
+            Statement statement = connection.createStatement();
+            logger.info("Deletando consulta com o id: " + id);
+            statement.execute(SQLDELETE);
+            logger.info("Consulta delatada com sucesso.");
+        } catch (Exception e){
+            logger.error("Erro ao exluir a consulta");
+            e.printStackTrace();
+        } finally {
+            logger.info("Conexão com o bando de dados encerrada.");
+            connection.close();
+        }
     }
 }

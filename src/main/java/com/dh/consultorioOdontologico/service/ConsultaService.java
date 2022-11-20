@@ -10,6 +10,7 @@ import java.util.Optional;
 
 public class ConsultaService {
     IDao<Consulta> consultaIDao = new ConsultaDao();
+    ConsultaDao consultaDao= new ConsultaDao();
 
     public Consulta cadastrar(Consulta consulta) throws SQLException {
         return consultaIDao.cadastrar(consulta);
@@ -24,11 +25,14 @@ public class ConsultaService {
     }
 
     public List<Consulta> buscarTodos() throws SQLException{
-        ConsultaDao consultaDao= new ConsultaDao();
         return consultaDao.buscarTodos();
     }
 
     public Optional<Consulta> buscarPorId(int id) throws SQLException {
         return consultaIDao.buscarPorId(id);
+    }
+    public void excluir(int id) throws SQLException{
+        consultaDao.excluirPorId(id);
+
     }
 }

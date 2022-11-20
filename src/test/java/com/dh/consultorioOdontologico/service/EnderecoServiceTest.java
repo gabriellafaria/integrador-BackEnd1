@@ -41,4 +41,9 @@ class EnderecoServiceTest {
 
     }
 
+    @Test
+    public void excluirPorId() throws SQLException {
+        enderecoService.excluirPorId(27);
+    }
+
 }

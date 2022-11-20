@@ -15,6 +15,17 @@ public class Consulta {
     private int idPaciente;
     private int idDentista;
     private LocalDateTime dataConsulta;
-    //private Ti
+
+    public Consulta(Paciente paciente, Dentista dentista, LocalDateTime dataConsulta) {
+        this.idPaciente = paciente.getId();
+        this.idDentista = dentista.getId();
+        this.dataConsulta = dataConsulta;
+    }
+
+    public Consulta(int idPaciente, int idDentista, LocalDateTime dataConsulta) {
+        this.idPaciente = idPaciente;
+        this.idDentista = idDentista;
+        this.dataConsulta = dataConsulta;
+    }
 
 }
