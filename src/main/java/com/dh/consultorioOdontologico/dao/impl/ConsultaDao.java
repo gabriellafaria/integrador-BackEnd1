@@ -8,10 +8,7 @@ import com.dh.consultorioOdontologico.model.Endereco;
 import com.dh.consultorioOdontologico.model.Paciente;
 import org.apache.log4j.Logger;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -47,13 +44,17 @@ public class ConsultaDao implements IDao<Consulta> {
 
     @Override
     public Consulta modificar(Consulta consulta) throws SQLException {
-        String SQLUPDATE = String.format("UPDATE consulta SET data_consulta = '%s' WHERE id = '%s'", consulta.getDataConsulta(), consulta.getId());
+        String SQLUPDATE = ("UPDATE consulta SET id_paciente = ?, id_dentista = ?, data_consulta = ? WHERE id = ?");
         Connection connection = null;
         try{
             logger.info("Conexão com o banco de dados aberta para atualização da consulta");
             connection = configuracaoJDBC.getConnectionH2();
-            Statement statement = connection.createStatement();
-            statement.execute(SQLUPDATE);
+            PreparedStatement prepStatement = connection.prepareStatement(SQLUPDATE);
+            prepStatement.setInt(1, consulta.getIdPaciente());
+            prepStatement.setInt(2, consulta.getIdDentista());
+            prepStatement.setString(3, consulta.getDataConsulta().toString());
+            prepStatement.setInt(4, consulta.getId());
+            prepStatement.executeUpdate();
             logger.info("Atualizada a data da consulta para: " + consulta.getDataConsulta());
         } catch (Exception e){
             logger.info("Erro ao atualizar a consulta");
