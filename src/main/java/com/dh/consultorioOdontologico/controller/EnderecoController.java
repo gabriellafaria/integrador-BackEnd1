@@ -3,6 +3,7 @@ package com.dh.consultorioOdontologico.controller;
 import com.dh.consultorioOdontologico.model.Consulta;
 import com.dh.consultorioOdontologico.model.Endereco;
 import com.dh.consultorioOdontologico.service.EnderecoService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -15,7 +16,8 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/endereco")
 public class EnderecoController {
-    EnderecoService enderecoService = new EnderecoService();
+    @Autowired
+    EnderecoService enderecoService;
 
     @GetMapping()
     public List<Endereco> buscarTodos() throws SQLException {
