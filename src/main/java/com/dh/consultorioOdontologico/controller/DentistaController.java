@@ -4,6 +4,7 @@ import com.dh.consultorioOdontologico.model.Consulta;
 import com.dh.consultorioOdontologico.model.Dentista;
 import com.dh.consultorioOdontologico.model.Paciente;
 import com.dh.consultorioOdontologico.service.DentistaService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.sql.SQLException;
@@ -14,7 +15,8 @@ import java.util.Optional;
 @RequestMapping("/dentista")
 
 public class DentistaController {
-    DentistaService dentistaService = new DentistaService();
+    @Autowired
+    DentistaService dentistaService;
 
     @GetMapping()
     public List<Dentista> buscar() throws SQLException {
