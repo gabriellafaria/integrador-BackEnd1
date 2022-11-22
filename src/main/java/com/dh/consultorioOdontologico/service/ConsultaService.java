@@ -3,11 +3,13 @@ package com.dh.consultorioOdontologico.service;
 import com.dh.consultorioOdontologico.dao.IDao;
 import com.dh.consultorioOdontologico.dao.impl.ConsultaDao;
 import com.dh.consultorioOdontologico.model.Consulta;
+import org.springframework.stereotype.Service;
 
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class ConsultaService {
     IDao<Consulta> consultaIDao = new ConsultaDao();
     ConsultaDao consultaDao= new ConsultaDao();

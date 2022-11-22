@@ -2,6 +2,7 @@ package com.dh.consultorioOdontologico.controller;
 
 import com.dh.consultorioOdontologico.model.Consulta;
 import com.dh.consultorioOdontologico.model.Endereco;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import com.dh.consultorioOdontologico.service.ConsultaService;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +14,9 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/consulta")
 public class ConsultaController {
-    ConsultaService consultaService = new ConsultaService();
+
+    @Autowired
+    ConsultaService consultaService;
 
     @GetMapping()
     public List<Consulta> buscarTodos() throws SQLException {
