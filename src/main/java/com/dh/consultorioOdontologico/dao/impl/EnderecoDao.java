@@ -4,12 +4,11 @@ import com.dh.consultorioOdontologico.dao.IDao;
 import com.dh.consultorioOdontologico.dao.configuracaoJDBC.ConfiguracaoJDBC;
 import com.dh.consultorioOdontologico.model.Consulta;
 import com.dh.consultorioOdontologico.model.Endereco;
+import com.dh.consultorioOdontologico.model.Paciente;
 import org.apache.log4j.Logger;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -60,7 +59,7 @@ public class EnderecoDao implements IDao<Endereco> {
             logger.info("Encerrando conexão com o banco de dados.");
             connection.close();
         }
-        return null;
+        return endereco;
     }
 
     @Override
@@ -83,8 +82,37 @@ public class EnderecoDao implements IDao<Endereco> {
     }
 
     @Override
-    public Optional<Endereco> buscarPorId(int T) throws SQLException {
-        return Optional.empty();
+    public Optional<Endereco> buscarPorId(int id) throws SQLException {
+        Connection connection = null;
+
+        String SQLBUSCARPORID = "SELECT id, rua, numero, cidade, sigla_estado FROM endereco WHERE id = ?";
+        Endereco endereco = null;
+
+        try {
+            logger.info("Conexão com o banco de dados aberta para buscar o endereço pelo Id.");
+            connection = configuracaoJDBC.getConnectionH2();
+            PreparedStatement preparedStatement = connection.prepareStatement(SQLBUSCARPORID);
+            preparedStatement.setInt(1, id);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                int idPkey = resultSet.getInt("id");
+                String rua = resultSet.getString("rua");
+                int numero = resultSet.getInt("numero");
+                String cidade = resultSet.getString("cidade");
+                String siglaEstado = resultSet.getString("sigla_estado");
+
+                endereco = new Endereco(idPkey, rua, numero, cidade, siglaEstado);
+                logger.info("O endereço com o id " + endereco.getId() + " foi encontrado!");
+            }
+        }catch (Exception e){
+            logger.error("Erro ao buscar o endereço do id informado.");
+            e.printStackTrace();
+        }finally {
+            logger.info("Encerrando a conexão com o banco de dados.");
+            connection.close();
+        }
+        return Optional.ofNullable(endereco);
     }
 
     //public static
@@ -108,5 +136,24 @@ public class EnderecoDao implements IDao<Endereco> {
             connection.close();
         }
         return enderecos;
+    }
+
+    public void excluirPorID(int id) throws SQLException {
+        String SQLDELETE = String.format("DELETE FROM endereco WHERE id = '%d'", id);
+        Connection connection = null;
+        try{
+            logger.info("Conexão com o banco de dados aberta.");
+            connection = configuracaoJDBC.getConnectionH2();
+            Statement statement = connection.createStatement();
+            logger.info("Endereco dentista com o id: " + id);
+            statement.execute(SQLDELETE);
+            logger.info("Endereco deletado do banco");
+        } catch (Exception e) {
+            logger.error("Erro ao excluir o endereco");
+            e.printStackTrace();
+        } finally {
+            logger.info("Conexão com o banco de dados encerrada.");
+            connection.close();
+        }
     }
 }

@@ -8,10 +8,10 @@ import com.dh.consultorioOdontologico.model.Endereco;
 import com.dh.consultorioOdontologico.model.Paciente;
 import org.apache.log4j.Logger;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
+import java.time.DateTimeException;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -47,13 +47,17 @@ public class ConsultaDao implements IDao<Consulta> {
 
     @Override
     public Consulta modificar(Consulta consulta) throws SQLException {
-        String SQLUPDATE = String.format("UPDATE consulta SET data_consulta = '%s' WHERE id = '%s'", consulta.getDataConsulta(), consulta.getId());
+        String SQLUPDATE = ("UPDATE consulta SET id_paciente = ?, id_dentista = ?, data_consulta = ? WHERE id = ?");
         Connection connection = null;
         try{
             logger.info("Conexão com o banco de dados aberta para atualização da consulta");
             connection = configuracaoJDBC.getConnectionH2();
-            Statement statement = connection.createStatement();
-            statement.execute(SQLUPDATE);
+            PreparedStatement prepStatement = connection.prepareStatement(SQLUPDATE);
+            prepStatement.setInt(1, consulta.getIdPaciente());
+            prepStatement.setInt(2, consulta.getIdDentista());
+            prepStatement.setString(3, consulta.getDataConsulta().toString());
+            prepStatement.setInt(4, consulta.getId());
+            prepStatement.executeUpdate();
             logger.info("Atualizada a data da consulta para: " + consulta.getDataConsulta());
         } catch (Exception e){
             logger.info("Erro ao atualizar a consulta");
@@ -62,7 +66,7 @@ public class ConsultaDao implements IDao<Consulta> {
             logger.info("Conexão com o banco de dados encerrada.");
             connection.close();
         }
-        return null;
+        return consulta;
     }
 
     @Override
@@ -86,8 +90,36 @@ public class ConsultaDao implements IDao<Consulta> {
     }
 
     @Override
-    public Optional<Consulta> buscarPorId(int T) throws SQLException {
-        return Optional.empty();
+    public Optional<Consulta> buscarPorId(int id) throws SQLException {
+        Connection connection = null;
+
+        String SQLBUSCARPORID = "SELECT id, id_paciente, id_dentista, data_consulta FROM consulta WHERE id = ?";
+        Consulta consulta = null;
+
+        try {
+            logger.info("Conexão com o banco de dados aberta para buscar a consulta pelo Id.");
+            connection = configuracaoJDBC.getConnectionH2();
+            PreparedStatement preparedStatement = connection.prepareStatement(SQLBUSCARPORID);
+            preparedStatement.setInt(1,id);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                int idPkey = resultSet.getInt("id");
+                int idPaciente = resultSet.getInt("id_paciente");
+                int idDentista = resultSet.getInt("id_dentista");
+                LocalDateTime dataConsulta = resultSet.getTimestamp("data_consulta").toLocalDateTime();
+
+                consulta = new Consulta(idPkey, idPaciente, idDentista, dataConsulta);
+                logger.info("A consuklta com o id " + consulta.getId() + " foi encontrada");
+            }
+        }catch (Exception e) {
+            logger.error("Erro ao buscar a consulta do Id informado.");
+            e.printStackTrace();
+        }finally {
+            logger.info("Encerrando conexão com o banco de dados.");
+            connection.close();
+        }
+        return Optional.ofNullable(consulta);
     }
 
     public List<Consulta> buscarTodos() throws SQLException {
@@ -112,5 +144,24 @@ public class ConsultaDao implements IDao<Consulta> {
             connection.close();
         }
         return consultas;
+    }
+
+    public void excluirPorId(int id) throws SQLException {
+        String SQLDELETE = String.format("DELETE FROM Consulta WHERE id = '%d'", id);
+        Connection connection = null;
+        try{
+            logger.info("Conexão com o bando de dados aberta para exlusão da consulta.");
+            connection = configuracaoJDBC.getConnectionH2();
+            Statement statement = connection.createStatement();
+            logger.info("Deletando consulta com o id: " + id);
+            statement.execute(SQLDELETE);
+            logger.info("Consulta delatada com sucesso.");
+        } catch (Exception e){
+            logger.error("Erro ao exluir a consulta");
+            e.printStackTrace();
+        } finally {
+            logger.info("Conexão com o bando de dados encerrada.");
+            connection.close();
+        }
     }
 }

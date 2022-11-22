@@ -66,9 +66,58 @@ public class DentistaDao implements IDao<Dentista> {
 
     }
 
+    public void excluirPorID(int id) throws SQLException {
+        String SQLDELETE = String.format("DELETE FROM dentista WHERE id = '%d'", id);
+        Connection connection = null;
+        try{
+            logger.info("Conexão com o banco de dados aberta.");
+            connection = configuracaoJDBC.getConnectionH2();
+            Statement statement = connection.createStatement();
+            logger.info("Deletando dentista com o id: " + id);
+            statement.execute(SQLDELETE);
+            logger.info("Dentista deletado do banco");
+        } catch (Exception e) {
+            logger.error("Erro ao excluir o dentista");
+            e.printStackTrace();
+        } finally {
+            logger.info("Conexão com o banco de dados encerrada.");
+            connection.close();
+        }
+    }
+
     @Override
-    public Optional<Dentista> buscarPorId(int T) throws SQLException {
-        return Optional.empty();
+    public Optional<Dentista> buscarPorId(int id) throws SQLException {
+        Connection connection = null;
+
+        String SQLBUSCARPORID = "SELECT id, nome, sobrenome, matricula FROM dentista WHERE id = ?";
+        Dentista dentista = null;
+
+        try{
+            logger.info("Conexão com o banco de dados aberta para buscar o dentista pelo Id.");
+            connection = configuracaoJDBC.getConnectionH2();
+            PreparedStatement preparedStatement = connection.prepareStatement(SQLBUSCARPORID);
+            preparedStatement.setInt(1,id);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                int idPkey = resultSet.getInt("id");
+                String nome = resultSet.getString("nome");
+                String sobrenome = resultSet.getString("sobrenome");
+                int matricula = resultSet.getInt("matricula");
+
+                dentista = new Dentista(idPkey, nome, sobrenome, matricula);
+                logger.info("O dentista com o id " + dentista.getId() + " foi encontrado!");
+            }
+
+        }catch (Exception e){
+            logger.error("Erro ao buscar o dentista do Id informado.");
+            e.printStackTrace();
+        }finally {
+            logger.info("Encerrando a conexão com o banco de dados.");
+            connection.close();
+        }
+
+        return Optional.ofNullable(dentista);
     }
 
     public List<Dentista> buscarTodos() throws SQLException{

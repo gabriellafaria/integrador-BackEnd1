@@ -33,4 +33,9 @@ public class PacienteService {
         return pacienteDao.buscarTodos();
     }
 
+    public void excluirPorId(int id) throws SQLException {
+        PacienteDao pacienteDao = new PacienteDao();
+        pacienteDao.excluirPorID(id);
+    }
+
 }

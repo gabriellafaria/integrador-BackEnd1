@@ -99,7 +99,7 @@ public class PacienteDao implements IDao<Paciente> {
             logger.info("Conexão com o banco de dados aberta.");
             connection = configuracaoJDBC.getConnectionH2();
             Statement statement = connection.createStatement();
-            logger.info("Deletando paciente com o id: "+ paciente.getId() + " e endereco de id: " + paciente.getIdEndereco());
+            logger.info("Deletando paciente com o id: "+ paciente.getId());
             statement.execute(SQLDELETE);
             logger.info("Paciente deletado do banco");
         } catch (Exception e) {
@@ -134,11 +134,10 @@ public class PacienteDao implements IDao<Paciente> {
                 int idEndereco = resultSet.getInt("id_endereco");
 
                 paciente = new Paciente(idPkey, nome, sobrenome, idEndereco, rg, dataRegistro);
-
                 logger.info("O paciente com o id " + paciente.getId() + " foi encontrado!");
             }
         }catch (Exception e){
-            logger.error("Erro ao buscar o paciente do id informado.");
+            logger.error("Erro ao buscar o paciente do Id informado.");
             e.printStackTrace();
         }finally {
             logger.info("Encerrando a conexão com o banco de dados.");
@@ -170,5 +169,24 @@ public class PacienteDao implements IDao<Paciente> {
             connection.close();
         }
         return pacientes;
+    }
+
+    public void excluirPorID(int id) throws SQLException {
+        String SQLDELETE = String.format("DELETE FROM paciente WHERE id = '%d'", id);
+        Connection connection = null;
+        try{
+            logger.info("Conexão com o banco de dados aberta.");
+            connection = configuracaoJDBC.getConnectionH2();
+            Statement statement = connection.createStatement();
+            logger.info("Paciente dentista com o id: " + id);
+            statement.execute(SQLDELETE);
+            logger.info("Paciente deletado do banco");
+        } catch (Exception e) {
+            logger.error("Erro ao excluir o paciente");
+            e.printStackTrace();
+        } finally {
+            logger.info("Conexão com o banco de dados encerrada.");
+            connection.close();
+        }
     }
 }

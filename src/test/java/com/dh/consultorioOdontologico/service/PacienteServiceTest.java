@@ -17,4 +17,9 @@ class PacienteServiceTest {
         List<Paciente> pacientes = pacienteService.buscarTodos();
         Assertions.assertEquals(21, pacientes.size());
     }
+
+    @Test
+    public void excluirPorId() throws SQLException {
+        pacienteService.excluirPorId(26);
+    }
 }
