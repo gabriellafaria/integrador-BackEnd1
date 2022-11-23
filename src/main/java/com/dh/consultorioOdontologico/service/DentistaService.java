@@ -3,12 +3,14 @@ package com.dh.consultorioOdontologico.service;
 import com.dh.consultorioOdontologico.dao.IDao;
 import com.dh.consultorioOdontologico.dao.impl.DentistaDao;
 import com.dh.consultorioOdontologico.model.Dentista;
+import org.springframework.stereotype.Service;
 
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class DentistaService {
     IDao<Dentista> dentistaIDao = new DentistaDao();
     DentistaDao dentistaDao = new DentistaDao();

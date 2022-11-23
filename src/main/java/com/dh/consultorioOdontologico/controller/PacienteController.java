@@ -3,6 +3,7 @@ package com.dh.consultorioOdontologico.controller;
 import com.dh.consultorioOdontologico.model.Consulta;
 import com.dh.consultorioOdontologico.model.Paciente;
 import com.dh.consultorioOdontologico.service.PacienteService;
+
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -12,7 +13,6 @@ import com.dh.consultorioOdontologico.service.ConsultaService;
 import org.springframework.web.bind.annotation.*;
 import java.sql.SQLException;
 import java.util.List;
-
 import com.dh.consultorioOdontologico.model.Endereco;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -26,7 +26,8 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/paciente")
 public class PacienteController {
-    PacienteService pacienteService = new PacienteService();
+    @Autowired
+    PacienteService pacienteService;
 
     @Autowired
     private ModelMapper modelMapper;
