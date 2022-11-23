@@ -6,11 +6,13 @@ import com.dh.consultorioOdontologico.dao.impl.EnderecoDao;
 import com.dh.consultorioOdontologico.dao.impl.PacienteDao;
 import com.dh.consultorioOdontologico.model.Consulta;
 import com.dh.consultorioOdontologico.model.Endereco;
+import org.springframework.stereotype.Service;
 
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class EnderecoService {
     IDao<Endereco> enderecoIDao = new EnderecoDao();
     EnderecoDao enderecoDao = new EnderecoDao();
