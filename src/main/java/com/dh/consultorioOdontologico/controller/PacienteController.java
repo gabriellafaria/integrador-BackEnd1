@@ -1,7 +1,6 @@
 package com.dh.consultorioOdontologico.controller;
 
-import com.dh.consultorioOdontologico.model.Endereco;
-import com.dh.consultorioOdontologico.model.Paciente;
+import com.dh.consultorioOdontologico.entity.Paciente;
 import com.dh.consultorioOdontologico.service.PacienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;

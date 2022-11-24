@@ -2,7 +2,7 @@ package com.dh.consultorioOdontologico.service;
 
 import com.dh.consultorioOdontologico.dao.IDao;
 import com.dh.consultorioOdontologico.dao.impl.PacienteDao;
-import com.dh.consultorioOdontologico.model.Paciente;
+import com.dh.consultorioOdontologico.entity.Paciente;
 import org.springframework.stereotype.Service;
 
 import java.sql.SQLException;

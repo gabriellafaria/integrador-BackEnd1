@@ -1,14 +1,11 @@
 package com.dh.consultorioOdontologico.service;
 
-import com.dh.consultorioOdontologico.model.Endereco;
-import org.junit.jupiter.api.AfterAll;
+import com.dh.consultorioOdontologico.entity.Endereco;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.sql.SQLException;
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class EnderecoServiceTest {
     EnderecoService enderecoService = new EnderecoService();

@@ -1,12 +1,9 @@
 package com.dh.consultorioOdontologico.service;
 
-import com.dh.consultorioOdontologico.model.Dentista;
-import org.junit.jupiter.api.BeforeAll;
+import com.dh.consultorioOdontologico.entity.Dentista;
 import org.junit.jupiter.api.Test;
 
 import java.sql.SQLException;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class DentistaServiceTest {
 

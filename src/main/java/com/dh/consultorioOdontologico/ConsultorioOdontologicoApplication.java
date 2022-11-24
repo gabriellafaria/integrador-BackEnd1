@@ -1,9 +1,9 @@
 package com.dh.consultorioOdontologico;
 
-import com.dh.consultorioOdontologico.model.Consulta;
-import com.dh.consultorioOdontologico.model.Dentista;
-import com.dh.consultorioOdontologico.model.Endereco;
-import com.dh.consultorioOdontologico.model.Paciente;
+import com.dh.consultorioOdontologico.entity.Consulta;
+import com.dh.consultorioOdontologico.entity.Dentista;
+import com.dh.consultorioOdontologico.entity.Endereco;
+import com.dh.consultorioOdontologico.entity.Paciente;
 import com.dh.consultorioOdontologico.service.ConsultaService;
 import com.dh.consultorioOdontologico.service.DentistaService;
 import com.dh.consultorioOdontologico.service.EnderecoService;

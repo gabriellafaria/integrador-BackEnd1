@@ -1,7 +1,6 @@
 package com.dh.consultorioOdontologico.controller;
 
-import com.dh.consultorioOdontologico.model.Consulta;
-import com.dh.consultorioOdontologico.model.Endereco;
+import com.dh.consultorioOdontologico.entity.Consulta;
 import com.dh.consultorioOdontologico.service.ConsultaService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

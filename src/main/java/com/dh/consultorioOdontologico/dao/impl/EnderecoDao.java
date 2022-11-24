@@ -2,8 +2,7 @@ package com.dh.consultorioOdontologico.dao.impl;
 
 import com.dh.consultorioOdontologico.dao.IDao;
 import com.dh.consultorioOdontologico.dao.configuracaoJDBC.ConfiguracaoJDBC;
-import com.dh.consultorioOdontologico.model.Consulta;
-import com.dh.consultorioOdontologico.model.Endereco;
+import com.dh.consultorioOdontologico.entity.Endereco;
 import org.apache.log4j.Logger;
 
 import java.sql.Connection;

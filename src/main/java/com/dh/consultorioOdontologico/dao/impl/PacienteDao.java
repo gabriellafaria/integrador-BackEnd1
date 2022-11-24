@@ -2,14 +2,15 @@ package com.dh.consultorioOdontologico.dao.impl;
 
 import com.dh.consultorioOdontologico.dao.IDao;
 import com.dh.consultorioOdontologico.dao.configuracaoJDBC.ConfiguracaoJDBC;
-import com.dh.consultorioOdontologico.model.Endereco;
-import com.dh.consultorioOdontologico.model.Paciente;
+import com.dh.consultorioOdontologico.entity.Paciente;
 import org.apache.log4j.Logger;
+import org.springframework.stereotype.Repository;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class PacienteDao implements IDao<Paciente> {
     private ConfiguracaoJDBC configuracaoJDBC = new ConfiguracaoJDBC();
     private List<Paciente> pacientes = new ArrayList<>();

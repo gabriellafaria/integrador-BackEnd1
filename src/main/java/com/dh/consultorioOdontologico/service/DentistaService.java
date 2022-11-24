@@ -2,9 +2,8 @@ package com.dh.consultorioOdontologico.service;
 
 import com.dh.consultorioOdontologico.dao.IDao;
 import com.dh.consultorioOdontologico.dao.impl.DentistaDao;
-import com.dh.consultorioOdontologico.model.Dentista;
+import com.dh.consultorioOdontologico.entity.Dentista;
 
-import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
 
