@@ -1,7 +1,6 @@
 package com.dh.consultorioOdontologico.controller;
 
-import com.dh.consultorioOdontologico.model.Consulta;
-import com.dh.consultorioOdontologico.model.Paciente;
+import com.dh.consultorioOdontologico.entity.Paciente;
 import com.dh.consultorioOdontologico.service.PacienteService;
 
 import org.modelmapper.ModelMapper;
@@ -21,7 +20,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.sql.SQLException;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/paciente")
@@ -57,6 +55,8 @@ public class PacienteController {
     public Paciente post(@RequestBody Paciente paciente) throws SQLException {
         return pacienteService.cadastrar(paciente);
     }
+
+}
 
     @PatchMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
