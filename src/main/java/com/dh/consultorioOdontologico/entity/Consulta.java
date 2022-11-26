@@ -16,9 +16,9 @@ public class Consulta {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(nullable = false)
-    private int idPaciente;
+    private Long idPaciente;
     @Column(nullable = false)
-    private int idDentista;
+    private Long idDentista;
     @Column(nullable = false)
     private Timestamp dataConsulta;
 }
