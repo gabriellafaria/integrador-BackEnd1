@@ -4,10 +4,6 @@ import com.dh.consultorioOdontologico.entity.Consulta;
 import com.dh.consultorioOdontologico.entity.Dentista;
 import com.dh.consultorioOdontologico.entity.Endereco;
 import com.dh.consultorioOdontologico.entity.Paciente;
-import com.dh.consultorioOdontologico.service.ConsultaService;
-import com.dh.consultorioOdontologico.service.DentistaService;
-import com.dh.consultorioOdontologico.service.EnderecoService;
-import com.dh.consultorioOdontologico.service.PacienteService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

@@ -27,7 +27,7 @@ public class Paciente {
         this.sobrenome = sobrenome;
         this.rg = rg;
         this.dataRegistro = dataRegistro;
-        this.idEndereco = endereco.getId();
+//        this.idEndereco = endereco.getId();
     }
 
 
