@@ -1,34 +1,35 @@
 package com.dh.consultorioOdontologico.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import java.time.LocalDate;
+import javax.persistence.*;
+import java.sql.Timestamp;
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
+@NoArgsConstructor
 @Entity
 public class Paciente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
+    @Column(nullable = false, length = 100)
     private String nome;
+    @Column(nullable = false, length = 100)
     private String sobrenome;
+    @Column(nullable = false)
     private int idEndereco;
+    @Column(nullable = false, unique = true)
     private String rg;
-    private LocalDate dataRegistro;
+    @Column(nullable = false)
+    private Timestamp dataRegistro;
 
-    public Paciente(String nome, String sobrenome, String rg, LocalDate dataRegistro, Endereco endereco) {
-        this.nome = nome;
-        this.sobrenome = sobrenome;
-        this.rg = rg;
-        this.dataRegistro = dataRegistro;
-        this.idEndereco = endereco.getId();
-    }
-
-
+//    public Paciente(String nome, String sobrenome, String rg, LocalDate dataRegistro, Endereco endereco) {
+//        this.nome = nome;
+//        this.sobrenome = sobrenome;
+//        this.rg = rg;
+//        this.dataRegistro = dataRegistro;
+//        this.idEndereco = endereco.getId();
+//    }
 }
