@@ -1,19 +1,20 @@
 package com.dh.consultorioOdontologico.controller;
 
+import com.dh.consultorioOdontologico.dto.EnderecoDTO;
 import com.dh.consultorioOdontologico.entity.Endereco;
 import com.dh.consultorioOdontologico.service.EnderecoService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import com.dh.consultorioOdontologico.model.Dentista;
 
 import java.sql.SQLException;
+import java.util.List;
 
+@CrossOrigin("*")
 @RestController
 @RequestMapping("/endereco")
 public class EnderecoController {
@@ -21,8 +22,24 @@ public class EnderecoController {
     EnderecoService enderecoService;
 
     @PostMapping()
-    public Endereco post(@RequestBody Endereco endereco) throws SQLException {
-        return enderecoService.cadastrar(endereco);
+    public ResponseEntity salvar(@RequestBody Endereco endereco) {
+        return enderecoService.salvarEndereco(endereco);
+    }
+
+    @GetMapping("/buscar")
+    public List<EnderecoDTO> buscarEnderecos(){
+        return enderecoService.buscarTodosEnderecos();
+    }
+
+    @GetMapping()
+    public ResponseEntity buscarPorId(@RequestParam("id") Long id){
+        return enderecoService.buscarEnderecoPorId(id);
+    }
+
+
+    @DeleteMapping()
+    public ResponseEntity deletarEndereco(@RequestParam("id") Long id){
+        return enderecoService.deletarEndereco(id);
     }
 
 }
