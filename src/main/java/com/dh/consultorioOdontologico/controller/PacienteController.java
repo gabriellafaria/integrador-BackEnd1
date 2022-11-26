@@ -3,25 +3,11 @@ package com.dh.consultorioOdontologico.controller;
 import com.dh.consultorioOdontologico.entity.Paciente;
 import com.dh.consultorioOdontologico.entity.dto.PacienteDTO;
 import com.dh.consultorioOdontologico.service.PacienteService;
-
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import com.dh.consultorioOdontologico.dao.impl.PacienteDao;
-import com.dh.consultorioOdontologico.service.ConsultaService;
 import org.springframework.web.bind.annotation.*;
-import java.sql.SQLException;
-import java.util.List;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.server.ResponseStatusException;
 
-import java.sql.SQLException;
-import java.util.Optional;
+import java.util.List;
 
 @RestController
 @RequestMapping("/paciente")

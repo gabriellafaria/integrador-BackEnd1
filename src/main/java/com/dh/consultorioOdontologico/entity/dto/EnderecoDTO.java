@@ -1,4 +1,4 @@
-package com.dh.consultorioOdontologico.dto;
+package com.dh.consultorioOdontologico.entity.dto;
 
 
 import com.dh.consultorioOdontologico.entity.Endereco;
