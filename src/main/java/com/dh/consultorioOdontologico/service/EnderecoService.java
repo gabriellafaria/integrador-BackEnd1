@@ -1,11 +1,10 @@
 package com.dh.consultorioOdontologico.service;
 
 
-import com.dh.consultorioOdontologico.dto.EnderecoDTO;
+import com.dh.consultorioOdontologico.entity.dto.EnderecoDTO;
 import com.dh.consultorioOdontologico.entity.Endereco;
 import com.dh.consultorioOdontologico.repository.EnderecoRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
