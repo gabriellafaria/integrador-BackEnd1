@@ -16,5 +16,4 @@ public class ConsultaDTO {
     private Long idDentista;
     private Timestamp dataConsulta;
 
-    p
 }
