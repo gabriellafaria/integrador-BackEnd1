@@ -1,22 +1,22 @@
 package com.dh.consultorioOdontologico.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import javax.persistence.*;
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
+//@Table(name="Dentista")  -> não precisa porque o nome da tabela é o mesmo da classe
 public class Dentista {
-
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    @Column(nullable = false, length = 100)
     private String nome;
+    @Column(nullable = false, length = 100)
     private String sobrenome;
+    @Column(nullable = false, unique = true)
     private int matricula;
-
-    public Dentista(String nome, String sobrenome, int matricula) {
-        this.nome = nome;
-        this.sobrenome = sobrenome;
-        this.matricula = matricula;
-    }
 }
