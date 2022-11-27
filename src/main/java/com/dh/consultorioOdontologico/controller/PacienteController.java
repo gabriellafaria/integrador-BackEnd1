@@ -30,6 +30,7 @@ public class PacienteController {
         return pacienteService.salvar(paciente);
     }
 
+    //e se já fizer direto pelo rg??? by Sa
     @DeleteMapping()
     public ResponseEntity deletar(@RequestParam("id") Long id){
         return pacienteService.deletar(id);
