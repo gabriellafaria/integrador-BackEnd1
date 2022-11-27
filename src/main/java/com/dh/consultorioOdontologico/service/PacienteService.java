@@ -40,6 +40,7 @@ public class PacienteService {
         }
     }
 
+    //e se já fizer direto pelo rg??? by Sa
     public ResponseEntity deletar(Long id){
        Optional<Paciente> paciente = pacienteRepository.findById(id);
        if(paciente.isEmpty())
@@ -55,6 +56,7 @@ public class PacienteService {
         if(paciente.isEmpty())
             return new ResponseEntity("Paciente com o rg " + rg + " não encontrado", HttpStatus.BAD_REQUEST);
 
+        //Acho que aqui o status é "OK" - by Sa
         PacienteDTO pacienteDTO = mapper.convertValue(paciente.get(), PacienteDTO.class);
         return new ResponseEntity(pacienteDTO, HttpStatus.CREATED);
     }

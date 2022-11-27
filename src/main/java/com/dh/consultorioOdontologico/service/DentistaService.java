@@ -1,26 +1,57 @@
-//package com.dh.consultorioOdontologico.service;
-//
-//import com.dh.consultorioOdontologico.dao.IDao;
-//import com.dh.consultorioOdontologico.dao.impl.DentistaDao;
-//import com.dh.consultorioOdontologico.entity.Dentista;
-//
-//import java.sql.SQLException;
-//import java.util.List;
-//
-//public class DentistaService {
-//
-//    public Dentista cadastrar(Dentista dentista) throws SQLException{
-//        IDao<Dentista> dentistaIDao = new DentistaDao();
-//        return dentistaIDao.cadastrar(dentista);
-//    }
-//
-//    public List<Dentista> buscarDentistas() throws SQLException{
-//        DentistaDao dentistaDao = new DentistaDao();
-//        return dentistaDao.buscarTodos();
-//    }
-//
-//    public List<Dentista> buscarDentistaPorMatricula(Integer matricula) throws SQLException {
-//        DentistaDao dentistaDao = new DentistaDao();
-//        return dentistaDao.buscarPorMatricula(matricula);
-//    }
-//}
+package com.dh.consultorioOdontologico.service;
+
+import com.dh.consultorioOdontologico.entity.Dentista;
+import com.dh.consultorioOdontologico.entity.dto.DentistaDTO;
+import com.dh.consultorioOdontologico.repository.DentistaRepository;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+@Service
+public class DentistaService {
+    @Autowired
+    DentistaRepository dentistaRepository;
+
+    public List<DentistaDTO> buscar(){
+        List<Dentista> dentistaList = dentistaRepository.findAll();
+        List<DentistaDTO> dentistaDTOList = new ArrayList<>();
+        ObjectMapper mapper = new ObjectMapper();
+        for(Dentista dentista: dentistaList){
+            dentistaDTOList.add(mapper.convertValue(dentista, DentistaDTO.class));
+        }
+        return dentistaDTOList;
+    }
+
+    public ResponseEntity salvar(Dentista dentista){
+        try{
+            Dentista dentistaSalvo = dentistaRepository.save(dentista);
+            return new ResponseEntity("Dentista " + dentistaSalvo.getNome() + " criado com sucesso!", HttpStatus.CREATED);
+        }catch (Exception e){
+            return new ResponseEntity("Erro ao cadastrar Dentista", HttpStatus.BAD_REQUEST);
+        }
+    }
+
+   public ResponseEntity buscarPorMatricula(int matricula){
+        ObjectMapper mapper = new ObjectMapper();
+        Optional<Dentista> dentista = Optional.ofNullable(dentistaRepository.findByMatricula(matricula));
+        if(dentista.isEmpty())
+            return new ResponseEntity("Dentista com matrícula " + matricula + " não encontrado.", HttpStatus.NOT_FOUND);
+
+        DentistaDTO dentistaDTO = mapper.convertValue(dentista.get(), DentistaDTO.class);
+        return new ResponseEntity(dentistaDTO, HttpStatus.CREATED);
+   }
+
+    public ResponseEntity deletar(int matricula){
+        Optional<Dentista> dentista = Optional.ofNullable(dentistaRepository.findByMatricula(matricula));
+        if(dentista.isEmpty())
+            return new ResponseEntity<>("Matrícula inexistente.", HttpStatus.BAD_REQUEST);
+
+        dentistaRepository.deleteById(dentista.get().getId());
+        return new ResponseEntity("Dentista deletado com sucesso!", HttpStatus.OK);
+    }
+}
