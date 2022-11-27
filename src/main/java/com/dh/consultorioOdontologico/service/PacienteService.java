@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.sql.Timestamp;
 import java.time.Instant;
@@ -40,13 +42,12 @@ public class PacienteService {
         }
     }
 
-    //e se já fizer direto pelo rg??? by Sa
-    public ResponseEntity deletar(Long id){
-       Optional<Paciente> paciente = pacienteRepository.findById(id);
+    public ResponseEntity deletar(String  rg){
+       Optional<Paciente> paciente = Optional.ofNullable(pacienteRepository.findByRg(rg));
        if(paciente.isEmpty())
            return new ResponseEntity<>("Id do paciente não existe!", HttpStatus.BAD_REQUEST);
 
-       pacienteRepository.deleteById(id);
+       pacienteRepository.deleteById(paciente.get().getId());
         return new ResponseEntity("Paciente delatado com sucesso!", HttpStatus.OK);
     }
 
@@ -56,9 +57,8 @@ public class PacienteService {
         if(paciente.isEmpty())
             return new ResponseEntity("Paciente com o rg " + rg + " não encontrado", HttpStatus.BAD_REQUEST);
 
-        //Acho que aqui o status é "OK" - by Sa
         PacienteDTO pacienteDTO = mapper.convertValue(paciente.get(), PacienteDTO.class);
-        return new ResponseEntity(pacienteDTO, HttpStatus.CREATED);
+        return new ResponseEntity(pacienteDTO, HttpStatus.OK);
     }
 
     /*private IDao<Paciente> pacienteIDao = new PacienteDao();
