@@ -1,25 +1,38 @@
-//package com.dh.consultorioOdontologico.controller;
-//
-//import com.dh.consultorioOdontologico.entity.Dentista;
-//import com.dh.consultorioOdontologico.service.DentistaService;
-//import org.springframework.web.bind.annotation.PostMapping;
-//import org.springframework.web.bind.annotation.RequestBody;
-//import org.springframework.web.bind.annotation.RequestMapping;
-//import org.springframework.web.bind.annotation.RestController;
-//
-//import java.sql.SQLException;
-//
-//@RestController
-//@RequestMapping("/dentista")
-//
-//public class DentistaController {
-//    DentistaService dentistaService = new DentistaService();
-//
-//
-//    @PostMapping()
-//    public Dentista post(@RequestBody Dentista dentista) throws SQLException {
-//        return dentistaService.cadastrar(dentista);
-//    }
-//
-//
-//}
+package com.dh.consultorioOdontologico.controller;
+
+import com.dh.consultorioOdontologico.entity.Dentista;
+import com.dh.consultorioOdontologico.entity.dto.DentistaDTO;
+import com.dh.consultorioOdontologico.service.DentistaService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/dentista")
+public class DentistaController {
+    @Autowired
+    DentistaService dentistaService;
+
+    @GetMapping()
+    public List<DentistaDTO> buscar(){
+        return dentistaService.buscar();
+    }
+
+    @GetMapping("/buscarMatricula/{matricula}")
+    public ResponseEntity buscarPorMatricula (@PathVariable int matricula){
+        return dentistaService.buscarPorMatricula(matricula);
+    }
+
+    @PostMapping
+    public ResponseEntity salvar (@RequestBody Dentista dentista){
+        return dentistaService.salvar(dentista);
+    }
+
+    @DeleteMapping
+    public ResponseEntity deletar(@RequestParam("matricula") int matricula){
+        return dentistaService.deletar(matricula);
+    }
+
+}
