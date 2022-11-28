@@ -12,8 +12,8 @@ import java.sql.Timestamp;
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ConsultaDTO {
-    private Long idPaciente;
-    private Long idDentista;
+    private String rgPaciente;
+    private int matriculaDentista;
     private Timestamp dataConsulta;
 
 }
