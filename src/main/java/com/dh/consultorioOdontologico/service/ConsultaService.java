@@ -3,6 +3,8 @@ package com.dh.consultorioOdontologico.service;
 import com.dh.consultorioOdontologico.entity.Consulta;
 import com.dh.consultorioOdontologico.entity.dto.ConsultaDTO;
 import com.dh.consultorioOdontologico.repository.ConsultaRepository;
+import com.dh.consultorioOdontologico.repository.DentistaRepository;
+import com.dh.consultorioOdontologico.repository.PacienteRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,9 +18,17 @@ import java.util.List;
 public class ConsultaService {
     @Autowired
     ConsultaRepository repository;
+    @Autowired
+    PacienteRepository pacienteRepository;
+    @Autowired
+    DentistaRepository dentistaRepository;
 
     public ResponseEntity salvar(Consulta consulta){
         try {
+            if(pacienteRepository.findByRg(consulta.getRgPaciente()) == null){
+                return new ResponseEntity("Não há paciente com o RG: " + consulta.getRgPaciente() + " cadastrado no sistema.", HttpStatus.BAD_REQUEST);
+            }
+            //fazer a validaçao para o dentista
             Consulta consultaSalva = repository.save(consulta);
             return new ResponseEntity("Consulta do RG: " + consulta.getRgPaciente() + "e matricula: " + consulta.getMatriculaDentista() + " salvo.", HttpStatus.CREATED);
         } catch (Exception e){
@@ -26,7 +36,7 @@ public class ConsultaService {
         }
     }
 
-    public List<ConsultaDTO> buscar() {
+    public List<ConsultaDTO> buscarTodasConsultas() {
         List<Consulta> listaConsulta = repository.findAll();
         List<ConsultaDTO> listaConsultaDTO = new ArrayList<>();
         ObjectMapper mapper = new ObjectMapper();
@@ -36,4 +46,15 @@ public class ConsultaService {
         }
         return listaConsultaDTO;
     }
+
+//    public List<ConsultaDTO> findConsultByRg(String rgPaciente){
+//        List<Consulta> listaConsulta = repository.findAllByRg(rgPaciente);
+//        List<ConsultaDTO> listaConsultaDTO = new ArrayList<>();
+//        ObjectMapper mapper = new ObjectMapper();
+//        for(Consulta consulta : listaConsulta){
+//            ConsultaDTO consultaDTO = mapper.convertValue(consulta, ConsultaDTO.class);
+//            listaConsultaDTO.add(consultaDTO);
+//        }
+//        return listaConsultaDTO;
+//    }
 }
