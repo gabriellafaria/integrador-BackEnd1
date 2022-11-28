@@ -11,7 +11,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/consulta")
-
 public class ConsultaController {
     @Autowired
     ConsultaService service;
@@ -21,8 +20,14 @@ public class ConsultaController {
         return service.salvar(consulta);
     }
 
-    @GetMapping()
-    public List<ConsultaDTO> buscarConsultas(){
-        return service.buscar();
+    @GetMapping("/buscar_todas_consultas")
+    public List<ConsultaDTO> buscarTodasConsultas(){
+        return service.buscarTodasConsultas();
     }
+
+//    @GetMapping("/buscar_por_rg/{rgPaciente}")
+//    public List<ConsultaDTO> buscarConsultaPorRg(@PathVariable String rgPaciente){
+//        return service.findConsultByRg(rgPaciente);
+//    }
+
 }
