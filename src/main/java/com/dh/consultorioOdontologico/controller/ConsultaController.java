@@ -13,17 +13,20 @@ import java.util.List;
 @RequestMapping("/consulta")
 public class ConsultaController {
     @Autowired
-    ConsultaService service;
+    ConsultaService consultaService;
 
     @PostMapping()
     public ResponseEntity salvar(@RequestBody Consulta consulta){
-        return service.salvar(consulta);
+        return consultaService.salvar(consulta);
     }
 
     @GetMapping("/buscar_todas_consultas")
     public List<ConsultaDTO> buscarTodasConsultas(){
-        return service.buscarTodasConsultas();
+        return consultaService.buscarTodasConsultas();
     }
+
+    @DeleteMapping
+    public ResponseEntity deletar(@RequestBody Consulta consulta) { return consultaService.deletar(consulta); }
 
 //    @GetMapping("/buscar_por_rg/{rgPaciente}")
 //    public List<ConsultaDTO> buscarConsultaPorRg(@PathVariable String rgPaciente){
