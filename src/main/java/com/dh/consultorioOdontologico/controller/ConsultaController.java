@@ -5,6 +5,7 @@ import com.dh.consultorioOdontologico.entity.dto.ConsultaDTO;
 import com.dh.consultorioOdontologico.service.ConsultaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,7 +17,7 @@ public class ConsultaController {
     ConsultaService consultaService;
 
     @PostMapping()
-    public ResponseEntity salvar(@RequestBody Consulta consulta){
+    public ResponseEntity salvar(@RequestBody @Validated Consulta consulta){
         return consultaService.salvar(consulta);
     }
 
@@ -26,7 +27,7 @@ public class ConsultaController {
     }
 
     @DeleteMapping
-    public ResponseEntity deletar(@RequestBody Consulta consulta) { return consultaService.deletar(consulta); }
+    public ResponseEntity deletar(@RequestBody @Validated Consulta consulta) { return consultaService.deletar(consulta); }
 
 //    @GetMapping("/buscar_por_rg/{rgPaciente}")
 //    public List<ConsultaDTO> buscarConsultaPorRg(@PathVariable String rgPaciente){
