@@ -3,14 +3,19 @@
 
 <h1> Trabalho Integrador | Back End I | Certified Tech Developer | Digital House</h1> 
 <p>
+
+Colaboradores: 
 <a href="https://www.linkedin.com/in/evertonpdasilva/" target="_blank" rel="noopener noreferrer">Everton Silva</a> |
 <a href="https://www.linkedin.com/in/felipe-stefani-a35185116/" target="_blank" rel="noopener noreferrer">Felipe Stefani</a> |
 <a href="https://www.linkedin.com/in/gabriella-faria-3665a11b8/" target="_blank" rel="noopener noreferrer">Gabriella Faria</a> |
- <a href="#" target="_blank" rel="noopener noreferrer">Juliana Ruama</a> | 
  <a href="https://www.linkedin.com/in/mariana-de-moraes-orsi-762165224/" target="_blank" rel="noopener noreferrer">Mariana Orsi</a> | 
- <a href="https://www.linkedin.com/in/sabrina-freiberger/" target="_blank" rel="noopener noreferrer">Sabrina Freiberger</a> | 
- <a href="https://www.linkedin.com/in/roger-ricco-rogerio-p-silva-5a888060/" target="_blank" rel="noopener noreferrer">Rogério P. Silva</a>
- </p></div>
+ <a href="https://www.linkedin.com/in/sabrina-freiberger/" target="_blank" rel="noopener noreferrer">Sabrina Freiberger</a>
+ 
+Expectadores: <a href="#" target="_blank" rel="noopener noreferrer">Juliana Ruama</a> |
+<a href="https://www.linkedin.com/in/roger-ricco-rogerio-p-silva-5a888060/" target="_blank" rel="noopener noreferrer">Rogério P. Silva</a>
+
+
+</p></div>
  
  <h1>Sistema de reserva de consultas</h1>
  <h2>Proposta</h2>
