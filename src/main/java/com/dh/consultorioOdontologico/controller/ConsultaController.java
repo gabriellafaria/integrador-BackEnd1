@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -17,7 +18,7 @@ public class ConsultaController {
     ConsultaService consultaService;
 
     @PostMapping()
-    public ResponseEntity salvar(@RequestBody @Validated Consulta consulta){
+    public ResponseEntity salvar(@RequestBody @Valid Consulta consulta){
         return consultaService.salvar(consulta);
     }
 
@@ -27,7 +28,7 @@ public class ConsultaController {
     }
 
     @DeleteMapping
-    public ResponseEntity deletar(@RequestBody @Validated Consulta consulta) { return consultaService.deletar(consulta); }
+    public ResponseEntity deletar(@RequestBody @Valid Consulta consulta) { return consultaService.deletar(consulta); }
 
 //    @GetMapping("/buscar_por_rg/{rgPaciente}")
 //    public List<ConsultaDTO> buscarConsultaPorRg(@PathVariable String rgPaciente){
