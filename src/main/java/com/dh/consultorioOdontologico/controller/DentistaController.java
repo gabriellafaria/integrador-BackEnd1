@@ -36,6 +36,11 @@ public class DentistaController {
         return dentistaService.patchDentista(dentistaDTO);
     }
 
+    @PutMapping()
+    public ResponseEntity putDentista(@RequestBody @Valid DentistaDTO dentistaDTO){
+        return dentistaService.putDentista(dentistaDTO);
+    }
+
     @DeleteMapping
     public ResponseEntity deletar(@RequestParam("matricula") int matricula){
         return dentistaService.deletar(matricula);

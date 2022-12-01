@@ -57,6 +57,23 @@ public class DentistaService {
         return new ResponseEntity(dentistaModificado, HttpStatus.OK);
     }
 
+    public ResponseEntity putDentista(DentistaDTO dentistaDTO){
+        ObjectMapper mapper = new ObjectMapper();
+        log.info("Localizando Dentista com matrícula " + dentistaDTO.getMatricula() + "...");
+        Optional<Dentista> dentistaOptional = Optional.ofNullable(dentistaRepository.findByMatricula(dentistaDTO.getMatricula()));
+        if(dentistaOptional.isEmpty())
+            return new ResponseEntity("Matrícula inexistente", HttpStatus.NOT_FOUND);
+        Dentista dentista = dentistaOptional.get();
+        if (dentistaDTO.getNome() != null)
+            dentista.setNome(dentistaDTO.getNome());
+        if (dentistaDTO.getSobrenome() != null)
+            dentista.setSobrenome(dentistaDTO.getSobrenome());
+
+        DentistaDTO dentistaEditado = mapper.convertValue(dentistaRepository.save(dentista), DentistaDTO.class);
+        log.info("Cadastro do Dentista com matrícula: " + dentista.getMatricula() + ", alterado com sucesso.");
+        return new ResponseEntity(dentistaEditado, HttpStatus.OK);
+    }
+
    public ResponseEntity buscarPorMatricula(int matricula){
         ObjectMapper mapper = new ObjectMapper();
         Optional<Dentista> dentista = Optional.ofNullable(dentistaRepository.findByMatricula(matricula));
