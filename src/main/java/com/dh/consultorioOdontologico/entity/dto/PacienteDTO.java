@@ -8,8 +8,9 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.beans.factory.annotation.Autowired;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 import java.sql.Timestamp;
 import java.util.Optional;
 
@@ -19,10 +20,14 @@ import java.util.Optional;
 @AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class PacienteDTO {
+    @NotBlank
     private String nome;
     private String sobrenome;
-    private EnderecoDTO enderecoDTO;
+    @Size(min= 6, max = 15, message = "O tamanho do campo deve ser maior que 6 e menor que 15.")
     private String rg;
+
+    private EnderecoDTO enderecoDTO;
+
     private Timestamp dataRegistro;
 
    public EnderecoDTO setEndereco(Endereco endereco){
