@@ -27,8 +27,13 @@ public class DentistaController {
     }
 
     @PostMapping
-    public ResponseEntity salvar (@RequestBody Dentista dentista){
+    public ResponseEntity salvar (@RequestBody @Valid Dentista dentista){
         return dentistaService.salvar(dentista);
+    }
+
+    @PatchMapping()
+    public ResponseEntity patchDentista(@RequestBody @Valid DentistaDTO dentistaDTO){
+        return dentistaService.patchDentista(dentistaDTO);
     }
 
     @DeleteMapping

@@ -38,6 +38,25 @@ public class DentistaService {
         }
     }
 
+    public ResponseEntity patchDentista(DentistaDTO dentistaDTO){
+        ObjectMapper mapper = new ObjectMapper();
+        Optional<Dentista> dentistaOptional = Optional.ofNullable(dentistaRepository.findByMatricula(dentistaDTO.getMatricula()));
+        if(dentistaOptional.isEmpty()){
+            return new ResponseEntity("Matrícula inexistente.", HttpStatus.NOT_FOUND);
+        }
+        Dentista dentista = dentistaOptional.get();
+        if (dentistaDTO.getNome() != null){
+            dentista.setNome(dentistaDTO.getNome());
+        }
+        if (dentistaDTO.getSobrenome() != null) {
+            dentista.setSobrenome(dentistaDTO.getSobrenome());
+        }
+
+        DentistaDTO dentistaModificado = mapper.convertValue(dentistaRepository.save(dentista), DentistaDTO.class);
+
+        return new ResponseEntity(dentistaModificado, HttpStatus.OK);
+    }
+
    public ResponseEntity buscarPorMatricula(int matricula){
         ObjectMapper mapper = new ObjectMapper();
         Optional<Dentista> dentista = Optional.ofNullable(dentistaRepository.findByMatricula(matricula));
