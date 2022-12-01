@@ -1,10 +1,8 @@
 package com.dh.consultorioOdontologico.entity;
 
-import com.sun.istack.NotNull;
 import lombok.*;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
 
 @Getter
 @Setter
@@ -16,7 +14,6 @@ public class Dentista {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     @NotBlank
 
     @Column(nullable = false, length = 100)
