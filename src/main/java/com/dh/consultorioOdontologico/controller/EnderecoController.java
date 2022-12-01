@@ -35,6 +35,11 @@ public class EnderecoController {
         return enderecoService.buscarEnderecoPorId(id);
     }
 
+    @PatchMapping()
+    public ResponseEntity alterarParcial(@RequestBody Endereco endereco){
+        return enderecoService.alterarParcial(endereco);
+    }
+
 
     @DeleteMapping()
     public ResponseEntity deletarEndereco(@RequestParam("id") Long id){

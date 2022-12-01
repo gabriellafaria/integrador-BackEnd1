@@ -50,6 +50,30 @@ public class EnderecoService {
         return new ResponseEntity("Endereço encontrado com sucesso", HttpStatus.OK);
     }
 
+    public ResponseEntity alterarParcial(Endereco endereco) {
+        ObjectMapper mapper = new ObjectMapper();
+        Optional<Endereco> enderecoOptional = repository.findById(endereco.getId());
+        if (enderecoOptional.isEmpty()) {
+            return new ResponseEntity("O endereco informado não existe",HttpStatus.NOT_FOUND);
+        }
+        Endereco atualizandoDados = enderecoOptional.get();
+        if (endereco.getRua() != null) {
+            atualizandoDados.setRua((endereco.getRua()));
+        }
+        if (endereco.getNumero() != 0 ){
+            atualizandoDados.setNumero(endereco.getNumero());
+        }
+        if (endereco.getSiglaEstado() != null) {
+            atualizandoDados.setSiglaEstado(endereco.getSiglaEstado());
+        }
+        if (endereco.getCidade() != null) {
+            atualizandoDados.setCidade(endereco.getCidade());
+        }
+
+        Endereco enderecoAlterado = mapper.convertValue(repository.save(atualizandoDados), Endereco.class);
+
+        return new ResponseEntity(enderecoAlterado, HttpStatus.CREATED);
+    }
 
     public ResponseEntity deletarEndereco(Long id) {
         Optional<Endereco> endereco = repository.findById(id);
