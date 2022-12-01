@@ -9,5 +9,4 @@ class ConsultorioOdontologicoApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }
