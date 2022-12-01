@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -26,8 +27,13 @@ public class DentistaController {
     }
 
     @PostMapping
-    public ResponseEntity salvar (@RequestBody Dentista dentista){
+    public ResponseEntity salvar (@RequestBody @Valid Dentista dentista){
         return dentistaService.salvar(dentista);
+    }
+
+    @PatchMapping()
+    public ResponseEntity patchDentista(@RequestBody @Valid DentistaDTO dentistaDTO){
+        return dentistaService.patchDentista(dentistaDTO);
     }
 
     @DeleteMapping
