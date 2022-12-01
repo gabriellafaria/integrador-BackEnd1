@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -35,6 +36,15 @@ public class PacienteController {
         return pacienteService.deletar(rg);
     }
 
+    @PatchMapping()
+    public ResponseEntity alterarParcialmente(@RequestBody @Valid PacienteDTO pacienteDTO){
+        return pacienteService.alterarParcialmente(pacienteDTO);
+    }
+
+    @PutMapping()
+    public ResponseEntity alterarTudo(@RequestBody @Valid PacienteDTO pacienteDTO){
+        return pacienteService.alterarTudo(pacienteDTO);
+    }
 /*    @Autowired
     private ModelMapper modelMapper;
 
