@@ -111,10 +111,10 @@ public class PacienteService {
             paciente.getEndereco().setCidade(pacienteDTO.getEnderecoDTO().getCidade());
         else
             paciente.getEndereco().getCidade();
-        if(pacienteDTO.getEnderecoDTO().getSiglaEstado() != null)
-            paciente.getEndereco().setSiglaEstado(pacienteDTO.getEnderecoDTO().getSiglaEstado());
+        if(pacienteDTO.getEnderecoDTO().getEstado() != null)
+            paciente.getEndereco().setEstado(pacienteDTO.getEnderecoDTO().getEstado());
         else
-            paciente.getEndereco().getSiglaEstado();
+            paciente.getEndereco().getEstado();
 
         PacienteDTO pacienteAlt = mapper.convertValue(pacienteRepository.save(paciente), PacienteDTO.class);
         logger.info("Paciente alterado com sucesso!");
@@ -138,8 +138,8 @@ public class PacienteService {
             paciente.getEndereco().setNumero(pacienteDTO.getEnderecoDTO().getNumero());
         if(pacienteDTO.getEnderecoDTO().getCidade() != null)
             paciente.getEndereco().setCidade(pacienteDTO.getEnderecoDTO().getCidade());
-        if(pacienteDTO.getEnderecoDTO().getSiglaEstado() != null)
-            paciente.getEndereco().setSiglaEstado(pacienteDTO.getEnderecoDTO().getSiglaEstado());
+        if(pacienteDTO.getEnderecoDTO().getEstado() != null)
+            paciente.getEndereco().setEstado(pacienteDTO.getEnderecoDTO().getEstado());
 
         PacienteDTO pacienteAlt = mapper.convertValue(pacienteRepository.save(paciente), PacienteDTO.class);
         logger.info("Paciente alterado com sucesso!");
