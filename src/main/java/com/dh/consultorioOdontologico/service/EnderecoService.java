@@ -74,8 +74,8 @@ public class EnderecoService {
             atualizandoDados.setNumero(enderecoDTO.getNumero());
         if (enderecoDTO.getCidade() != null)
             atualizandoDados.setCidade(enderecoDTO.getCidade());
-        if (enderecoDTO.getSiglaEstado() != null)
-            atualizandoDados.setSiglaEstado(enderecoDTO.getSiglaEstado());
+        if (enderecoDTO.getEstado() != null)
+            atualizandoDados.setEstado(enderecoDTO.getEstado());
 
         EnderecoDTO enderecoAlterado = mapper.convertValue(repository.save(atualizandoDados), EnderecoDTO.class);
         logger.info("Endereço atualizado com sucesso.");
@@ -95,10 +95,10 @@ public class EnderecoService {
             atualizandoDados.setRua((enderecoDTO.getRua()));
         if (enderecoDTO.getNumero() != 0 )
             atualizandoDados.setNumero(enderecoDTO.getNumero());
-        if (enderecoDTO.getSiglaEstado() != null)
-            atualizandoDados.setSiglaEstado(enderecoDTO.getSiglaEstado());
         if (enderecoDTO.getCidade() != null)
             atualizandoDados.setCidade(enderecoDTO.getCidade());
+        if (enderecoDTO.getEstado() != null)
+            atualizandoDados.setEstado(enderecoDTO.getEstado());
 
         Endereco enderecoAlterado = mapper.convertValue(repository.save(atualizandoDados), Endereco.class);
         logger.info("O endereço foi atualizado com sucesso.");
