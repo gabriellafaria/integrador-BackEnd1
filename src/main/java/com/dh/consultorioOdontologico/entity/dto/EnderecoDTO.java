@@ -19,7 +19,7 @@ public class EnderecoDTO {
     private String rua;
     private int numero;
     private String cidade;
-    private String SiglaEstado;
+    private String estado;
 
 //    public EnderecoDTO(Endereco endereco) {
 //    }
