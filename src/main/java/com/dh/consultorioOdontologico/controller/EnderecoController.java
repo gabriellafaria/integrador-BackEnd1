@@ -36,8 +36,8 @@ public class EnderecoController {
     }
 
     @PatchMapping()
-    public ResponseEntity alterarParcial(@RequestBody Endereco endereco){
-        return enderecoService.alterarParcial(endereco);
+    public ResponseEntity alterarParcial(@RequestBody EnderecoDTO enderecoDTO){
+        return enderecoService.alterarParcial(enderecoDTO);
     }
 
 
