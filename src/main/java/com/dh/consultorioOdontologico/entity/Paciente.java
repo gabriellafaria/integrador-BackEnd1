@@ -1,6 +1,10 @@
 package com.dh.consultorioOdontologico.entity;
 
+import com.dh.consultorioOdontologico.entity.dto.EnderecoDTO;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.*;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -13,6 +17,7 @@ import java.sql.Timestamp;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Paciente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -38,4 +43,9 @@ public class Paciente {
         this.endereco = endereco;
         this.dataRegistro = dataRegistro;
     }*/
+
+   public Endereco setEndereco(EnderecoDTO enderecoDTO){
+       ObjectMapper mapper = new ObjectMapper();
+       return this.endereco = mapper.convertValue(enderecoDTO, Endereco.class);
+   }
 }
