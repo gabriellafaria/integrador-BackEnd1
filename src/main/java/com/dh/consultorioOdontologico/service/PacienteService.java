@@ -42,13 +42,15 @@ public class PacienteService {
         return pacienteDTOList;
     }
 
-    public ResponseEntity salvar(Paciente paciente){
+    public ResponseEntity salvar(PacienteDTO pacienteDTO){
+         ObjectMapper mapper = new ObjectMapper();
         try{
             logger.info("Iniciando operação para salvar o paciente.");
+            EnderecoDTO enderecoDTO = pacienteDTO.getEnderecoDTO();
+            enderecoService.salvarEndereco(enderecoDTO);
+            Paciente paciente = mapper.convertValue(pacienteDTO, Paciente.class);
             paciente.setDataRegistro(Timestamp.from(Instant.now()));
             Paciente pacienteSalvo = pacienteRepository.save(paciente);
-            Endereco endereco = pacienteSalvo.getEndereco();
-            enderecoService.salvarEndereco(endereco);
             logger.info("Paciente " + pacienteSalvo.getNome() + " salvo com sucesso.");
             return new ResponseEntity("Paciente " + pacienteSalvo.getNome() + " criado com sucesso!", HttpStatus.CREATED);
         } catch (Exception e) {
