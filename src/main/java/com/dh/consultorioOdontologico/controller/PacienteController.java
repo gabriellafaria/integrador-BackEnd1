@@ -27,7 +27,7 @@ public class PacienteController {
     }
 
     @PostMapping
-    public ResponseEntity salvar(@RequestBody Paciente paciente){
+    public ResponseEntity salvar(@RequestBody PacienteDTO paciente){
         return pacienteService.salvar(paciente);
     }
 
