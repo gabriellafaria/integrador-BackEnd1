@@ -24,6 +24,6 @@ public class Endereco {
     @Column(nullable = false, length = 50)
     private String cidade;
     @Column(nullable = false, length = 2)
-    private String siglaEstado;
+    private String estado;
 
 }
