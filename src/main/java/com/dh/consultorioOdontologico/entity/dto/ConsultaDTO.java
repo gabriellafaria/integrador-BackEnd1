@@ -15,5 +15,4 @@ public class ConsultaDTO {
     private String rgPaciente;
     private int matriculaDentista;
     private Timestamp dataConsulta;
-
 }
