@@ -44,8 +44,8 @@ public class Paciente {
         this.dataRegistro = dataRegistro;
     }*/
 
-   public Endereco setEndereco(EnderecoDTO enderecoDTO){
+  /* public Endereco setEndereco(EnderecoDTO enderecoDTO){
        ObjectMapper mapper = new ObjectMapper();
        return this.endereco = mapper.convertValue(enderecoDTO, Endereco.class);
-   }
+   }*/
 }
