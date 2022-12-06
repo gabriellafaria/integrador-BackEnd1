@@ -21,7 +21,7 @@ public class EnderecoController {
     EnderecoService enderecoService;
 
     @PostMapping()
-    public ResponseEntity salvar(@RequestBody Endereco endereco) {
+    public ResponseEntity salvar(@RequestBody EnderecoDTO endereco) {
         return enderecoService.salvarEndereco(endereco);
     }
 
