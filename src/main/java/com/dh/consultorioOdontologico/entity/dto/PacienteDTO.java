@@ -1,7 +1,6 @@
 package com.dh.consultorioOdontologico.entity.dto;
 
 import com.dh.consultorioOdontologico.entity.Endereco;
-import com.dh.consultorioOdontologico.service.EnderecoService;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
@@ -9,10 +8,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.persistence.OneToOne;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.sql.Timestamp;
-import java.util.Optional;
 
 @Getter
 @Setter
@@ -30,7 +29,7 @@ public class PacienteDTO {
 
     private Timestamp dataRegistro;
 
-   public EnderecoDTO setEndereco(Endereco endereco){
+   public EnderecoDTO setEnderecoDTO(Endereco endereco){
         ObjectMapper mapper = new ObjectMapper();
         return this.enderecoDTO = mapper.convertValue(endereco, EnderecoDTO.class);
    }
