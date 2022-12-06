@@ -23,11 +23,11 @@ public class EnderecoDTO {
 
 //    public EnderecoDTO(Endereco endereco) {
 //    }
-    @Autowired
+   /* @Autowired
     private EnderecoDTO enderecoDTO;
 
     public EnderecoDTO setEndereco(Endereco endereco){
         ObjectMapper mapper = new ObjectMapper();
         return this.enderecoDTO = mapper.convertValue(endereco, EnderecoDTO.class);
-    }
+    }*/
 }
