@@ -4,6 +4,7 @@ import com.dh.consultorioOdontologico.entity.Endereco;
 import com.dh.consultorioOdontologico.entity.Paciente;
 import com.dh.consultorioOdontologico.entity.dto.EnderecoDTO;
 import com.dh.consultorioOdontologico.entity.dto.PacienteDTO;
+import com.dh.consultorioOdontologico.exception.NotFoundException;
 import com.dh.consultorioOdontologico.repository.PacienteRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.log4j.Logger;
@@ -11,8 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+
 
 import java.sql.Timestamp;
 import java.time.Instant;
@@ -35,29 +35,26 @@ public class PacienteService {
         List<Paciente> pacienteList = pacienteRepository.findAll();
         List<PacienteDTO> pacienteDTOList = new ArrayList<>();
         ObjectMapper mapper = new ObjectMapper();
+        logger.info("Exibindo os pacientes:");
         for(Paciente paciente: pacienteList){
             pacienteDTOList.add(mapper.convertValue(paciente, PacienteDTO.class));
+            logger.info("Paciente: " + paciente.getNome() + " " + paciente.getSobrenome() + ", rg: " +  paciente.getRg());
         }
-        logger.info("Exibindo os pacientes.");
         return pacienteDTOList;
     }
 
-    public ResponseEntity salvar(PacienteDTO pacienteDTO){
-         ObjectMapper mapper = new ObjectMapper();
-        try{
-            logger.info("Iniciando operação para salvar o paciente.");
-            EnderecoDTO enderecoDTO = pacienteDTO.getEnderecoDTO();
-            enderecoService.salvarEndereco(enderecoDTO);
-            Paciente paciente = mapper.convertValue(pacienteDTO, Paciente.class);
-            paciente.setDataRegistro(Timestamp.from(Instant.now()));
-            Paciente pacienteSalvo = pacienteRepository.save(paciente);
-            logger.info("Paciente " + pacienteSalvo.getNome() + " salvo com sucesso.");
-            return new ResponseEntity("Paciente " + pacienteSalvo.getNome() + " criado com sucesso!", HttpStatus.CREATED);
-        } catch (Exception e) {
-            logger.error("Erro ao salvar o paciente.");
-            e.printStackTrace();
-            return new ResponseEntity("Erro ao cadastrar o paciente", HttpStatus.BAD_REQUEST);
-        }
+    public Paciente salvar(PacienteDTO pacienteDTO){
+        ObjectMapper mapper = new ObjectMapper();
+        logger.info("Iniciando operação para salvar o paciente.");
+        Endereco endereco = mapper.convertValue(pacienteDTO.getEnderecoDTO(), Endereco.class);
+        /*EnderecoDTO enderecoDTO = pacienteDTO.getEnderecoDTO();
+        enderecoService.salvarEndereco(enderecoDTO);*/
+        Paciente paciente = mapper.convertValue(pacienteDTO, Paciente.class);
+        paciente.setDataRegistro(Timestamp.from(Instant.now()));
+        paciente.setEndereco(endereco);
+        Paciente pacienteSalvo = pacienteRepository.save(paciente);
+        logger.info("Paciente " + pacienteSalvo.getNome() + " salvo com sucesso.");
+        return pacienteSalvo;
     }
 
     public ResponseEntity deletar(String  rg){
