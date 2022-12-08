@@ -2,6 +2,7 @@ package com.dh.consultorioOdontologico.controller;
 
 import com.dh.consultorioOdontologico.entity.Dentista;
 import com.dh.consultorioOdontologico.entity.dto.DentistaDTO;
+import com.dh.consultorioOdontologico.exception.ResourceNotFoundException;
 import com.dh.consultorioOdontologico.service.DentistaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -23,7 +24,7 @@ public class DentistaController {
     }
 
     @GetMapping("/buscarMatricula/{matricula}")
-    public ResponseEntity buscarPorMatricula (@PathVariable int matricula){
+    public ResponseEntity buscarPorMatricula (@PathVariable int matricula) throws ResourceNotFoundException {
         return dentistaService.buscarPorMatricula(matricula);
     }
 

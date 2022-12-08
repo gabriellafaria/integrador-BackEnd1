@@ -2,6 +2,7 @@ package com.dh.consultorioOdontologico.service;
 
 import com.dh.consultorioOdontologico.entity.Dentista;
 import com.dh.consultorioOdontologico.entity.dto.DentistaDTO;
+import com.dh.consultorioOdontologico.exception.ResourceNotFoundException;
 import com.dh.consultorioOdontologico.repository.DentistaRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.log4j.Logger;
@@ -62,6 +63,7 @@ public class DentistaService {
         return dentistaModificado;
     }
 
+    //falta colocar exception aqui
     public ResponseEntity putDentista(DentistaDTO dentistaDTO){
         ObjectMapper mapper = new ObjectMapper();
         log.info("Localizando Dentista com matrícula " + dentistaDTO.getMatricula() + "...");
@@ -79,18 +81,20 @@ public class DentistaService {
         return new ResponseEntity(dentistaEditado, HttpStatus.OK);
     }
 
-   public ResponseEntity buscarPorMatricula(int matricula){
+   public ResponseEntity buscarPorMatricula(int matricula) throws ResourceNotFoundException {
         log.info("Buscando Dentista com matrícula " + matricula + "...");
         ObjectMapper mapper = new ObjectMapper();
         Optional<Dentista> dentista = Optional.ofNullable(dentistaRepository.findByMatricula(matricula));
-        if(dentista.isEmpty())
-            return new ResponseEntity("Dentista com matrícula " + matricula + " não encontrado.", HttpStatus.NOT_FOUND);
+             if(dentista.isEmpty())
+                 throw new ResourceNotFoundException("Matrícula inexistente");
+//               return new ResponseEntity("Dentista com matrícula " + matricula + " não encontrado.", HttpStatus.NOT_FOUND);
 
         DentistaDTO dentistaDTO = mapper.convertValue(dentista.get(), DentistaDTO.class);
         log.info("Dentista localizado com sucesso.");
         return new ResponseEntity(dentistaDTO, HttpStatus.CREATED);
    }
 
+   //falta colocar exception
     public ResponseEntity deletar(int matricula){
         log.info("Localizando Dentista com matrícula " + matricula + "...");
         Optional<Dentista> dentista = Optional.ofNullable(dentistaRepository.findByMatricula(matricula));
