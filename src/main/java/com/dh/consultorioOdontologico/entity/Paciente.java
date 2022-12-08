@@ -1,10 +1,7 @@
 package com.dh.consultorioOdontologico.entity;
 
-import com.dh.consultorioOdontologico.entity.dto.EnderecoDTO;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.*;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -23,29 +20,18 @@ public class Paciente {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @NotBlank
-
     @Column(nullable = false, length = 100)
     private String nome;
+    @NotBlank
     @Column(nullable = false, length = 100)
     private String sobrenome;
+    @NotBlank
     @Size(min= 6, max = 15, message = "O tamanho do campo deve ser maior que 6 e menor que 15.")
     @Column(nullable = false, unique = true)
     private String rg;
+    @NotNull
     @OneToOne(cascade = CascadeType.ALL)
     private Endereco endereco;
     @Column(nullable = false)
     private Timestamp dataRegistro;
-
-   /* public Paciente(String nome, String sobrenome, String rg, Endereco endereco, Timestamp dataRegistro) {
-        this.nome = nome;
-        this.sobrenome = sobrenome;
-        this.rg = rg;
-        this.endereco = endereco;
-        this.dataRegistro = dataRegistro;
-    }*/
-
-  /* public Endereco setEndereco(EnderecoDTO enderecoDTO){
-       ObjectMapper mapper = new ObjectMapper();
-       return this.endereco = mapper.convertValue(enderecoDTO, Endereco.class);
-   }*/
 }
