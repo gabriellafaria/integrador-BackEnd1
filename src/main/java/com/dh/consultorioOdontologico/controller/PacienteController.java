@@ -2,19 +2,25 @@ package com.dh.consultorioOdontologico.controller;
 
 import com.dh.consultorioOdontologico.entity.Paciente;
 import com.dh.consultorioOdontologico.entity.dto.PacienteDTO;
+import com.dh.consultorioOdontologico.service.EnderecoService;
 import com.dh.consultorioOdontologico.service.PacienteService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/paciente")
 public class PacienteController {
     @Autowired
     PacienteService pacienteService;
+
+    @Autowired
+    EnderecoService enderecoService;
 
     @GetMapping()
     public List<PacienteDTO> buscar(){
@@ -23,64 +29,45 @@ public class PacienteController {
 
     @GetMapping("/buscarRg/{rg}")
     public ResponseEntity buscarPorRg (@PathVariable String rg){
-        return pacienteService.buscarPorRg(rg);
+        PacienteDTO paciente = pacienteService.buscarPorRg(rg);
+        if(paciente == null)
+            return new ResponseEntity("Paciente com o rg " + rg + " não foi encontrado.", HttpStatus.NOT_FOUND);
+        return new ResponseEntity(paciente, HttpStatus.OK);
     }
 
     @PostMapping
-    public ResponseEntity salvar(@RequestBody Paciente paciente){
-        return pacienteService.salvar(paciente);
+    public ResponseEntity salvar(@RequestBody @Valid PacienteDTO pacienteDTO){
+        try{
+            PacienteDTO pacienteSalvo = pacienteService.salvar(pacienteDTO);
+            return new ResponseEntity("Paciente " + pacienteSalvo.getNome() + " criado com sucesso!", HttpStatus.CREATED);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity("Erro ao cadastrar o paciente", HttpStatus.BAD_REQUEST);
+        }
     }
 
     @DeleteMapping()
     public ResponseEntity deletar(@RequestParam("rg") String rg){
-        return pacienteService.deletar(rg);
+        Optional<Paciente> paciente = pacienteService.deletar(rg);
+        if (paciente == null)
+            return new ResponseEntity("Paciente não localizado.", HttpStatus.NOT_FOUND);
+        return new ResponseEntity("Paciente delatado com sucesso!", HttpStatus.OK);
     }
 
     @PatchMapping()
     public ResponseEntity alterarParcialmente(@RequestBody @Valid PacienteDTO pacienteDTO){
-        return pacienteService.alterarParcialmente(pacienteDTO);
+        PacienteDTO pacienteAlt = pacienteService.alterarParcialmente(pacienteDTO);
+        if(pacienteAlt == null){
+            return new ResponseEntity("Não existe o paciente com o rg " + pacienteDTO.getRg(), HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity(pacienteAlt, HttpStatus.CREATED);
     }
 
     @PutMapping()
     public ResponseEntity alterarTudo(@RequestBody @Valid PacienteDTO pacienteDTO){
-        return pacienteService.alterarTudo(pacienteDTO);
+        PacienteDTO pacienteAlt = pacienteService.alterarTudo(pacienteDTO);
+        if(pacienteAlt == null)
+            return new ResponseEntity("Não existe o paciente com o rg " + pacienteDTO.getRg(), HttpStatus.NOT_FOUND);
+        return new ResponseEntity(pacienteAlt, HttpStatus.CREATED);
     }
-/*    @Autowired
-    private ModelMapper modelMapper;
-
-    @GetMapping()
-    public List<Paciente> buscarTodos() throws SQLException {
-        return pacienteService.buscarTodos();
-    }
-
-    @GetMapping("/{id}")
-    public Optional<Paciente> buscarPacientePorId(@PathVariable("id") int id) throws SQLException {
-        return pacienteService.buscarPorId(id);
-    }
-
-    @DeleteMapping()
-    public void excluirPaciente(@RequestBody Paciente paciente) throws SQLException {
-        pacienteService.excluir(paciente);
-
-    }
-
-    @PutMapping()
-    public Paciente alterarPaciente(@RequestBody Paciente paciente) throws SQLException {  //Felipe comment: acho que nao precisa passar o id como PathVariable, pq podemos retirar o id do paciente direto
-        return pacienteService.modificar(paciente);
-    }
-
-    @PostMapping()
-    public Paciente post(@RequestBody Paciente paciente) throws SQLException {
-        return pacienteService.cadastrar(paciente);
-    }
-
-
-    @PatchMapping("/{id}")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void alterarPacienteParcial(@PathVariable("id") int id, @RequestBody Paciente paciente) throws SQLException {
-            pacienteService.buscarPorId(id).map(pacienteBase -> {
-            modelMapper.map(paciente, pacienteBase);
-            return Void.TYPE;
-        }).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Paciente não encontrado"));
-    }*/
 }

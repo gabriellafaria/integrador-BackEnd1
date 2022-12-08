@@ -22,9 +22,11 @@ public class EnderecoService {
     EnderecoRepository repository;
 
     static final Logger logger = Logger.getLogger(EnderecoService.class);
-    public ResponseEntity salvarEndereco(Endereco endereco) {
+    public ResponseEntity salvarEndereco(EnderecoDTO enderecoDTO) {
+        ObjectMapper mapper = new ObjectMapper();
         logger.info("Cadastrando novo endereço.");
         try {
+            Endereco endereco = mapper.convertValue(enderecoDTO, Endereco.class);
             Endereco enderecoSalvo = repository.save(endereco);
             logger.info("Endereço cadastrado com sucesso.");
             return new ResponseEntity("Endereco com id " + enderecoSalvo.getId() + " foi cadastrado com sucesso.", HttpStatus.CREATED);

@@ -1,5 +1,6 @@
 package com.dh.consultorioOdontologico.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,6 +12,7 @@ import javax.validation.constraints.NotBlank;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Endereco {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
