@@ -1,7 +1,7 @@
 package com.dh.consultorioOdontologico.exception;
 
-public class exceptions extends Exception {
-    public exceptions (String menssage){
+public class Exceptions extends Exception {
+    public Exceptions (String menssage){
         super(menssage);
 
     }

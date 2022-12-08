@@ -3,6 +3,7 @@ package com.dh.consultorioOdontologico.entity;
 import lombok.*;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import java.util.Optional;
 
 @Getter
 @Setter
@@ -22,4 +23,5 @@ public class Dentista {
     private String sobrenome;
     @Column(nullable = false, unique = true)
     private int matricula;
+
 }

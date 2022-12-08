@@ -2,6 +2,7 @@ package com.dh.consultorioOdontologico.service;
 
 import com.dh.consultorioOdontologico.entity.Dentista;
 import com.dh.consultorioOdontologico.entity.dto.DentistaDTO;
+import com.dh.consultorioOdontologico.exception.ResourceNotFoundException;
 import com.dh.consultorioOdontologico.repository.DentistaRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.log4j.Logger;
@@ -34,22 +35,19 @@ public class DentistaService {
         return dentistaDTOList;
     }
 
-    public ResponseEntity salvar(Dentista dentista){
-        try{
+    public Dentista salvar(Dentista dentista){
             log.info("Cadastrando novo Dentista...");
             Dentista dentistaSalvo = dentistaRepository.save(dentista);
             log.info("Novo Dentista cadastrado");
-            return new ResponseEntity("Dentista " + dentistaSalvo.getNome() + " cadastrado com sucesso!", HttpStatus.CREATED);
-        }catch (Exception e){
-            return new ResponseEntity("Erro ao cadastrar Dentista", HttpStatus.BAD_REQUEST);
-        }
+            return dentistaSalvo;
     }
 
-    public ResponseEntity patchDentista(DentistaDTO dentistaDTO){
+    public DentistaDTO patchDentista(DentistaDTO dentistaDTO){
         ObjectMapper mapper = new ObjectMapper();
         Optional<Dentista> dentistaOptional = Optional.ofNullable(dentistaRepository.findByMatricula(dentistaDTO.getMatricula()));
+        DentistaDTO dentistaModificado = null;
         if(dentistaOptional.isEmpty()){
-            return new ResponseEntity("Matrícula inexistente.", HttpStatus.NOT_FOUND);
+            return dentistaModificado;
         }
         Dentista dentista = dentistaOptional.get();
         if (dentistaDTO.getNome() != null){
@@ -59,12 +57,13 @@ public class DentistaService {
             dentista.setSobrenome(dentistaDTO.getSobrenome());
         }
 
-        DentistaDTO dentistaModificado = mapper.convertValue(dentistaRepository.save(dentista), DentistaDTO.class);
+         dentistaModificado = mapper.convertValue(dentistaRepository.save(dentista), DentistaDTO.class);
 
         log.info("Informações do Dentista com matrícula: " + dentista.getMatricula() + ", alteradas com sucesso.");
-        return new ResponseEntity(dentistaModificado, HttpStatus.OK);
+        return dentistaModificado;
     }
 
+    //falta colocar exception aqui
     public ResponseEntity putDentista(DentistaDTO dentistaDTO){
         ObjectMapper mapper = new ObjectMapper();
         log.info("Localizando Dentista com matrícula " + dentistaDTO.getMatricula() + "...");
@@ -82,18 +81,20 @@ public class DentistaService {
         return new ResponseEntity(dentistaEditado, HttpStatus.OK);
     }
 
-   public ResponseEntity buscarPorMatricula(int matricula){
+   public ResponseEntity buscarPorMatricula(int matricula) throws ResourceNotFoundException {
         log.info("Buscando Dentista com matrícula " + matricula + "...");
         ObjectMapper mapper = new ObjectMapper();
         Optional<Dentista> dentista = Optional.ofNullable(dentistaRepository.findByMatricula(matricula));
-        if(dentista.isEmpty())
-            return new ResponseEntity("Dentista com matrícula " + matricula + " não encontrado.", HttpStatus.NOT_FOUND);
+             if(dentista.isEmpty())
+                 throw new ResourceNotFoundException("Matrícula inexistente");
+//               return new ResponseEntity("Dentista com matrícula " + matricula + " não encontrado.", HttpStatus.NOT_FOUND);
 
         DentistaDTO dentistaDTO = mapper.convertValue(dentista.get(), DentistaDTO.class);
         log.info("Dentista localizado com sucesso.");
         return new ResponseEntity(dentistaDTO, HttpStatus.CREATED);
    }
 
+   //falta colocar exception
     public ResponseEntity deletar(int matricula){
         log.info("Localizando Dentista com matrícula " + matricula + "...");
         Optional<Dentista> dentista = Optional.ofNullable(dentistaRepository.findByMatricula(matricula));
