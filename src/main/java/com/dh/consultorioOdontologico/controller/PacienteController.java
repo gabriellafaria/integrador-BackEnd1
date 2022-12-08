@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/paciente")
@@ -28,13 +29,16 @@ public class PacienteController {
 
     @GetMapping("/buscarRg/{rg}")
     public ResponseEntity buscarPorRg (@PathVariable String rg){
-        return pacienteService.buscarPorRg(rg);
+        PacienteDTO paciente = pacienteService.buscarPorRg(rg);
+        if(paciente == null)
+            return new ResponseEntity("Paciente com o rg " + rg + " não foi encontrado.", HttpStatus.NOT_FOUND);
+        return new ResponseEntity(paciente, HttpStatus.OK);
     }
 
     @PostMapping
     public ResponseEntity salvar(@RequestBody @Valid PacienteDTO pacienteDTO){
         try{
-            Paciente pacienteSalvo = pacienteService.salvar(pacienteDTO);
+            PacienteDTO pacienteSalvo = pacienteService.salvar(pacienteDTO);
             return new ResponseEntity("Paciente " + pacienteSalvo.getNome() + " criado com sucesso!", HttpStatus.CREATED);
         } catch (Exception e) {
             e.printStackTrace();
@@ -44,16 +48,26 @@ public class PacienteController {
 
     @DeleteMapping()
     public ResponseEntity deletar(@RequestParam("rg") String rg){
-        return pacienteService.deletar(rg);
+        Optional<Paciente> paciente = pacienteService.deletar(rg);
+        if (paciente == null)
+            return new ResponseEntity("Paciente não localizado.", HttpStatus.NOT_FOUND);
+        return new ResponseEntity("Paciente delatado com sucesso!", HttpStatus.OK);
     }
 
     @PatchMapping()
     public ResponseEntity alterarParcialmente(@RequestBody @Valid PacienteDTO pacienteDTO){
-        return pacienteService.alterarParcialmente(pacienteDTO);
+        PacienteDTO pacienteAlt = pacienteService.alterarParcialmente(pacienteDTO);
+        if(pacienteAlt == null){
+            return new ResponseEntity("Não existe o paciente com o rg " + pacienteDTO.getRg(), HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity(pacienteAlt, HttpStatus.CREATED);
     }
 
     @PutMapping()
     public ResponseEntity alterarTudo(@RequestBody @Valid PacienteDTO pacienteDTO){
-        return pacienteService.alterarTudo(pacienteDTO);
+        PacienteDTO pacienteAlt = pacienteService.alterarTudo(pacienteDTO);
+        if(pacienteAlt == null)
+            return new ResponseEntity("Não existe o paciente com o rg " + pacienteDTO.getRg(), HttpStatus.NOT_FOUND);
+        return new ResponseEntity(pacienteAlt, HttpStatus.CREATED);
     }
 }
