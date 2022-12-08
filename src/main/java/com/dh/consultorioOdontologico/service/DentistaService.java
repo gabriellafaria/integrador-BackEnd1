@@ -34,22 +34,19 @@ public class DentistaService {
         return dentistaDTOList;
     }
 
-    public ResponseEntity salvar(Dentista dentista){
-        try{
+    public Dentista salvar(Dentista dentista){
             log.info("Cadastrando novo Dentista...");
             Dentista dentistaSalvo = dentistaRepository.save(dentista);
             log.info("Novo Dentista cadastrado");
-            return new ResponseEntity("Dentista " + dentistaSalvo.getNome() + " cadastrado com sucesso!", HttpStatus.CREATED);
-        }catch (Exception e){
-            return new ResponseEntity("Erro ao cadastrar Dentista", HttpStatus.BAD_REQUEST);
-        }
+            return dentistaSalvo;
     }
 
-    public ResponseEntity patchDentista(DentistaDTO dentistaDTO){
+    public DentistaDTO patchDentista(DentistaDTO dentistaDTO){
         ObjectMapper mapper = new ObjectMapper();
         Optional<Dentista> dentistaOptional = Optional.ofNullable(dentistaRepository.findByMatricula(dentistaDTO.getMatricula()));
+        DentistaDTO dentistaModificado = null;
         if(dentistaOptional.isEmpty()){
-            return new ResponseEntity("Matrícula inexistente.", HttpStatus.NOT_FOUND);
+            return dentistaModificado;
         }
         Dentista dentista = dentistaOptional.get();
         if (dentistaDTO.getNome() != null){
@@ -59,10 +56,10 @@ public class DentistaService {
             dentista.setSobrenome(dentistaDTO.getSobrenome());
         }
 
-        DentistaDTO dentistaModificado = mapper.convertValue(dentistaRepository.save(dentista), DentistaDTO.class);
+         dentistaModificado = mapper.convertValue(dentistaRepository.save(dentista), DentistaDTO.class);
 
         log.info("Informações do Dentista com matrícula: " + dentista.getMatricula() + ", alteradas com sucesso.");
-        return new ResponseEntity(dentistaModificado, HttpStatus.OK);
+        return dentistaModificado;
     }
 
     public ResponseEntity putDentista(DentistaDTO dentistaDTO){

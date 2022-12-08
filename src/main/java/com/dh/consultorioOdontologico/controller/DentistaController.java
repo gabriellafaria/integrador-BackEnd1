@@ -4,6 +4,7 @@ import com.dh.consultorioOdontologico.entity.Dentista;
 import com.dh.consultorioOdontologico.entity.dto.DentistaDTO;
 import com.dh.consultorioOdontologico.service.DentistaService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -27,13 +28,23 @@ public class DentistaController {
     }
 
     @PostMapping
-    public ResponseEntity salvar (@RequestBody @Valid Dentista dentista){
-        return dentistaService.salvar(dentista);
+    public ResponseEntity salvar(@RequestBody @Valid Dentista dentista){
+        try{
+            Dentista dentistaSalvo = dentistaService.salvar(dentista);
+            return new ResponseEntity("Dentista " + dentistaSalvo.getNome() + " cadastrado com sucesso.", HttpStatus.CREATED);
+        } catch (Exception e){
+            return new ResponseEntity("Erro ao cadastrar dentista.", HttpStatus.BAD_REQUEST);
+        }
     }
 
+
     @PatchMapping()
-    public ResponseEntity patchDentista(@RequestBody @Valid DentistaDTO dentistaDTO){
-        return dentistaService.patchDentista(dentistaDTO);
+    public ResponseEntity patchDentista(@RequestBody @Valid DentistaDTO dentistaDTO) {
+        DentistaDTO dentistaDTOModificado = dentistaService.patchDentista((dentistaDTO));
+        if (dentistaDTOModificado == null) {
+            return new ResponseEntity("Erro ao modificar informações de Dentista.", HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity(dentistaDTOModificado, HttpStatus.OK);
     }
 
     @PutMapping()
