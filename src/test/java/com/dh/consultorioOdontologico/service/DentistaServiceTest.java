@@ -3,6 +3,7 @@ package com.dh.consultorioOdontologico.service;
 import com.dh.consultorioOdontologico.entity.Dentista;
 import com.dh.consultorioOdontologico.entity.dto.DentistaDTO;
 import com.dh.consultorioOdontologico.exception.ResourceNotFoundException;
+import com.dh.consultorioOdontologico.repository.DentistaRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -15,6 +16,7 @@ public class DentistaServiceTest {
 
     @Autowired
     DentistaService service;
+    DentistaRepository repository;
     ObjectMapper mapper = new ObjectMapper();
 
     @Test
@@ -78,7 +80,7 @@ public class DentistaServiceTest {
     }
 
     @Test
-    void PutDentista(){
+    void PutDentista() throws ResourceNotFoundException{
         Dentista dentista = new Dentista();
         dentista.setNome("Tira");
         dentista.setSobrenome("Dentes");
@@ -96,11 +98,11 @@ public class DentistaServiceTest {
         Assertions.assertFalse(dentistaDTOModificado.equals(nomeDentista));
         Assertions.assertFalse(dentistaDTOModificado.equals(sobrenomeDentista));
 
-        //System.out.println("Informações do dentista " + dentista.getNome() + " " + dentista.getSobrenome() + " modificadas com sucesso.");
+        System.out.println("Informações do dentista " + dentista.getNome() + " " + dentista.getSobrenome() + " modificadas com sucesso.");
     }
 
     @Test
-    void DeleteDentista(){
+    void DeleteDentista() throws ResourceNotFoundException {
         Dentista dentista = new Dentista();
         dentista.setNome("Harvey");
         dentista.setSobrenome("Dent");
@@ -109,6 +111,8 @@ public class DentistaServiceTest {
 
         service.deletar(dentista.getMatricula());
 
-        //System.out.println("Dentista " + dentista.getNome() + " deletado com sucesso.");
+        Assertions.assertTrue(service.buscar().isEmpty());
+
+       System.out.println("Dentista " + dentista.getNome() + " deletado com sucesso.");
     }
 }

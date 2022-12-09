@@ -49,12 +49,12 @@ public class DentistaController {
     }
 
     @PutMapping()
-    public ResponseEntity putDentista(@RequestBody @Valid DentistaDTO dentistaDTO){
+    public ResponseEntity putDentista(@RequestBody @Valid DentistaDTO dentistaDTO) throws ResourceNotFoundException{
         return dentistaService.putDentista(dentistaDTO);
     }
 
     @DeleteMapping
-    public ResponseEntity deletar(@RequestParam("matricula") int matricula){
+    public ResponseEntity deletar(@RequestParam("matricula") int matricula) throws ResourceNotFoundException {
         return dentistaService.deletar(matricula);
     }
 
