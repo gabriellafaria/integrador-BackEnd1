@@ -1,14 +1,11 @@
 package com.dh.consultorioOdontologico.entity.dto;
 
-import com.dh.consultorioOdontologico.entity.Endereco;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.OneToOne;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -32,8 +29,8 @@ public class PacienteDTO {
 
     private Timestamp dataRegistro;
 
-   public EnderecoDTO setEnderecoDTO(Endereco endereco){
+   /*public EnderecoDTO setEnderecoDTO(Endereco endereco){
         ObjectMapper mapper = new ObjectMapper();
         return this.endereco = mapper.convertValue(endereco, EnderecoDTO.class);
-   }
+   }*/
 }

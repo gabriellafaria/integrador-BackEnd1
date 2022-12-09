@@ -36,8 +36,9 @@ public class PacienteService {
         return pacienteDTOList;
     }
 
-    public PacienteDTO salvar(PacienteDTO pacienteDTO){
+    public Paciente salvar(PacienteDTO pacienteDTO){
         ObjectMapper mapper = new ObjectMapper();
+        System.out.println("Arrg");
         logger.info("Iniciando operação para salvar o paciente.");
         Endereco endereco = mapper.convertValue(pacienteDTO.getEndereco(), Endereco.class);
         Paciente paciente = mapper.convertValue(pacienteDTO, Paciente.class);
@@ -45,7 +46,7 @@ public class PacienteService {
         paciente.setEndereco(endereco);
         Paciente pacienteSalvo = pacienteRepository.save(paciente);
         logger.info("Paciente " + pacienteSalvo.getNome() + " salvo com sucesso.");
-        return pacienteDTO;
+        return paciente;
     }
 
     public Optional<Paciente> deletar(String  rg){
@@ -114,7 +115,13 @@ public class PacienteService {
         if(pacienteOp.isEmpty())
             logger.error("Não existe o paciente com o rg " + pacienteDTO.getRg());
         Paciente paciente = pacienteOp.get();
-        if(pacienteDTO.getNome() != null)
+        paciente.setNome(pacienteDTO.getNome());
+        paciente.setSobrenome(pacienteDTO.getSobrenome());
+        paciente.getEndereco().setRua(pacienteDTO.getEndereco().getRua());
+        paciente.getEndereco().setNumero(pacienteDTO.getEndereco().getNumero());
+        paciente.getEndereco().setCidade(pacienteDTO.getEndereco().getCidade());
+        paciente.getEndereco().setEstado(pacienteDTO.getEndereco().getEstado());
+       /* if(pacienteDTO.getNome() != null)
             paciente.setNome(pacienteDTO.getNome());
         if(pacienteDTO.getSobrenome() != null)
             paciente.setSobrenome(pacienteDTO.getSobrenome());
@@ -125,7 +132,7 @@ public class PacienteService {
         if(pacienteDTO.getEndereco().getCidade() != null)
             paciente.getEndereco().setCidade(pacienteDTO.getEndereco().getCidade());
         if(pacienteDTO.getEndereco().getEstado() != null)
-            paciente.getEndereco().setEstado(pacienteDTO.getEndereco().getEstado());
+            paciente.getEndereco().setEstado(pacienteDTO.getEndereco().getEstado());*/
 
         PacienteDTO pacienteAlt = mapper.convertValue(pacienteRepository.save(paciente), PacienteDTO.class);
         logger.info("Paciente alterado com sucesso!");
