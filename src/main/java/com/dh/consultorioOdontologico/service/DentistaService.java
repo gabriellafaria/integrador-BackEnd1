@@ -63,13 +63,13 @@ public class DentistaService {
         return dentistaModificado;
     }
 
-    //falta colocar exception aqui
-    public ResponseEntity putDentista(DentistaDTO dentistaDTO){
+    public ResponseEntity putDentista(DentistaDTO dentistaDTO) throws ResourceNotFoundException {
         ObjectMapper mapper = new ObjectMapper();
         log.info("Localizando Dentista com matrícula " + dentistaDTO.getMatricula() + "...");
         Optional<Dentista> dentistaOptional = Optional.ofNullable(dentistaRepository.findByMatricula(dentistaDTO.getMatricula()));
         if(dentistaOptional.isEmpty())
-            return new ResponseEntity("Matrícula inexistente", HttpStatus.NOT_FOUND);
+            throw new ResourceNotFoundException("Matrícula inexistente.");
+
         Dentista dentista = dentistaOptional.get();
         if (dentistaDTO.getNome() != null)
             dentista.setNome(dentistaDTO.getNome());
@@ -87,19 +87,17 @@ public class DentistaService {
         Optional<Dentista> dentista = Optional.ofNullable(dentistaRepository.findByMatricula(matricula));
              if(dentista.isEmpty())
                  throw new ResourceNotFoundException("Matrícula inexistente");
-//               return new ResponseEntity("Dentista com matrícula " + matricula + " não encontrado.", HttpStatus.NOT_FOUND);
 
         DentistaDTO dentistaDTO = mapper.convertValue(dentista.get(), DentistaDTO.class);
         log.info("Dentista localizado com sucesso.");
         return new ResponseEntity(dentistaDTO, HttpStatus.CREATED);
    }
 
-   //falta colocar exception
-    public ResponseEntity deletar(int matricula){
+    public ResponseEntity deletar(int matricula) throws ResourceNotFoundException {
         log.info("Localizando Dentista com matrícula " + matricula + "...");
         Optional<Dentista> dentista = Optional.ofNullable(dentistaRepository.findByMatricula(matricula));
         if(dentista.isEmpty())
-            return new ResponseEntity<>("Matrícula inexistente.", HttpStatus.BAD_REQUEST);
+            throw new ResourceNotFoundException("Matrícula inexistente.");
 
         dentistaRepository.deleteById(dentista.get().getId());
         return new ResponseEntity("Dentista deletado com sucesso!", HttpStatus.OK);
