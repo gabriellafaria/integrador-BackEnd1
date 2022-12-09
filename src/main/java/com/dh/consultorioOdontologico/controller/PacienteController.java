@@ -38,7 +38,7 @@ public class PacienteController {
     @PostMapping
     public ResponseEntity salvar(@RequestBody @Valid PacienteDTO pacienteDTO){
         try{
-            PacienteDTO pacienteSalvo = pacienteService.salvar(pacienteDTO);
+            Paciente pacienteSalvo = pacienteService.salvar(pacienteDTO);
             return new ResponseEntity("Paciente " + pacienteSalvo.getNome() + " criado com sucesso!", HttpStatus.CREATED);
         } catch (Exception e) {
             e.printStackTrace();
