@@ -4,6 +4,8 @@ import com.dh.consultorioOdontologico.entity.Endereco;
 import com.dh.consultorioOdontologico.entity.Paciente;
 import com.dh.consultorioOdontologico.entity.dto.EnderecoDTO;
 import com.dh.consultorioOdontologico.entity.dto.PacienteDTO;
+import com.dh.consultorioOdontologico.exception.Exceptions;
+import com.dh.consultorioOdontologico.exception.ResourceNotFoundException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -45,13 +47,13 @@ class PacienteServiceTest {
     }
 
     @Test
-    public void buscarPorRg(){
+    public void buscarPorRg() throws ResourceNotFoundException {
         PacienteDTO paciente = pacienteService.buscarPorRg("123456");
         Assertions.assertNotNull(paciente);
     }
 
     @Test
-    public void deletar(){
+    public void deletar() throws ResourceNotFoundException {
         PacienteDTO paciente = pacienteService.buscarPorRg("123456");
         Paciente pacienteAlterado = mapper.convertValue(paciente, Paciente.class);
         pacienteService.deletar(paciente.getRg());
@@ -59,7 +61,7 @@ class PacienteServiceTest {
     }
 
     @Test
-    public void alterarTudo(){
+    public void alterarTudo() throws ResourceNotFoundException, Exceptions {
         PacienteDTO pacienteDTO = pacienteService.buscarPorRg("123456");
         String nomeAnterior = pacienteDTO.getNome();
         pacienteDTO.setNome("Sabrina");
@@ -69,13 +71,12 @@ class PacienteServiceTest {
         enderecoDTO.setCidade("Perdidin");
         enderecoDTO.setNumero(1456);
         enderecoDTO.setEstado("PE");
-        //pacienteDTO.setEndereco();
         pacienteService.alterarTudo(pacienteDTO);
         Assertions.assertFalse(nomeAnterior.equals(pacienteDTO.getNome()));
     }
 
     @Test
-    public void alterarParcialmente(){
+    public void alterarParcialmente() throws ResourceNotFoundException, Exceptions {
         PacienteDTO paciente = pacienteService.buscarPorRg("123456");
         String nomeAnterior = paciente.getNome();
         paciente.setNome("Felipe");
@@ -104,13 +105,13 @@ class PacienteServiceTest {
     }
 
     @Test
-    public void buscarComRgIncorreto(){
+    public void buscarComRgIncorreto() throws ResourceNotFoundException {
         PacienteDTO paciente = pacienteService.buscarPorRg("1234568");
         Assertions.assertNotNull(paciente);
     }
 
     @Test
-    public void deleteAltAssert(){
+    public void deleteAltAssert() throws ResourceNotFoundException {
         PacienteDTO paciente = pacienteService.buscarPorRg("123456");
         Paciente pacienteAlterado = mapper.convertValue(paciente, Paciente.class);
         pacienteService.deletar(paciente.getRg());
@@ -118,7 +119,7 @@ class PacienteServiceTest {
     }
 
     @Test
-    public void alterarTudoIncorreto(){
+    public void alterarTudoIncorreto() throws ResourceNotFoundException, Exceptions {
         PacienteDTO paciente = pacienteService.buscarPorRg("123456");
         String nomeAnterior = paciente.getNome();
         paciente.setNome("Sabrina");
@@ -129,6 +130,6 @@ class PacienteServiceTest {
         enderecoDTO.setNumero(1456);
         enderecoDTO.setEstado("PE");
         pacienteService.alterarTudo(paciente);
-        Assertions.assertFalse(nomeAnterior.equals(paciente.getNome()));
+        Assertions.assertTrue(nomeAnterior.equals(paciente.getNome()));
     }
 }

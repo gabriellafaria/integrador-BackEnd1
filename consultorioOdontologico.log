@@ -1,0 +1,706 @@
+04/12/22 15:06 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Iniciando operação para salvar o paciente.
+04/12/22 15:06 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.EnderecoService:26 - Cadastrando novo endereço.
+04/12/22 15:06 [http-nio-8080-exec-2] ERROR com.dh.consultorioOdontologico.service.EnderecoService:34 - O endereço não foi cadastrado.
+04/12/22 15:06 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:56 - Paciente Mariana salvo com sucesso.
+04/12/22 15:06 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:34 - Iniciando operação para buscar os pacientes.
+04/12/22 15:06 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:41 - Exibindo os pacientes.
+04/12/22 15:06 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.EnderecoService:40 - Buscando todos os endereços.
+04/12/22 15:06 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.EnderecoService:48 - Exibindo todos os endereços.
+04/12/22 15:07 [http-nio-8080-exec-5]  INFO com.dh.conszzultorioOdontologico.service.EnderecoService:26 - Cadastrando novo endereço.
+04/12/22 15:07 [http-nio-8080-exec-5] ERROR com.dh.consultorioOdontologico.service.EnderecoService:34 - O endereço não foi cadastrado.
+04/12/22 15:07 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Iniciando operação para salvar o paciente.
+04/12/22 15:07 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.EnderecoService:26 - Cadastrando novo endereço.
+04/12/22 15:07 [http-nio-8080-exec-2] ERROR com.dh.consultorioOdontologico.service.EnderecoService:34 - O endereço não foi cadastrado.
+04/12/22 15:07 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:56 - Paciente Mariana salvo com sucesso.
+04/12/22 15:08 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Iniciando operação para salvar o paciente.
+04/12/22 15:08 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.EnderecoService:26 - Cadastrando novo endereço.
+04/12/22 15:08 [http-nio-8080-exec-2] ERROR com.dh.consultorioOdontologico.service.EnderecoService:34 - O endereço não foi cadastrado.
+04/12/22 15:08 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:56 - Paciente Mariana salvo com sucesso.
+04/12/22 15:11 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Iniciando operação para salvar o paciente.
+04/12/22 15:11 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.EnderecoService:26 - Cadastrando novo endereço.
+04/12/22 15:11 [http-nio-8080-exec-2] ERROR com.dh.consultorioOdontologico.service.EnderecoService:34 - O endereço não foi cadastrado.
+04/12/22 15:11 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:56 - Paciente Mariana salvo com sucesso.
+04/12/22 15:12 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Iniciando operação para salvar o paciente.
+04/12/22 15:12 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.EnderecoService:26 - Cadastrando novo endereço.
+04/12/22 15:12 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.EnderecoService:31 - Endereço cadastrado com sucesso.
+04/12/22 15:12 [http-nio-8080-exec-3] ERROR com.dh.consultorioOdontologico.service.PacienteService:59 - Erro ao salvar o paciente.
+04/12/22 15:12 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Iniciando operação para salvar o paciente.
+04/12/22 15:12 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.EnderecoService:26 - Cadastrando novo endereço.
+04/12/22 15:12 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.EnderecoService:31 - Endereço cadastrado com sucesso.
+04/12/22 15:12 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:56 - Paciente Mariana salvo com sucesso.
+04/12/22 15:12 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:34 - Iniciando operação para buscar os pacientes.
+04/12/22 15:12 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:41 - Exibindo os pacientes.
+04/12/22 15:12 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.EnderecoService:41 - Buscando todos os endereços.
+04/12/22 15:12 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.EnderecoService:49 - Exibindo todos os endereços.
+04/12/22 15:13 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Iniciando operação para salvar o paciente.
+04/12/22 15:13 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.EnderecoService:26 - Cadastrando novo endereço.
+04/12/22 15:13 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.EnderecoService:31 - Endereço cadastrado com sucesso.
+04/12/22 15:13 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:56 - Paciente Mariana salvo com sucesso.
+04/12/22 15:14 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:34 - Iniciando operação para buscar os pacientes.
+04/12/22 15:14 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:41 - Exibindo os pacientes.
+04/12/22 15:18 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Iniciando operação para salvar o paciente.
+04/12/22 15:18 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.EnderecoService:26 - Cadastrando novo endereço.
+04/12/22 15:18 [http-nio-8080-exec-2] ERROR com.dh.consultorioOdontologico.service.EnderecoService:34 - O endereço não foi cadastrado.
+04/12/22 15:18 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:56 - Paciente Mariana salvo com sucesso.
+04/12/22 15:19 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Iniciando operação para salvar o paciente.
+04/12/22 15:19 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.EnderecoService:26 - Cadastrando novo endereço.
+04/12/22 15:19 [http-nio-8080-exec-2] ERROR com.dh.consultorioOdontologico.service.EnderecoService:34 - O endereço não foi cadastrado.
+04/12/22 15:19 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:56 - Paciente Mariana salvo com sucesso.
+04/12/22 15:22 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Iniciando operação para salvar o paciente.
+04/12/22 15:22 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:26 - Cadastrando novo endereço.
+04/12/22 15:22 [http-nio-8080-exec-1] ERROR com.dh.consultorioOdontologico.service.EnderecoService:34 - O endereço não foi cadastrado.
+04/12/22 15:22 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:56 - Paciente Mariana salvo com sucesso.
+04/12/22 15:23 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Iniciando operação para salvar o paciente.
+04/12/22 15:23 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:26 - Cadastrando novo endereço.
+04/12/22 15:23 [http-nio-8080-exec-1] ERROR com.dh.consultorioOdontologico.service.EnderecoService:34 - O endereço não foi cadastrado.
+04/12/22 15:23 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:56 - Paciente Mariana salvo com sucesso.
+04/12/22 15:24 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Iniciando operação para salvar o paciente.
+04/12/22 15:24 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:26 - Cadastrando novo endereço.
+04/12/22 15:24 [http-nio-8080-exec-1] ERROR com.dh.consultorioOdontologico.service.EnderecoService:32 - O endereço não foi cadastrado.
+04/12/22 15:24 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:56 - Paciente Mariana salvo com sucesso.
+04/12/22 15:26 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Iniciando operação para salvar o paciente.
+04/12/22 15:26 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:26 - Cadastrando novo endereço.
+04/12/22 15:26 [http-nio-8080-exec-1] ERROR com.dh.consultorioOdontologico.service.EnderecoService:32 - O endereço não foi cadastrado.
+04/12/22 15:26 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:56 - Paciente Mariana salvo com sucesso.
+04/12/22 15:26 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:34 - Iniciando operação para buscar os pacientes.
+04/12/22 15:26 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:41 - Exibindo os pacientes.
+04/12/22 15:27 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:34 - Iniciando operação para buscar os pacientes.
+04/12/22 15:27 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:41 - Exibindo os pacientes.
+04/12/22 15:27 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Iniciando operação para salvar o paciente.
+04/12/22 15:27 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.EnderecoService:26 - Cadastrando novo endereço.
+04/12/22 15:27 [http-nio-8080-exec-3] ERROR com.dh.consultorioOdontologico.service.EnderecoService:32 - O endereço não foi cadastrado.
+04/12/22 15:27 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:56 - Paciente Mariana salvo com sucesso.
+04/12/22 15:31 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Iniciando operação para salvar o paciente.
+04/12/22 15:31 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:26 - Cadastrando novo endereço.
+04/12/22 15:31 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:29 - Endereço cadastrado com sucesso.
+04/12/22 15:31 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:53 - Paciente Mariana salvo com sucesso.
+04/12/22 15:31 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:34 - Iniciando operação para buscar os pacientes.
+04/12/22 15:31 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:41 - Exibindo os pacientes.
+04/12/22 15:33 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Iniciando operação para salvar o paciente.
+04/12/22 15:33 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.EnderecoService:26 - Cadastrando novo endereço.
+04/12/22 15:33 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.EnderecoService:29 - Endereço cadastrado com sucesso.
+04/12/22 15:33 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:53 - Paciente Mariana salvo com sucesso.
+04/12/22 15:33 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:34 - Iniciando operação para buscar os pacientes.
+04/12/22 15:33 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:41 - Exibindo os pacientes.
+04/12/22 15:34 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.EnderecoService:38 - Buscando todos os endereços.
+04/12/22 15:34 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.EnderecoService:46 - Exibindo todos os endereços.
+04/12/22 15:36 [http-nio-8080-exec-7]  INFO com.dh.consultorioOdontologico.service.PacienteService:89 - Iniciando operação para alterar parcialmente o paciente.
+04/12/22 15:36 [http-nio-8080-exec-9]  INFO com.dh.consultorioOdontologico.service.PacienteService:34 - Iniciando operação para buscar os pacientes.
+04/12/22 15:36 [http-nio-8080-exec-9]  INFO com.dh.consultorioOdontologico.service.PacienteService:41 - Exibindo os pacientes.
+04/12/22 15:39 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Iniciando operação para salvar o paciente.
+04/12/22 15:39 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.EnderecoService:26 - Cadastrando novo endereço.
+04/12/22 15:39 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.EnderecoService:29 - Endereço cadastrado com sucesso.
+04/12/22 15:39 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:53 - Paciente Mariana salvo com sucesso.
+04/12/22 15:39 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:34 - Iniciando operação para buscar os pacientes.
+04/12/22 15:39 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:41 - Exibindo os pacientes.
+04/12/22 15:41 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Iniciando operação para salvar o paciente.
+04/12/22 15:41 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:26 - Cadastrando novo endereço.
+04/12/22 15:41 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:29 - Endereço cadastrado com sucesso.
+04/12/22 15:41 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:53 - Paciente Mariana salvo com sucesso.
+04/12/22 15:41 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:34 - Iniciando operação para buscar os pacientes.
+04/12/22 15:41 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:41 - Exibindo os pacientes.
+04/12/22 15:43 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Iniciando operação para salvar o paciente.
+04/12/22 15:43 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.EnderecoService:26 - Cadastrando novo endereço.
+04/12/22 15:43 [http-nio-8080-exec-2] ERROR com.dh.consultorioOdontologico.service.EnderecoService:32 - O endereço não foi cadastrado.
+04/12/22 15:43 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:54 - Paciente Mariana salvo com sucesso.
+04/12/22 15:44 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:34 - Iniciando operação para buscar os pacientes.
+04/12/22 15:44 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:41 - Exibindo os pacientes.
+04/12/22 15:46 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Iniciando operação para salvar o paciente.
+04/12/22 15:46 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.EnderecoService:26 - Cadastrando novo endereço.
+04/12/22 15:46 [http-nio-8080-exec-2] ERROR com.dh.consultorioOdontologico.service.EnderecoService:32 - O endereço não foi cadastrado.
+04/12/22 15:46 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:54 - Paciente Mariana salvo com sucesso.
+04/12/22 15:48 [http-nio-8080-exec-5]  INFO com.dh.consultorioOdontologico.service.EnderecoService:26 - Cadastrando novo endereço.
+04/12/22 15:48 [http-nio-8080-exec-5]  INFO com.dh.consultorioOdontologico.service.EnderecoService:29 - Endereço cadastrado com sucesso.
+04/12/22 15:48 [http-nio-8080-exec-6]  INFO com.dh.consultorioOdontologico.service.EnderecoService:38 - Buscando todos os endereços.
+04/12/22 15:48 [http-nio-8080-exec-6]  INFO com.dh.consultorioOdontologico.service.EnderecoService:46 - Exibindo todos os endereços.
+04/12/22 15:51 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:27 - Cadastrando novo endereço.
+04/12/22 15:51 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:31 - Endereço cadastrado com sucesso.
+04/12/22 15:51 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.EnderecoService:40 - Buscando todos os endereços.
+04/12/22 15:51 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.EnderecoService:48 - Exibindo todos os endereços.
+04/12/22 15:51 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Iniciando operação para salvar o paciente.
+04/12/22 15:51 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.EnderecoService:27 - Cadastrando novo endereço.
+04/12/22 15:51 [http-nio-8080-exec-4] ERROR com.dh.consultorioOdontologico.service.EnderecoService:34 - O endereço não foi cadastrado.
+04/12/22 15:51 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.PacienteService:56 - Paciente Mariana salvo com sucesso.
+04/12/22 15:51 [http-nio-8080-exec-5]  INFO com.dh.consultorioOdontologico.service.PacienteService:34 - Iniciando operação para buscar os pacientes.
+04/12/22 15:51 [http-nio-8080-exec-5]  INFO com.dh.consultorioOdontologico.service.PacienteService:41 - Exibindo os pacientes.
+04/12/22 15:52 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Iniciando operação para salvar o paciente.
+04/12/22 15:52 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.EnderecoService:27 - Cadastrando novo endereço.
+04/12/22 15:52 [http-nio-8080-exec-2] ERROR com.dh.consultorioOdontologico.service.EnderecoService:34 - O endereço não foi cadastrado.
+04/12/22 15:52 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:56 - Paciente Mariana salvo com sucesso.
+04/12/22 15:53 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.EnderecoService:27 - Cadastrando novo endereço.
+04/12/22 15:53 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.EnderecoService:31 - Endereço cadastrado com sucesso.
+04/12/22 15:53 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.EnderecoService:40 - Buscando todos os endereços.
+04/12/22 15:53 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.EnderecoService:48 - Exibindo todos os endereços.
+04/12/22 15:55 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Iniciando operação para salvar o paciente.
+04/12/22 15:55 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.EnderecoService:27 - Cadastrando novo endereço.
+04/12/22 15:55 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.EnderecoService:31 - Endereço cadastrado com sucesso.
+04/12/22 15:55 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:56 - Paciente Mariana salvo com sucesso.
+04/12/22 15:55 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:34 - Iniciando operação para buscar os pacientes.
+04/12/22 15:55 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:41 - Exibindo os pacientes.
+04/12/22 15:55 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.EnderecoService:40 - Buscando todos os endereços.
+04/12/22 15:55 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.EnderecoService:48 - Exibindo todos os endereços.
+04/12/22 15:56 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Iniciando operação para salvar o paciente.
+04/12/22 15:56 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:27 - Cadastrando novo endereço.
+04/12/22 15:56 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:31 - Endereço cadastrado com sucesso.
+04/12/22 15:56 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:56 - Paciente Mariana salvo com sucesso.
+04/12/22 15:56 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:34 - Iniciando operação para buscar os pacientes.
+04/12/22 15:56 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:41 - Exibindo os pacientes.
+04/12/22 15:56 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.EnderecoService:40 - Buscando todos os endereços.
+04/12/22 15:56 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.EnderecoService:48 - Exibindo todos os endereços.
+04/12/22 16:08 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:50 - Iniciando operação para salvar o paciente.
+04/12/22 16:08 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:27 - Cadastrando novo endereço.
+04/12/22 16:08 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:31 - Endereço cadastrado com sucesso.
+04/12/22 16:08 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:58 - Paciente Mariana salvo com sucesso.
+04/12/22 16:08 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:34 - Iniciando operação para buscar os pacientes.
+04/12/22 16:08 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.EnderecoService:40 - Buscando todos os endereços.
+04/12/22 16:08 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.EnderecoService:48 - Exibindo todos os endereços.
+04/12/22 16:08 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:43 - Exibindo os pacientes.
+04/12/22 16:08 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.EnderecoService:40 - Buscando todos os endereços.
+04/12/22 16:08 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.EnderecoService:48 - Exibindo todos os endereços.
+04/12/22 16:09 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:50 - Iniciando operação para salvar o paciente.
+04/12/22 16:09 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.EnderecoService:27 - Cadastrando novo endereço.
+04/12/22 16:09 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.EnderecoService:31 - Endereço cadastrado com sucesso.
+04/12/22 16:09 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:58 - Paciente Mariana salvo com sucesso.
+04/12/22 16:09 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.EnderecoService:40 - Buscando todos os endereços.
+04/12/22 16:09 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.EnderecoService:48 - Exibindo todos os endereços.
+04/12/22 16:09 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.PacienteService:34 - Iniciando operação para buscar os pacientes.
+04/12/22 16:09 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.EnderecoService:40 - Buscando todos os endereços.
+04/12/22 16:09 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.EnderecoService:48 - Exibindo todos os endereços.
+04/12/22 16:09 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.PacienteService:43 - Exibindo os pacientes.
+04/12/22 16:10 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Iniciando operação para salvar o paciente.
+04/12/22 16:10 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.EnderecoService:27 - Cadastrando novo endereço.
+04/12/22 16:10 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.EnderecoService:31 - Endereço cadastrado com sucesso.
+04/12/22 16:10 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:56 - Paciente Mariana salvo com sucesso.
+04/12/22 16:10 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:34 - Iniciando operação para buscar os pacientes.
+04/12/22 16:10 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:41 - Exibindo os pacientes.
+04/12/22 16:14 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Iniciando operação para salvar o paciente.
+04/12/22 16:14 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.EnderecoService:27 - Cadastrando novo endereço.
+04/12/22 16:14 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.EnderecoService:31 - Endereço cadastrado com sucesso.
+04/12/22 16:14 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:54 - Paciente Mariana salvo com sucesso.
+04/12/22 16:14 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.EnderecoService:40 - Buscando todos os endereços.
+04/12/22 16:14 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.EnderecoService:48 - Exibindo todos os endereços.
+04/12/22 16:15 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.PacienteService:90 - Iniciando operação para alterar parcialmente o paciente.
+04/12/22 16:16 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Iniciando operação para salvar o paciente.
+04/12/22 16:16 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.EnderecoService:27 - Cadastrando novo endereço.
+04/12/22 16:16 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.EnderecoService:31 - Endereço cadastrado com sucesso.
+04/12/22 16:16 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:54 - Paciente Mariana salvo com sucesso.
+04/12/22 16:16 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:34 - Iniciando operação para buscar os pacientes.
+04/12/22 16:16 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:41 - Exibindo os pacientes.
+04/12/22 16:16 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.EnderecoService:40 - Buscando todos os endereços.
+04/12/22 16:16 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.EnderecoService:48 - Exibindo todos os endereços.
+04/12/22 16:23 [http-nio-8080-exec-7]  INFO com.dh.consultorioOdontologico.service.PacienteService:34 - Iniciando operação para buscar os pacientes.
+04/12/22 16:23 [http-nio-8080-exec-7]  INFO com.dh.consultorioOdontologico.service.PacienteService:41 - Exibindo os pacientes.
+04/12/22 16:24 [http-nio-8080-exec-8]  INFO com.dh.consultorioOdontologico.service.PacienteService:76 - iniciando operação para buscar o paciente com o rg 123456
+04/12/22 16:24 [http-nio-8080-exec-8]  INFO com.dh.consultorioOdontologico.service.PacienteService:84 - Paciente com o rg 123456 localizado com sucesso.
+04/12/22 16:24 [http-nio-8080-exec-9]  INFO com.dh.consultorioOdontologico.service.PacienteService:128 - Iniciando operação para alterar parcialmente o paciente.
+04/12/22 16:24 [http-nio-8080-exec-10]  INFO com.dh.consultorioOdontologico.service.PacienteService:128 - Iniciando operação para alterar parcialmente o paciente.
+04/12/22 16:45 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:34 - Iniciando operação para buscar os pacientes.
+04/12/22 16:45 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:41 - Exibindo os pacientes.
+04/12/22 16:46 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:49 - Iniciando operação para salvar o paciente.
+04/12/22 16:46 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:27 - Cadastrando novo endereço.
+04/12/22 16:46 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:31 - Endereço cadastrado com sucesso.
+04/12/22 16:46 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:55 - Paciente Mariana salvo com sucesso.
+04/12/22 16:46 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:34 - Iniciando operação para buscar os pacientes.
+04/12/22 16:46 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:38 - Exibindo os pacientes:
+04/12/22 16:47 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:49 - Iniciando operação para salvar o paciente.
+04/12/22 16:47 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:27 - Cadastrando novo endereço.
+04/12/22 16:47 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:31 - Endereço cadastrado com sucesso.
+04/12/22 16:47 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:55 - Paciente Mariana salvo com sucesso.
+04/12/22 16:47 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:34 - Iniciando operação para buscar os pacientes.
+04/12/22 16:47 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:38 - Exibindo os pacientes:
+04/12/22 16:47 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:41 - Paciente MarianaOrsi Rg: 123456
+04/12/22 16:56 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:49 - Iniciando operação para salvar o paciente.
+04/12/22 16:56 [main] ERROR com.dh.consultorioOdontologico.service.PacienteService:58 - Erro ao salvar o paciente.
+04/12/22 16:56 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:34 - Iniciando operação para buscar os pacientes.
+04/12/22 16:57 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:49 - Iniciando operação para salvar o paciente.
+04/12/22 16:57 [main] ERROR com.dh.consultorioOdontologico.service.PacienteService:58 - Erro ao salvar o paciente.
+04/12/22 16:57 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:34 - Iniciando operação para buscar os pacientes.
+04/12/22 16:57 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:49 - Iniciando operação para salvar o paciente.
+04/12/22 16:57 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:55 - Paciente Mariana salvo com sucesso.
+04/12/22 16:57 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:34 - Iniciando operação para buscar os pacientes.
+04/12/22 16:57 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:38 - Exibindo os pacientes:
+04/12/22 16:57 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:41 - Paciente: Mariana Orsi, rg: 123456
+04/12/22 16:57 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.EnderecoService:40 - Buscando todos os endereços.
+04/12/22 16:57 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.EnderecoService:48 - Exibindo todos os endereços.
+04/12/22 17:34 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:49 - Iniciando operação para salvar o paciente.
+04/12/22 17:34 [main]  INFO com.dh.consultorioOdontologico.service.EnderecoService:27 - Cadastrando novo endereço.
+04/12/22 17:34 [main]  INFO com.dh.consultorioOdontologico.service.EnderecoService:31 - Endereço cadastrado com sucesso.
+04/12/22 17:34 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:55 - Paciente Gabriella salvo com sucesso.
+04/12/22 17:34 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:34 - Iniciando operação para buscar os pacientes.
+04/12/22 17:34 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:38 - Exibindo os pacientes:
+04/12/22 17:34 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:41 - Paciente: Gabriella Faria, rg: 123456
+04/12/22 17:37 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:49 - Iniciando operação para salvar o paciente.
+04/12/22 17:37 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:27 - Cadastrando novo endereço.
+04/12/22 17:37 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:31 - Endereço cadastrado com sucesso.
+04/12/22 17:37 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:55 - Paciente Mariana salvo com sucesso.
+04/12/22 17:37 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:34 - Iniciando operação para buscar os pacientes.
+04/12/22 17:37 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:38 - Exibindo os pacientes:
+04/12/22 17:37 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:41 - Paciente: Mariana Orsi, rg: 123456
+04/12/22 17:38 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:49 - Iniciando operação para salvar o paciente.
+04/12/22 17:38 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.EnderecoService:27 - Cadastrando novo endereço.
+04/12/22 17:38 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.EnderecoService:31 - Endereço cadastrado com sucesso.
+04/12/22 17:38 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:55 - Paciente Mariana salvo com sucesso.
+04/12/22 17:38 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:34 - Iniciando operação para buscar os pacientes.
+04/12/22 17:38 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:38 - Exibindo os pacientes:
+04/12/22 17:38 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:41 - Paciente: Mariana Orsi, rg: 123456
+04/12/22 17:38 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.EnderecoService:40 - Buscando todos os endereços.
+04/12/22 17:38 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.EnderecoService:48 - Exibindo todos os endereços.
+04/12/22 18:01 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Iniciando operação para salvar o paciente.
+04/12/22 18:01 [main]  INFO com.dh.consultorioOdontologico.service.EnderecoService:27 - Cadastrando novo endereço.
+04/12/22 18:01 [main]  INFO com.dh.consultorioOdontologico.service.EnderecoService:31 - Endereço cadastrado com sucesso.
+04/12/22 18:01 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:54 - Paciente Gabriella salvo com sucesso.
+04/12/22 18:04 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Iniciando operação para salvar o paciente.
+04/12/22 18:04 [main]  INFO com.dh.consultorioOdontologico.service.EnderecoService:27 - Cadastrando novo endereço.
+04/12/22 18:04 [main]  INFO com.dh.consultorioOdontologico.service.EnderecoService:31 - Endereço cadastrado com sucesso.
+04/12/22 18:04 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:54 - Paciente Gabriella salvo com sucesso.
+04/12/22 18:05 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:27 - Cadastrando novo endereço.
+04/12/22 18:05 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:31 - Endereço cadastrado com sucesso.
+04/12/22 18:05 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Iniciando operação para salvar o paciente.
+04/12/22 18:05 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:27 - Cadastrando novo endereço.
+04/12/22 18:05 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:31 - Endereço cadastrado com sucesso.
+04/12/22 18:05 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:54 - Paciente Mariana salvo com sucesso.
+04/12/22 18:05 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:34 - Iniciando operação para buscar os pacientes.
+04/12/22 18:05 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:38 - Exibindo os pacientes:
+04/12/22 18:05 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:41 - Paciente: Mariana Orsi, rg: 123456
+04/12/22 18:53 [http-nio-8080-exec-6]  INFO com.dh.consultorioOdontologico.service.EnderecoService:27 - Cadastrando novo endereço.
+04/12/22 18:53 [http-nio-8080-exec-6]  INFO com.dh.consultorioOdontologico.service.EnderecoService:31 - Endereço cadastrado com sucesso.
+04/12/22 18:53 [http-nio-8080-exec-6]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Iniciando operação para salvar o paciente.
+04/12/22 18:53 [http-nio-8080-exec-6]  INFO com.dh.consultorioOdontologico.service.EnderecoService:27 - Cadastrando novo endereço.
+04/12/22 18:53 [http-nio-8080-exec-6]  INFO com.dh.consultorioOdontologico.service.EnderecoService:31 - Endereço cadastrado com sucesso.
+04/12/22 19:01 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Iniciando operação para salvar o paciente.
+04/12/22 19:01 [main]  INFO com.dh.consultorioOdontologico.service.EnderecoService:27 - Cadastrando novo endereço.
+04/12/22 19:01 [main]  INFO com.dh.consultorioOdontologico.service.EnderecoService:31 - Endereço cadastrado com sucesso.
+04/12/22 19:01 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:54 - Paciente Gabriella salvo com sucesso.
+04/12/22 19:01 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Iniciando operação para salvar o paciente.
+04/12/22 19:01 [main]  INFO com.dh.consultorioOdontologico.service.EnderecoService:27 - Cadastrando novo endereço.
+04/12/22 19:01 [main]  INFO com.dh.consultorioOdontologico.service.EnderecoService:31 - Endereço cadastrado com sucesso.
+04/12/22 19:01 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:54 - Paciente Gabriella salvo com sucesso.
+04/12/22 19:03 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Iniciando operação para salvar o paciente.
+04/12/22 19:03 [main]  INFO com.dh.consultorioOdontologico.service.EnderecoService:27 - Cadastrando novo endereço.
+04/12/22 19:03 [main]  INFO com.dh.consultorioOdontologico.service.EnderecoService:31 - Endereço cadastrado com sucesso.
+04/12/22 19:03 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:54 - Paciente Gabriella salvo com sucesso.
+04/12/22 19:06 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:27 - Cadastrando novo endereço.
+04/12/22 19:06 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:31 - Endereço cadastrado com sucesso.
+04/12/22 19:06 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Iniciando operação para salvar o paciente.
+04/12/22 19:06 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:27 - Cadastrando novo endereço.
+04/12/22 19:06 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:31 - Endereço cadastrado com sucesso.
+04/12/22 19:06 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:54 - Paciente Mariana salvo com sucesso.
+04/12/22 19:06 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:34 - Iniciando operação para buscar os pacientes.
+04/12/22 19:06 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:38 - Exibindo os pacientes:
+04/12/22 19:06 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:41 - Paciente: Mariana Orsi, rg: 123456
+04/12/22 19:06 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.EnderecoService:40 - Buscando todos os endereços.
+04/12/22 19:06 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.EnderecoService:48 - Exibindo todos os endereços.
+04/12/22 19:07 [http-nio-8080-exec-5]  INFO com.dh.consultorioOdontologico.service.PacienteService:83 - Iniciando operação para alterar parcialmente o paciente.
+04/12/22 19:07 [http-nio-8080-exec-5]  INFO com.dh.consultorioOdontologico.service.PacienteService:115 - Paciente alterado com sucesso!
+05/12/22 22:11 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:27 - Cadastrando novo endereço.
+05/12/22 22:11 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:31 - Endereço cadastrado com sucesso.
+05/12/22 22:11 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:49 - Iniciando operação para salvar o paciente.
+05/12/22 22:11 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:27 - Cadastrando novo endereço.
+05/12/22 22:11 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:31 - Endereço cadastrado com sucesso.
+05/12/22 22:11 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:55 - Paciente Mariana salvo com sucesso.
+05/12/22 22:11 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:35 - Iniciando operação para buscar os pacientes.
+05/12/22 22:11 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:39 - Exibindo os pacientes:
+05/12/22 22:11 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Paciente: Mariana Orsi, rg: 123456
+05/12/22 22:11 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.EnderecoService:40 - Buscando todos os endereços.
+05/12/22 22:11 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.EnderecoService:48 - Exibindo todos os endereços.
+05/12/22 22:13 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:27 - Cadastrando novo endereço.
+05/12/22 22:13 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:31 - Endereço cadastrado com sucesso.
+05/12/22 22:13 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:49 - Iniciando operação para salvar o paciente.
+05/12/22 22:13 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:27 - Cadastrando novo endereço.
+05/12/22 22:13 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:31 - Endereço cadastrado com sucesso.
+05/12/22 22:13 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:55 - Paciente Mariana salvo com sucesso.
+05/12/22 22:13 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:35 - Iniciando operação para buscar os pacientes.
+05/12/22 22:13 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:39 - Exibindo os pacientes:
+05/12/22 22:13 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Paciente: Mariana Orsi, rg: 123456
+05/12/22 22:13 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.EnderecoService:40 - Buscando todos os endereços.
+05/12/22 22:13 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.EnderecoService:48 - Exibindo todos os endereços.
+05/12/22 22:14 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.EnderecoService:40 - Buscando todos os endereços.
+05/12/22 22:14 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.EnderecoService:48 - Exibindo todos os endereços.
+05/12/22 22:14 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.EnderecoService:27 - Cadastrando novo endereço.
+05/12/22 22:14 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.EnderecoService:31 - Endereço cadastrado com sucesso.
+05/12/22 22:14 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:49 - Iniciando operação para salvar o paciente.
+05/12/22 22:14 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.EnderecoService:27 - Cadastrando novo endereço.
+05/12/22 22:14 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.EnderecoService:31 - Endereço cadastrado com sucesso.
+05/12/22 22:14 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:55 - Paciente Mariana salvo com sucesso.
+05/12/22 22:14 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.EnderecoService:40 - Buscando todos os endereços.
+05/12/22 22:14 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.EnderecoService:48 - Exibindo todos os endereços.
+05/12/22 22:15 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:49 - Iniciando operação para salvar o paciente.
+05/12/22 22:15 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:27 - Cadastrando novo endereço.
+05/12/22 22:15 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:31 - Endereço cadastrado com sucesso.
+05/12/22 22:15 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:55 - Paciente Mariana salvo com sucesso.
+05/12/22 22:15 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:35 - Iniciando operação para buscar os pacientes.
+05/12/22 22:15 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:39 - Exibindo os pacientes:
+05/12/22 22:15 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Paciente: Mariana Orsi, rg: 123456
+05/12/22 22:15 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.EnderecoService:40 - Buscando todos os endereços.
+05/12/22 22:15 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.EnderecoService:48 - Exibindo todos os endereços.
+05/12/22 22:17 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:49 - Iniciando operação para salvar o paciente.
+05/12/22 22:17 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:27 - Cadastrando novo endereço.
+05/12/22 22:17 [http-nio-8080-exec-1] ERROR com.dh.consultorioOdontologico.service.EnderecoService:34 - O endereço não foi cadastrado.
+05/12/22 22:17 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:55 - Paciente Mariana salvo com sucesso.
+05/12/22 22:17 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:35 - Iniciando operação para buscar os pacientes.
+05/12/22 22:17 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:39 - Exibindo os pacientes:
+05/12/22 22:17 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Paciente: Mariana Orsi, rg: 123456
+05/12/22 22:39 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:49 - Iniciando operação para salvar o paciente.
+05/12/22 22:39 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:27 - Cadastrando novo endereço.
+05/12/22 22:39 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:31 - Endereço cadastrado com sucesso.
+05/12/22 22:39 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:55 - Paciente Mariana salvo com sucesso.
+05/12/22 22:39 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:35 - Iniciando operação para buscar os pacientes.
+05/12/22 22:39 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:39 - Exibindo os pacientes:
+05/12/22 22:39 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Paciente: Mariana Orsi, rg: 123456
+05/12/22 22:40 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.EnderecoService:40 - Buscando todos os endereços.
+05/12/22 22:40 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.EnderecoService:48 - Exibindo todos os endereços.
+05/12/22 22:41 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:49 - Iniciando operação para salvar o paciente.
+05/12/22 22:41 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.EnderecoService:27 - Cadastrando novo endereço.
+05/12/22 22:41 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.EnderecoService:31 - Endereço cadastrado com sucesso.
+05/12/22 22:41 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:55 - Paciente Mariana salvo com sucesso.
+05/12/22 22:41 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:35 - Iniciando operação para buscar os pacientes.
+05/12/22 22:41 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:39 - Exibindo os pacientes:
+05/12/22 22:41 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Paciente: Mariana Orsi, rg: 123456
+05/12/22 22:44 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:49 - Iniciando operação para salvar o paciente.
+05/12/22 22:45 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:27 - Cadastrando novo endereço.
+05/12/22 22:45 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:31 - Endereço cadastrado com sucesso.
+05/12/22 22:47 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:55 - Paciente Mariana salvo com sucesso.
+05/12/22 22:48 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:49 - Iniciando operação para salvar o paciente.
+05/12/22 22:58 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:55 - Paciente Mariana salvo com sucesso.
+05/12/22 23:09 [http-nio-8081-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:49 - Iniciando operação para salvar o paciente.
+05/12/22 23:09 [http-nio-8081-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:55 - Paciente Mariana salvo com sucesso.
+05/12/22 23:13 [http-nio-8081-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:49 - Iniciando operação para salvar o paciente.
+05/12/22 23:13 [http-nio-8081-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:57 - Paciente Mariana salvo com sucesso.
+05/12/22 23:13 [http-nio-8081-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:49 - Iniciando operação para salvar o paciente.
+05/12/22 23:13 [http-nio-8081-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:57 - Paciente Mariana salvo com sucesso.
+05/12/22 23:14 [http-nio-8081-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:35 - Iniciando operação para buscar os pacientes.
+05/12/22 23:14 [http-nio-8081-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:39 - Exibindo os pacientes:
+05/12/22 23:14 [http-nio-8081-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Paciente: Mariana Orsi, rg: 123456
+05/12/22 23:14 [http-nio-8081-exec-4]  INFO com.dh.consultorioOdontologico.service.EnderecoService:40 - Buscando todos os endereços.
+05/12/22 23:14 [http-nio-8081-exec-4]  INFO com.dh.consultorioOdontologico.service.EnderecoService:48 - Exibindo todos os endereços.
+05/12/22 23:20 [http-nio-8082-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:49 - Iniciando operação para salvar o paciente.
+05/12/22 23:20 [http-nio-8082-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:57 - Paciente Mariana salvo com sucesso.
+05/12/22 23:20 [http-nio-8082-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:35 - Iniciando operação para buscar os pacientes.
+05/12/22 23:22 [http-nio-8082-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:39 - Exibindo os pacientes:
+05/12/22 23:22 [http-nio-8082-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Paciente: Mariana Orsi, rg: 123456
+05/12/22 23:24 [http-nio-8082-exec-5]  INFO com.dh.consultorioOdontologico.service.PacienteService:35 - Iniciando operação para buscar os pacientes.
+05/12/22 23:24 [http-nio-8082-exec-5]  INFO com.dh.consultorioOdontologico.service.PacienteService:39 - Exibindo os pacientes:
+05/12/22 23:24 [http-nio-8082-exec-5]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Paciente: Mariana Orsi, rg: 123456
+05/12/22 23:27 [http-nio-8082-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:50 - Iniciando operação para salvar o paciente.
+05/12/22 23:27 [http-nio-8082-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:58 - Paciente Mariana salvo com sucesso.
+05/12/22 23:27 [http-nio-8082-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:35 - Iniciando operação para buscar os pacientes.
+05/12/22 23:27 [http-nio-8082-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:39 - Exibindo os pacientes:
+05/12/22 23:27 [http-nio-8082-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Paciente: Mariana Orsi, rg: 123456
+05/12/22 23:28 [http-nio-8082-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:50 - Iniciando operação para salvar o paciente.
+05/12/22 23:28 [http-nio-8082-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:58 - Paciente Mariana salvo com sucesso.
+05/12/22 23:28 [http-nio-8082-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:35 - Iniciando operação para buscar os pacientes.
+05/12/22 23:28 [http-nio-8082-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:39 - Exibindo os pacientes:
+05/12/22 23:30 [http-nio-8082-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Paciente: Mariana Orsi, rg: 123456
+05/12/22 23:30 [http-nio-8082-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:50 - Iniciando operação para salvar o paciente.
+05/12/22 23:30 [http-nio-8082-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:58 - Paciente Mariana salvo com sucesso.
+05/12/22 23:30 [http-nio-8082-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:35 - Iniciando operação para buscar os pacientes.
+05/12/22 23:30 [http-nio-8082-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:39 - Exibindo os pacientes:
+05/12/22 23:30 [http-nio-8082-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Paciente: Mariana Orsi, rg: 123456
+06/12/22 21:10 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:46 - Iniciando operação para salvar o paciente.
+06/12/22 21:10 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:54 - Paciente Mariana salvo com sucesso.
+06/12/22 21:10 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:32 - Iniciando operação para buscar os pacientes.
+06/12/22 21:10 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:36 - Exibindo os pacientes:
+06/12/22 21:10 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:39 - Paciente: Mariana Orsi, rg: 123456
+06/12/22 21:10 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.PacienteService:46 - Iniciando operação para salvar o paciente.
+06/12/22 21:12 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:46 - Iniciando operação para salvar o paciente.
+06/12/22 21:12 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:54 - Paciente Mariana salvo com sucesso.
+06/12/22 21:12 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:32 - Iniciando operação para buscar os pacientes.
+06/12/22 21:12 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:36 - Exibindo os pacientes:
+06/12/22 21:12 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:39 - Paciente: Mariana Orsi, rg: 123456
+06/12/22 21:12 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.PacienteService:85 - Iniciando operação para alterar parcialmente o paciente.
+06/12/22 21:13 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:46 - Iniciando operação para salvar o paciente.
+06/12/22 21:13 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:54 - Paciente Mariana salvo com sucesso.
+06/12/22 21:13 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:85 - Iniciando operação para alterar parcialmente o paciente.
+06/12/22 21:29 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:46 - Iniciando operação para salvar o paciente.
+06/12/22 21:29 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:54 - Paciente Mariana salvo com sucesso.
+06/12/22 21:29 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:32 - Iniciando operação para buscar os pacientes.
+06/12/22 21:29 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:36 - Exibindo os pacientes:
+06/12/22 21:29 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:39 - Paciente: Mariana Orsi, rg: 123456
+06/12/22 21:30 [http-nio-8080-exec-6]  INFO com.dh.consultorioOdontologico.service.PacienteService:85 - Iniciando operação para alterar parcialmente o paciente.
+06/12/22 21:32 [http-nio-8080-exec-8]  INFO com.dh.consultorioOdontologico.service.PacienteService:32 - Iniciando operação para buscar os pacientes.
+06/12/22 21:32 [http-nio-8080-exec-8]  INFO com.dh.consultorioOdontologico.service.PacienteService:36 - Exibindo os pacientes:
+06/12/22 21:32 [http-nio-8080-exec-8]  INFO com.dh.consultorioOdontologico.service.PacienteService:39 - Paciente: Mariana Orsi, rg: 123456
+06/12/22 22:12 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:46 - Iniciando operação para salvar o paciente.
+06/12/22 22:12 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:54 - Paciente Mariana salvo com sucesso.
+06/12/22 22:12 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:32 - Iniciando operação para buscar os pacientes.
+06/12/22 22:12 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:36 - Exibindo os pacientes:
+06/12/22 22:12 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:39 - Paciente: Mariana Orsi, rg: 123456
+06/12/22 22:13 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.PacienteService:85 - Iniciando operação para alterar parcialmente o paciente.
+06/12/22 22:14 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:46 - Iniciando operação para salvar o paciente.
+06/12/22 22:14 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:54 - Paciente Mariana salvo com sucesso.
+06/12/22 22:14 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:32 - Iniciando operação para buscar os pacientes.
+06/12/22 22:14 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:36 - Exibindo os pacientes:
+06/12/22 22:14 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:39 - Paciente: Mariana Orsi, rg: 123456
+06/12/22 22:14 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.PacienteService:85 - Iniciando operação para alterar parcialmente o paciente.
+06/12/22 22:16 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:46 - Iniciando operação para salvar o paciente.
+06/12/22 22:16 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:54 - Paciente Mariana salvo com sucesso.
+06/12/22 22:16 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:32 - Iniciando operação para buscar os pacientes.
+06/12/22 22:16 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:36 - Exibindo os pacientes:
+06/12/22 22:16 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:39 - Paciente: Mariana Orsi, rg: 123456
+06/12/22 22:17 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.PacienteService:85 - Iniciando operação para alterar parcialmente o paciente.
+07/12/22 19:34 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:46 - Iniciando operação para salvar o paciente.
+07/12/22 19:34 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:54 - Paciente Gabs salvo com sucesso.
+07/12/22 19:34 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:32 - Iniciando operação para buscar os pacientes.
+07/12/22 19:34 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:36 - Exibindo os pacientes:
+07/12/22 19:34 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:39 - Paciente: Gabs Faria, rg: 123456
+07/12/22 19:34 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.PacienteService:71 - iniciando operação para buscar o paciente com o rg 123456
+07/12/22 19:34 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.PacienteService:78 - Paciente com o rg 123456 localizado com sucesso.
+07/12/22 19:48 [http-nio-8080-exec-7]  INFO com.dh.consultorioOdontologico.service.PacienteService:122 - Iniciando operação para alterar parcialmente o paciente.
+07/12/22 19:48 [http-nio-8080-exec-7]  INFO com.dh.consultorioOdontologico.service.PacienteService:141 - Paciente alterado com sucesso!
+07/12/22 19:48 [http-nio-8080-exec-8]  INFO com.dh.consultorioOdontologico.service.PacienteService:32 - Iniciando operação para buscar os pacientes.
+07/12/22 19:48 [http-nio-8080-exec-8]  INFO com.dh.consultorioOdontologico.service.PacienteService:36 - Exibindo os pacientes:
+07/12/22 19:48 [http-nio-8080-exec-8]  INFO com.dh.consultorioOdontologico.service.PacienteService:39 - Paciente: Gabriella Faria, rg: 123456
+07/12/22 19:48 [http-nio-8080-exec-9]  INFO com.dh.consultorioOdontologico.service.PacienteService:122 - Iniciando operação para alterar parcialmente o paciente.
+07/12/22 19:48 [http-nio-8080-exec-9]  INFO com.dh.consultorioOdontologico.service.PacienteService:141 - Paciente alterado com sucesso!
+07/12/22 19:49 [http-nio-8080-exec-10]  INFO com.dh.consultorioOdontologico.service.PacienteService:46 - Iniciando operação para salvar o paciente.
+07/12/22 19:49 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:32 - Iniciando operação para buscar os pacientes.
+07/12/22 19:49 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:36 - Exibindo os pacientes:
+07/12/22 19:49 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:39 - Paciente: Gab F, rg: 123456
+07/12/22 19:57 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:46 - Iniciando operação para salvar o paciente.
+07/12/22 19:57 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:54 - Paciente Gabs salvo com sucesso.
+07/12/22 19:57 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:32 - Iniciando operação para buscar os pacientes.
+07/12/22 19:57 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:36 - Exibindo os pacientes:
+07/12/22 19:57 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:39 - Paciente: Gabs Faria, rg: 123456
+07/12/22 19:58 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.PacienteService:71 - iniciando operação para buscar o paciente com o rg 123456
+07/12/22 19:58 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.PacienteService:78 - Paciente com o rg 123456 localizado com sucesso.
+07/12/22 19:58 [http-nio-8080-exec-5]  INFO com.dh.consultorioOdontologico.service.PacienteService:121 - Iniciando operação para alterar parcialmente o paciente.
+07/12/22 19:58 [http-nio-8080-exec-5]  INFO com.dh.consultorioOdontologico.service.PacienteService:140 - Paciente alterado com sucesso!
+07/12/22 19:58 [http-nio-8080-exec-6]  INFO com.dh.consultorioOdontologico.service.PacienteService:32 - Iniciando operação para buscar os pacientes.
+07/12/22 19:58 [http-nio-8080-exec-6]  INFO com.dh.consultorioOdontologico.service.PacienteService:36 - Exibindo os pacientes:
+07/12/22 19:58 [http-nio-8080-exec-6]  INFO com.dh.consultorioOdontologico.service.PacienteService:39 - Paciente: Gab F, rg: 123456
+07/12/22 19:58 [http-nio-8080-exec-7]  INFO com.dh.consultorioOdontologico.service.PacienteService:121 - Iniciando operação para alterar parcialmente o paciente.
+07/12/22 19:58 [http-nio-8080-exec-7]  INFO com.dh.consultorioOdontologico.service.PacienteService:140 - Paciente alterado com sucesso!
+07/12/22 19:59 [http-nio-8080-exec-8]  INFO com.dh.consultorioOdontologico.service.PacienteService:32 - Iniciando operação para buscar os pacientes.
+07/12/22 19:59 [http-nio-8080-exec-8]  INFO com.dh.consultorioOdontologico.service.PacienteService:36 - Exibindo os pacientes:
+07/12/22 19:59 [http-nio-8080-exec-8]  INFO com.dh.consultorioOdontologico.service.PacienteService:39 - Paciente: Gab F, rg: 123456
+07/12/22 19:59 [http-nio-8080-exec-9]  INFO com.dh.consultorioOdontologico.service.PacienteService:84 - Iniciando operação para alterar parcialmente o paciente.
+07/12/22 20:13 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:84 - Iniciando operação para alterar parcialmente o paciente.
+07/12/22 20:13 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:115 - Paciente alterado com sucesso!
+07/12/22 20:14 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.PacienteService:32 - Iniciando operação para buscar os pacientes.
+07/12/22 20:14 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.PacienteService:36 - Exibindo os pacientes:
+07/12/22 20:14 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.PacienteService:39 - Paciente: Everton F, rg: 123456
+07/12/22 20:15 [http-nio-8080-exec-5]  INFO com.dh.consultorioOdontologico.service.PacienteService:84 - Iniciando operação para alterar parcialmente o paciente.
+07/12/22 20:15 [http-nio-8080-exec-5]  INFO com.dh.consultorioOdontologico.service.PacienteService:115 - Paciente alterado com sucesso!
+07/12/22 20:15 [http-nio-8080-exec-6]  INFO com.dh.consultorioOdontologico.service.PacienteService:32 - Iniciando operação para buscar os pacientes.
+07/12/22 20:15 [http-nio-8080-exec-6]  INFO com.dh.consultorioOdontologico.service.PacienteService:36 - Exibindo os pacientes:
+07/12/22 20:15 [http-nio-8080-exec-6]  INFO com.dh.consultorioOdontologico.service.PacienteService:39 - Paciente: Everton F, rg: 123456
+07/12/22 20:18 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:84 - Iniciando operação para alterar parcialmente o paciente.
+07/12/22 20:18 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:115 - Paciente alterado com sucesso!
+07/12/22 20:20 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:46 - Iniciando operação para salvar o paciente.
+07/12/22 20:20 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:54 - Paciente Gabs salvo com sucesso.
+07/12/22 20:20 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:32 - Iniciando operação para buscar os pacientes.
+07/12/22 20:20 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:36 - Exibindo os pacientes:
+07/12/22 20:20 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:39 - Paciente: Gabs Faria, rg: 123456
+07/12/22 20:21 [http-nio-8080-exec-6]  INFO com.dh.consultorioOdontologico.service.PacienteService:84 - Iniciando operação para alterar parcialmente o paciente.
+07/12/22 20:21 [http-nio-8080-exec-6]  INFO com.dh.consultorioOdontologico.service.PacienteService:115 - Paciente alterado com sucesso!
+07/12/22 20:21 [http-nio-8080-exec-8]  INFO com.dh.consultorioOdontologico.service.PacienteService:84 - Iniciando operação para alterar parcialmente o paciente.
+07/12/22 20:21 [http-nio-8080-exec-8]  INFO com.dh.consultorioOdontologico.service.PacienteService:115 - Paciente alterado com sucesso!
+07/12/22 20:23 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:46 - Iniciando operação para salvar o paciente.
+07/12/22 20:24 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:46 - Iniciando operação para salvar o paciente.
+07/12/22 20:24 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:46 - Iniciando operação para salvar o paciente.
+07/12/22 20:24 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:54 - Paciente Gabs salvo com sucesso.
+07/12/22 20:24 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:84 - Iniciando operação para alterar parcialmente o paciente.
+07/12/22 20:24 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:115 - Paciente alterado com sucesso!
+07/12/22 20:44 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:43 - Iniciando operação para salvar o paciente.
+07/12/22 20:44 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:49 - Paciente Gabs salvo com sucesso.
+07/12/22 20:44 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:29 - Iniciando operação para buscar os pacientes.
+07/12/22 20:44 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:33 - Exibindo os pacientes:
+07/12/22 20:44 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:36 - Paciente: Gabs Faria, rg: 123456
+07/12/22 20:44 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.PacienteService:76 - Iniciando operação para alterar parcialmente o paciente.
+07/12/22 20:44 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.PacienteService:107 - Paciente alterado com sucesso!
+07/12/22 20:44 [http-nio-8080-exec-5]  INFO com.dh.consultorioOdontologico.service.EnderecoService:40 - Buscando todos os endereços.
+07/12/22 20:44 [http-nio-8080-exec-5]  INFO com.dh.consultorioOdontologico.service.EnderecoService:48 - Exibindo todos os endereços.
+07/12/22 20:44 [http-nio-8080-exec-6]  INFO com.dh.consultorioOdontologico.service.PacienteService:63 - iniciando operação para buscar o paciente com o rg 123456
+07/12/22 20:44 [http-nio-8080-exec-6]  INFO com.dh.consultorioOdontologico.service.PacienteService:70 - Paciente com o rg 123456 localizado com sucesso.
+07/12/22 20:44 [http-nio-8080-exec-7]  INFO com.dh.consultorioOdontologico.service.PacienteService:113 - Iniciando operação para alterar parcialmente o paciente.
+07/12/22 20:44 [http-nio-8080-exec-7]  INFO com.dh.consultorioOdontologico.service.PacienteService:132 - Paciente alterado com sucesso!
+07/12/22 20:45 [http-nio-8080-exec-10]  INFO com.dh.consultorioOdontologico.service.PacienteService:63 - iniciando operação para buscar o paciente com o rg 123456
+07/12/22 20:45 [http-nio-8080-exec-10]  INFO com.dh.consultorioOdontologico.service.PacienteService:70 - Paciente com o rg 123456 localizado com sucesso.
+07/12/22 20:46 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:40 - Buscando todos os endereços.
+07/12/22 20:46 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.EnderecoService:48 - Exibindo todos os endereços.
+07/12/22 20:46 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:29 - Iniciando operação para buscar os pacientes.
+07/12/22 20:46 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:33 - Exibindo os pacientes:
+07/12/22 20:46 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:36 - Paciente: Gab F, rg: 123456
+07/12/22 20:55 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:43 - Iniciando operação para salvar o paciente.
+07/12/22 20:55 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:49 - Paciente Gabs salvo com sucesso.
+07/12/22 20:55 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:29 - Iniciando operação para buscar os pacientes.
+07/12/22 20:55 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:33 - Exibindo os pacientes:
+07/12/22 20:55 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:36 - Paciente: Gabs Faria, rg: 123456
+07/12/22 20:56 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.PacienteService:54 - Iniciada operação para deletar o paciente com o Rg 123456
+07/12/22 20:56 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.PacienteService:59 - Paciente deletado!
+07/12/22 21:01 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:41 - Iniciando operação para salvar o paciente.
+07/12/22 21:01 [http-nio-8080-exec-1]  INFO com.dh.consultorioOdontologico.service.PacienteService:47 - Paciente Gabs salvo com sucesso.
+07/12/22 21:01 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:27 - Iniciando operação para buscar os pacientes.
+07/12/22 21:01 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:31 - Exibindo os pacientes:
+07/12/22 21:01 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:34 - Paciente: Gabs Faria, rg: 123456
+07/12/22 21:01 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.PacienteService:52 - Iniciada operação para deletar o paciente com o Rg 123456
+07/12/22 21:01 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.PacienteService:57 - Paciente deletado!
+07/12/22 21:10 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:41 - Iniciando operação para salvar o paciente.
+07/12/22 21:29 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:41 - Iniciando operação para salvar o paciente.
+08/12/22 19:20 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:41 - Iniciando operação para salvar o paciente.
+08/12/22 19:32 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:41 - Iniciando operação para salvar o paciente.
+08/12/22 19:34 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Iniciando operação para salvar o paciente.
+08/12/22 19:34 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Iniciando operação para salvar o paciente.
+08/12/22 19:39 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Iniciando operação para salvar o paciente.
+08/12/22 19:40 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Iniciando operação para salvar o paciente.
+08/12/22 19:48 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Iniciando operação para salvar o paciente.
+08/12/22 19:48 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Paciente Gabs salvo com sucesso.
+08/12/22 19:48 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:27 - Iniciando operação para buscar os pacientes.
+08/12/22 19:48 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:31 - Exibindo os pacientes:
+08/12/22 19:48 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:34 - Paciente: Gabs Faria, rg: 123456
+08/12/22 19:49 [http-nio-8080-exec-6]  INFO com.dh.consultorioOdontologico.service.PacienteService:76 - Iniciando operação para alterar parcialmente o paciente.
+08/12/22 19:49 [http-nio-8080-exec-6]  INFO com.dh.consultorioOdontologico.service.PacienteService:107 - Paciente alterado com sucesso!
+08/12/22 19:50 [http-nio-8080-exec-7]  INFO com.dh.consultorioOdontologico.service.EnderecoService:40 - Buscando todos os endereços.
+08/12/22 19:50 [http-nio-8080-exec-7]  INFO com.dh.consultorioOdontologico.service.EnderecoService:48 - Exibindo todos os endereços.
+08/12/22 19:50 [http-nio-8080-exec-8]  INFO com.dh.consultorioOdontologico.service.PacienteService:63 - iniciando operação para buscar o paciente com o rg 123456
+08/12/22 19:50 [http-nio-8080-exec-8]  INFO com.dh.consultorioOdontologico.service.PacienteService:70 - Paciente com o rg 123456 localizado com sucesso.
+08/12/22 19:50 [http-nio-8080-exec-9]  INFO com.dh.consultorioOdontologico.service.PacienteService:113 - Iniciando operação para alterar parcialmente o paciente.
+08/12/22 19:50 [http-nio-8080-exec-9]  INFO com.dh.consultorioOdontologico.service.PacienteService:132 - Paciente alterado com sucesso!
+08/12/22 19:50 [http-nio-8080-exec-10]  INFO com.dh.consultorioOdontologico.service.PacienteService:53 - Iniciada operação para deletar o paciente com o Rg 123456
+08/12/22 19:50 [http-nio-8080-exec-10]  INFO com.dh.consultorioOdontologico.service.PacienteService:58 - Paciente deletado!
+08/12/22 19:50 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Iniciando operação para salvar o paciente.
+08/12/22 19:59 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Iniciando operação para salvar o paciente.
+08/12/22 19:59 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Paciente Gabriella salvo com sucesso.
+08/12/22 20:12 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Iniciando operação para salvar o paciente.
+08/12/22 20:12 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Paciente Gabriella salvo com sucesso.
+08/12/22 20:12 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:27 - Iniciando operação para buscar os pacientes.
+08/12/22 20:12 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:31 - Exibindo os pacientes:
+08/12/22 20:12 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:34 - Paciente: Gabriella Faria, rg: 123456
+08/12/22 20:18 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Iniciando operação para salvar o paciente.
+08/12/22 20:18 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Paciente Gabriella salvo com sucesso.
+08/12/22 20:18 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:53 - Iniciada operação para deletar o paciente com o Rg 123456
+08/12/22 20:18 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:58 - Paciente deletado!
+08/12/22 20:19 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Iniciando operação para salvar o paciente.
+08/12/22 20:19 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Paciente Gabriella salvo com sucesso.
+08/12/22 20:19 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:53 - Iniciada operação para deletar o paciente com o Rg 123456
+08/12/22 20:19 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:58 - Paciente deletado!
+08/12/22 20:19 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:27 - Iniciando operação para buscar os pacientes.
+08/12/22 20:19 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:31 - Exibindo os pacientes:
+08/12/22 20:20 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Iniciando operação para salvar o paciente.
+08/12/22 20:20 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Paciente Gabriella salvo com sucesso.
+08/12/22 20:20 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:27 - Iniciando operação para buscar os pacientes.
+08/12/22 20:20 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:31 - Exibindo os pacientes:
+08/12/22 20:20 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:34 - Paciente: Gabriella Faria, rg: 123456
+08/12/22 20:24 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Iniciando operação para salvar o paciente.
+08/12/22 20:24 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Paciente Gabriella salvo com sucesso.
+08/12/22 20:24 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:53 - Iniciada operação para deletar o paciente com o Rg 123456
+08/12/22 20:24 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:58 - Paciente deletado!
+08/12/22 20:24 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:27 - Iniciando operação para buscar os pacientes.
+08/12/22 20:24 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:31 - Exibindo os pacientes:
+08/12/22 20:26 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Iniciando operação para salvar o paciente.
+08/12/22 20:26 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Paciente Gabriella salvo com sucesso.
+08/12/22 20:26 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:53 - Iniciada operação para deletar o paciente com o Rg 123456
+08/12/22 20:26 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:58 - Paciente deletado!
+08/12/22 20:26 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:63 - iniciando operação para buscar o paciente com o rg 123456
+08/12/22 20:26 [main] ERROR com.dh.consultorioOdontologico.service.PacienteService:67 - Paciente com o rg 123456 não localizado.
+08/12/22 20:39 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Iniciando operação para salvar o paciente.
+08/12/22 20:39 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Paciente Gabriella salvo com sucesso.
+08/12/22 20:39 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:53 - Iniciada operação para deletar o paciente com o Rg 123456
+08/12/22 20:39 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:58 - Paciente deletado!
+08/12/22 20:39 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:27 - Iniciando operação para buscar os pacientes.
+08/12/22 20:39 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:31 - Exibindo os pacientes:
+08/12/22 20:39 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Iniciando operação para salvar o paciente.
+08/12/22 20:39 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Iniciando operação para salvar o paciente.
+08/12/22 20:39 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Paciente Gabriella salvo com sucesso.
+08/12/22 20:39 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:27 - Iniciando operação para buscar os pacientes.
+08/12/22 20:39 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:31 - Exibindo os pacientes:
+08/12/22 20:39 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:34 - Paciente: Gabriella Faria, rg: 123456
+08/12/22 20:40 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Iniciando operação para salvar o paciente.
+08/12/22 20:40 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Paciente Gabriella salvo com sucesso.
+08/12/22 20:40 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:53 - Iniciada operação para deletar o paciente com o Rg 123456
+08/12/22 20:40 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:58 - Paciente deletado!
+08/12/22 20:40 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:27 - Iniciando operação para buscar os pacientes.
+08/12/22 20:40 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:31 - Exibindo os pacientes:
+08/12/22 20:47 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Iniciando operação para salvar o paciente.
+08/12/22 20:47 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Paciente Gabriella salvo com sucesso.
+08/12/22 20:47 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:53 - Iniciada operação para deletar o paciente com o Rg 123456
+08/12/22 20:47 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:58 - Paciente deletado!
+08/12/22 20:47 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:27 - Iniciando operação para buscar os pacientes.
+08/12/22 20:47 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:31 - Exibindo os pacientes:
+08/12/22 21:15 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Iniciando operação para salvar o paciente.
+08/12/22 21:15 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Paciente Gabriella salvo com sucesso.
+08/12/22 21:15 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:63 - iniciando operação para buscar o paciente com o rg 123456
+08/12/22 21:15 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:70 - Paciente com o rg 123456 localizado com sucesso.
+08/12/22 21:15 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:113 - Iniciando operação para alterar parcialmente o paciente.
+08/12/22 21:15 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:132 - Paciente alterado com sucesso!
+08/12/22 21:21 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Iniciando operação para salvar o paciente.
+08/12/22 21:21 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Paciente Gabriella salvo com sucesso.
+08/12/22 21:21 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:63 - iniciando operação para buscar o paciente com o rg 123456
+08/12/22 21:21 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:70 - Paciente com o rg 123456 localizado com sucesso.
+08/12/22 21:21 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:113 - Iniciando operação para alterar parcialmente o paciente.
+08/12/22 21:21 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:132 - Paciente alterado com sucesso!
+08/12/22 21:31 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Iniciando operação para salvar o paciente.
+08/12/22 21:31 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Paciente Gabriella salvo com sucesso.
+08/12/22 21:31 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:63 - iniciando operação para buscar o paciente com o rg 123456
+08/12/22 21:31 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:70 - Paciente com o rg 123456 localizado com sucesso.
+08/12/22 21:31 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:76 - Iniciando operação para alterar parcialmente o paciente.
+08/12/22 21:31 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:107 - Paciente alterado com sucesso!
+08/12/22 21:44 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Iniciando operação para salvar o paciente.
+08/12/22 21:44 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Paciente Gabriella salvo com sucesso.
+08/12/22 21:44 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:63 - iniciando operação para buscar o paciente com o rg 123456
+08/12/22 21:44 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:70 - Paciente com o rg 123456 localizado com sucesso.
+08/12/22 21:44 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:53 - Iniciada operação para deletar o paciente com o Rg 123456
+08/12/22 21:44 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:58 - Paciente deletado!
+08/12/22 22:01 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Iniciando operação para salvar o paciente.
+08/12/22 22:01 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Paciente Gabriella salvo com sucesso.
+08/12/22 22:01 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:63 - iniciando operação para buscar o paciente com o rg 123456
+08/12/22 22:01 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:70 - Paciente com o rg 123456 localizado com sucesso.
+08/12/22 22:04 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Iniciando operação para salvar o paciente.
+08/12/22 22:04 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Paciente Gabriella salvo com sucesso.
+08/12/22 22:04 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Iniciando operação para salvar o paciente.
+08/12/22 22:05 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Iniciando operação para salvar o paciente.
+08/12/22 22:05 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Paciente Gabriella salvo com sucesso.
+08/12/22 22:05 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Iniciando operação para salvar o paciente.
+08/12/22 22:05 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Paciente Mariana salvo com sucesso.
+08/12/22 22:06 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Iniciando operação para salvar o paciente.
+08/12/22 22:06 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Paciente Gabriella salvo com sucesso.
+08/12/22 22:06 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Iniciando operação para salvar o paciente.
+08/12/22 22:17 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Iniciando operação para salvar o paciente.
+08/12/22 22:17 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Paciente Gabriella salvo com sucesso.
+08/12/22 22:17 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:63 - iniciando operação para buscar o paciente com o rg 1234568
+08/12/22 22:17 [main] ERROR com.dh.consultorioOdontologico.service.PacienteService:67 - Paciente com o rg 1234568 não localizado.
+08/12/22 22:19 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Iniciando operação para salvar o paciente.
+08/12/22 22:19 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Paciente Gabriella salvo com sucesso.
+08/12/22 22:19 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:63 - iniciando operação para buscar o paciente com o rg 123456
+08/12/22 22:19 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:70 - Paciente com o rg 123456 localizado com sucesso.
+08/12/22 22:19 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:53 - Iniciada operação para deletar o paciente com o Rg 123456
+08/12/22 22:19 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:58 - Paciente deletado!
+08/12/22 22:30 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Iniciando operação para salvar o paciente.
+08/12/22 22:30 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Paciente Gabriella salvo com sucesso.
+08/12/22 22:30 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:63 - iniciando operação para buscar o paciente com o rg 123456
+08/12/22 22:30 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:70 - Paciente com o rg 123456 localizado com sucesso.
+08/12/22 22:30 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:113 - Iniciando operação para alterar parcialmente o paciente.
+08/12/22 22:30 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:132 - Paciente alterado com sucesso!
+08/12/22 22:37 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Iniciando operação para salvar o paciente.
+08/12/22 22:37 [http-nio-8080-exec-2]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Paciente Gabs salvo com sucesso.
+08/12/22 22:37 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:27 - Iniciando operação para buscar os pacientes.
+08/12/22 22:37 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:31 - Exibindo os pacientes:
+08/12/22 22:37 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.PacienteService:34 - Paciente: Gabs Faria, rg: 123456
+08/12/22 22:37 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.PacienteService:113 - Iniciando operação para alterar parcialmente o paciente.
+08/12/22 22:37 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.PacienteService:138 - Paciente alterado com sucesso!
+08/12/22 22:38 [http-nio-8080-exec-7]  INFO com.dh.consultorioOdontologico.service.PacienteService:63 - iniciando operação para buscar o paciente com o rg 123456
+08/12/22 22:38 [http-nio-8080-exec-7]  INFO com.dh.consultorioOdontologico.service.PacienteService:70 - Paciente com o rg 123456 localizado com sucesso.
+08/12/22 22:38 [http-nio-8080-exec-8]  INFO com.dh.consultorioOdontologico.service.EnderecoService:40 - Buscando todos os endereços.
+08/12/22 22:38 [http-nio-8080-exec-8]  INFO com.dh.consultorioOdontologico.service.EnderecoService:48 - Exibindo todos os endereços.
+08/12/22 22:38 [http-nio-8080-exec-9]  INFO com.dh.consultorioOdontologico.service.PacienteService:53 - Iniciada operação para deletar o paciente com o Rg 123456
+08/12/22 22:38 [http-nio-8080-exec-9]  INFO com.dh.consultorioOdontologico.service.PacienteService:58 - Paciente deletado!
+08/12/22 22:38 [http-nio-8080-exec-10]  INFO com.dh.consultorioOdontologico.service.EnderecoService:40 - Buscando todos os endereços.
+08/12/22 22:38 [http-nio-8080-exec-10]  INFO com.dh.consultorioOdontologico.service.EnderecoService:48 - Exibindo todos os endereços.
+08/12/22 22:43 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.EnderecoService:40 - Buscando todos os endereços.
+08/12/22 22:43 [http-nio-8080-exec-3]  INFO com.dh.consultorioOdontologico.service.EnderecoService:48 - Exibindo todos os endereços.
+08/12/22 22:43 [http-nio-8080-exec-4]  INFO com.dh.consultorioOdontologico.service.PacienteService:63 - iniciando operação para buscar o paciente com o rg 123456
+08/12/22 22:43 [http-nio-8080-exec-4] ERROR com.dh.consultorioOdontologico.service.PacienteService:67 - Paciente com o rg 123456 não localizado.
+08/12/22 22:43 [http-nio-8080-exec-6]  INFO com.dh.consultorioOdontologico.service.PacienteService:27 - Iniciando operação para buscar os pacientes.
+08/12/22 22:43 [http-nio-8080-exec-6]  INFO com.dh.consultorioOdontologico.service.PacienteService:31 - Exibindo os pacientes:
+08/12/22 22:43 [http-nio-8080-exec-7]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Iniciando operação para salvar o paciente.
+08/12/22 22:43 [http-nio-8080-exec-7]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Paciente Gabs salvo com sucesso.
+08/12/22 22:43 [http-nio-8080-exec-8]  INFO com.dh.consultorioOdontologico.service.PacienteService:53 - Iniciada operação para deletar o paciente com o Rg 123456
+08/12/22 22:43 [http-nio-8080-exec-8]  INFO com.dh.consultorioOdontologico.service.PacienteService:58 - Paciente deletado!
+08/12/22 22:43 [http-nio-8080-exec-9]  INFO com.dh.consultorioOdontologico.service.EnderecoService:40 - Buscando todos os endereços.
+08/12/22 22:43 [http-nio-8080-exec-9]  INFO com.dh.consultorioOdontologico.service.EnderecoService:48 - Exibindo todos os endereços.
+08/12/22 22:45 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:42 - Iniciando operação para salvar o paciente.
+08/12/22 22:45 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:48 - Paciente Gabriella salvo com sucesso.
+08/12/22 22:45 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:63 - iniciando operação para buscar o paciente com o rg 123456
+08/12/22 22:45 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:70 - Paciente com o rg 123456 localizado com sucesso.
+08/12/22 22:45 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:113 - Iniciando operação para alterar parcialmente o paciente.
+08/12/22 22:45 [main]  INFO com.dh.consultorioOdontologico.service.PacienteService:126 - Paciente alterado com sucesso!
