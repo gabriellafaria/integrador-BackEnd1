@@ -3,6 +3,8 @@ package com.dh.consultorioOdontologico.service;
 import com.dh.consultorioOdontologico.entity.Endereco;
 import com.dh.consultorioOdontologico.entity.Paciente;
 import com.dh.consultorioOdontologico.entity.dto.PacienteDTO;
+import com.dh.consultorioOdontologico.exception.Exceptions;
+import com.dh.consultorioOdontologico.exception.ResourceNotFoundException;
 import com.dh.consultorioOdontologico.repository.PacienteRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.log4j.Logger;
@@ -49,34 +51,39 @@ public class PacienteService {
         return paciente;
     }
 
-    public Optional<Paciente> deletar(String  rg){
+    public Optional<Paciente> deletar(String  rg) throws ResourceNotFoundException {
         logger.info("Iniciada operação para deletar o paciente com o Rg " + rg);
        Optional<Paciente> paciente = Optional.ofNullable(pacienteRepository.findByRg(rg));
-       if(paciente.isEmpty())
+       if(paciente.isEmpty()) {
            logger.error("Erro ao excluir o paciente. Não foi localizado nenhum cadastro com o rg " + rg);
+            throw new ResourceNotFoundException("Não foi localizado o paciente com o Rg informado");
+       }
        pacienteRepository.deleteById(paciente.get().getId());
         logger.info("Paciente deletado!");
         return paciente;
     }
 
-    public PacienteDTO buscarPorRg(String rg) {
+    public PacienteDTO buscarPorRg(String rg) throws ResourceNotFoundException {
         logger.info("iniciando operação para buscar o paciente com o rg " + rg);
         ObjectMapper mapper = new ObjectMapper();
         Optional<Paciente> paciente = Optional.ofNullable(pacienteRepository.findByRg(rg));
         if(paciente.isEmpty()) {
             logger.error("Paciente com o rg " + rg + " não localizado.");
+            throw new ResourceNotFoundException("Paciente com o rg " + rg + " não localizado.");
         }
         PacienteDTO pacienteDTO = mapper.convertValue(paciente.get(), PacienteDTO.class);
         logger.info("Paciente com o rg " + rg + " localizado com sucesso.");
         return pacienteDTO;
     }
 
-    public PacienteDTO alterarParcialmente(PacienteDTO pacienteDTO){
+    public PacienteDTO alterarParcialmente(PacienteDTO pacienteDTO) throws Exceptions {
         ObjectMapper mapper = new ObjectMapper();
         logger.info("Iniciando operação para alterar parcialmente o paciente.");
         Optional<Paciente> pacienteOp = Optional.ofNullable(pacienteRepository.findByRg(pacienteDTO.getRg()));
-        if(pacienteOp.isEmpty())
+        if(pacienteOp.isEmpty()) {
             logger.error("Paciente com o rg " + pacienteDTO.getRg() + " não encontrado.");
+            throw new Exceptions("Paciente com o rg " + pacienteDTO.getRg() + " não localizado, abortando operação.");
+        }
         Paciente paciente = pacienteOp.get();
         if(pacienteDTO.getNome() != null)
             paciente.setNome(pacienteDTO.getNome());
@@ -108,12 +115,14 @@ public class PacienteService {
         return pacienteAlt;
     }
 
-    public PacienteDTO alterarTudo(PacienteDTO pacienteDTO){
+    public PacienteDTO alterarTudo(PacienteDTO pacienteDTO) throws Exceptions {
         ObjectMapper mapper = new ObjectMapper();
         logger.info("Iniciando operação para alterar parcialmente o paciente.");
         Optional<Paciente> pacienteOp = Optional.ofNullable(pacienteRepository.findByRg(pacienteDTO.getRg()));
-        if(pacienteOp.isEmpty())
+        if(pacienteOp.isEmpty()) {
             logger.error("Não existe o paciente com o rg " + pacienteDTO.getRg());
+            throw new Exceptions("Paciente com o rg " + pacienteDTO.getRg() + " não localizado");
+        }
         Paciente paciente = pacienteOp.get();
         paciente.setNome(pacienteDTO.getNome());
         paciente.setSobrenome(pacienteDTO.getSobrenome());
@@ -121,18 +130,6 @@ public class PacienteService {
         paciente.getEndereco().setNumero(pacienteDTO.getEndereco().getNumero());
         paciente.getEndereco().setCidade(pacienteDTO.getEndereco().getCidade());
         paciente.getEndereco().setEstado(pacienteDTO.getEndereco().getEstado());
-       /* if(pacienteDTO.getNome() != null)
-            paciente.setNome(pacienteDTO.getNome());
-        if(pacienteDTO.getSobrenome() != null)
-            paciente.setSobrenome(pacienteDTO.getSobrenome());
-        if(pacienteDTO.getEndereco() != null)
-            paciente.getEndereco().setRua(pacienteDTO.getEndereco().getRua());
-        if(pacienteDTO.getEndereco().getNumero() != 0)
-            paciente.getEndereco().setNumero(pacienteDTO.getEndereco().getNumero());
-        if(pacienteDTO.getEndereco().getCidade() != null)
-            paciente.getEndereco().setCidade(pacienteDTO.getEndereco().getCidade());
-        if(pacienteDTO.getEndereco().getEstado() != null)
-            paciente.getEndereco().setEstado(pacienteDTO.getEndereco().getEstado());*/
 
         PacienteDTO pacienteAlt = mapper.convertValue(pacienteRepository.save(paciente), PacienteDTO.class);
         logger.info("Paciente alterado com sucesso!");
