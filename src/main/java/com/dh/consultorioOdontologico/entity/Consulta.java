@@ -26,4 +26,6 @@ public class Consulta {
 
     @Column(nullable = false)
     private Timestamp dataConsulta;
+
+    private String chave;
 }

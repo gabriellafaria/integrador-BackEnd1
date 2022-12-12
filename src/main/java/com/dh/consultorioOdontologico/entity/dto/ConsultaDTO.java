@@ -15,4 +15,9 @@ public class ConsultaDTO {
     private String rgPaciente;
     private int matriculaDentista;
     private Timestamp dataConsulta;
+    private String chave;
+
+    public void setChave(){
+        this.chave = rgPaciente+matriculaDentista+dataConsulta;
+    }
 }
