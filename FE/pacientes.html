@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/paciente.css">
+    
+    <title>Cadastro de pacientes</title>
+</head>
+<body>
+    <div class="container-paciente">
+        <div class="image-paciente">
+            <img src="./img/undraw_address_re_yaoj.svg">
+        </div>
+
+        <div class="form-paciente">
+            <div class="form-header">
+                <div class="title">
+                    <h1>Buscar pacientes</h1>
+                </div>
+            </div>
+            <form action="">
+                <div class="input-group">
+                    <div class="input-rg">
+                        <label for="rg">RG</label>
+                        <input id="rg" type="text" class="rg" name="rg" placeholder="Rg do paciente">
+                    </div>
+                </div>
+                <div class="buttons-pacientes">
+                    <div class="buscar-button buscar-rg">
+                        <button type="button" onclick="buscarPorRg()">Buscar paciente por Rg</button>
+                    </div>
+                    <div class="buscar-button buscar-paciente">
+                        <button id="buscar-paciente" onclick="buscarPacientes()" type="button">Buscar todos os pacientes</button>
+                    </div>
+                    <div class="cadastrar-button">
+                        <button onclick="window.location.href = './cadastro_paciente.html'" type="button">Cadastrar pacientes</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="exibir_pacientes">
+            <table id="pacienteTabela">
+                <thead>
+                    <tr>
+                    <th id="nomeTabela">Nome</th>
+                    <th id="sobrenomeTabela">Sobrenome</th>
+                    <th id="rgTabela">Rg</th>
+                    <th id="ruaTabela">Rua</th>
+                    <th id="numeroTabela">Numero</th>
+                    <th id="cidadeTabela">Cidade</th>
+                    <th id="estadoTabela">Estado</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+    <script src="./js/pacienteScript.js"></script>
+</body>
+</html>
