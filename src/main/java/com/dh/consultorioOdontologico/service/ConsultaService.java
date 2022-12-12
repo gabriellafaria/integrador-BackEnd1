@@ -58,9 +58,9 @@ public class ConsultaService {
             consulta.setDataConsulta(consultaDTO.getDataConsulta());
             consulta.setIdDentista(dentista.get().getId());
             consulta.setIdPaciente(paciente.get().getId());
-            consultaDTO.setChave();
+            consulta.setChave(consultaDTO.setChave());
             consultaRepository.save(consulta);
-            return new ResponseEntity("Consulta do paciente de RG: " + consultaDTO.getRgPaciente() + " com dentista de matrícula: " + consultaDTO.getMatriculaDentista() + " salva.", HttpStatus.CREATED);
+           return new ResponseEntity("Consulta do paciente de RG: " + consultaDTO.getRgPaciente() + " com dentista de matrícula: " + consultaDTO.getMatriculaDentista() + " salva.", HttpStatus.CREATED);
         } catch (Exception e){
             e.printStackTrace();
             logger.error("Erro ao cadastrar nova consulta.");
@@ -72,14 +72,19 @@ public class ConsultaService {
         logger.info("Buscando todas as consultas marcadas.");
         List<Consulta> listaConsulta = consultaRepository.findAll();
         List<ConsultaDTO> listaConsultaDTO = new ArrayList<>();
-        ObjectMapper mapper = new ObjectMapper();
         for (Consulta consulta : listaConsulta){
             Optional<Paciente> paciente = pacienteRepository.findById(consulta.getIdPaciente());
             Optional<Dentista> dentista = dentistaRepository.findById(consulta.getIdDentista());
-            ConsultaDTO consultaDTO = new ConsultaDTO(paciente.get().getRg(), dentista.get().getMatricula(), consulta.getDataConsulta(), consulta.getChave());
+            //ConsultaDTO consultaDTO = new ConsultaDTO(paciente.get().getRg(), dentista.get().getMatricula(), consulta.getDataConsulta(), consulta.getChave());
+            ConsultaDTO consultaDTO = new ConsultaDTO();
+            consultaDTO.setRgPaciente(paciente.get().getRg());
+            consultaDTO.setMatriculaDentista(dentista.get().getMatricula());
+            consultaDTO.setDataConsulta(consulta.getDataConsulta());
+            consultaDTO.setChave(consulta.getChave());
             listaConsultaDTO.add(consultaDTO);
         }
         logger.info("Trazendo a lista de consultas marcadas.");
+        System.out.println(listaConsultaDTO);
         return listaConsultaDTO;
     }
 
@@ -89,6 +94,7 @@ public class ConsultaService {
             System.out.println(consultaDTO.getChave());
             Optional<Consulta> consulta = consultaRepository.findByChave(consultaDTO.getChave());
             System.out.println(consulta.get().getChave());
+            System.out.println(consulta.get().getId());
             consultaRepository.delete(consulta.get());
             logger.info("Deletando consulta pedida.");
             return new ResponseEntity("Consulta deletada com sucesso", HttpStatus.OK);
