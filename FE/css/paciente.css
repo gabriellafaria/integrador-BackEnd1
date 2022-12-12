@@ -1,13 +1,155 @@
 .container {
-    height: 87vh;
+    height: 92vh;
+}
+
+.container-paciente{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .212);
+}
+
+.image-paciente {
+    width: 14%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f3c5fa;
+    padding: 1rem;
+}
+
+.image-paciente img{
+    width: 16rem;
+}
+
+
+.form {
+    padding-top: 0;
 }
 
 .form-header {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.2rem;
+    padding: 0;
 }
 
+.input-box input {
+    padding: 0.8rem 2.2rem;
+}
+
+.buttons {
+    margin-top: 0.1em;
+    margin-left: 0.5em;
+    display: flex;
+    align-items: center;
+}
+
+.limpar-button button{
+    width: 100%;
+    margin-top: 0rem;
+    border: none;
+    background-color: #e26ef4;
+    padding: 0.62rem 2.6rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buscar-button button {
+    margin-top: 1.2rem;
+    width: 70%;
+    border: none;
+    background-color: #e26ef4;
+    padding: 0.62rem 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #a700fb;
+}
+
+button a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+}
+
+button {
+    font-weight: 500;
+    color: #fff;
+}
 
 .cadastrar-button button {
-    margin-top: 0.6rem;
+    margin-top: 0rem;
+    margin-right: 1.1rem;
+    padding: 0.62rem 1.9rem;
 }
 
+.buscar-paciente {
+    margin-bottom: 1.8rem;
+}
+
+.buscar-paciente button{
+    width: 95%;
+    color: #fff;
+}
+
+.buscar-rg button {
+    width: 95%;
+}
+
+.buscar-rg {
+    margin-bottom: 2.9rem;
+}
+
+.form-paciente {
+    width: 24%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: #fafafa4d;
+    padding: 3rem;
+}
+
+.input-rg {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-rg input {
+    margin-top: 0.6rem;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+}
+
+.input-rg input:hover {
+    background-color: #eeeeee75;
+}
+
+.input-rg input:focus-visible {
+    outline: 1px solid #a700fb;
+}
+
+.exibir_pacientes {
+    width: 61%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: #fafafa4d;
+    padding: 3rem;
+}
+
+th{
+    padding: 0 1.8rem;
+}
+
+tr{
+    text-align: center;
+}
+
+.nomeTabela {
+    padding: 0;
+}
