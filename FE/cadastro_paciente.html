@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/paciente.css">
-    <script src="./js/pacienteScript.js"></script>
     <title>Cadastro de pacientes</title>
 </head>
 <body>
@@ -18,9 +17,7 @@
         <div class="form">
             <form action="">
                 <div class="form-header">
-                    <div class="title">
-                        <h1>Cadastrar novo paciente</h1>
-                    </div>
+                    <h1 class="title">Cadastrar novo paciente</h1>
                 </div>
                 <div class="input-group">
                     <div class="input-box">
@@ -47,13 +44,22 @@
 
                     </div>
                 </div>
-                <div class="cadastrar-button">
-                    <button><a href="#">Cadastrar</a></button>
+                <div class="buttons">
+                    <span class="cadastrar-button">
+                        <button type="button" id="cadastrarButton">Cadastrar</button>
+                    </span>
+                    <span class="limpar-button">
+                        <button type="reset" onclick="limpar()">Limpar</button>
+                    </span>
+                </div>
+                <div class="buscar-button">
+                    <button type="button" onclick="window.location.href = './pacientes.html'">Buscar pacientes</button>
                 </div>
             </form>
         </div>
 
     </div>
-    
+
+    <script src="./js/pacienteScript.js"></script>    
 </body>
 </html>
