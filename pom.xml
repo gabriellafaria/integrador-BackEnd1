@@ -109,6 +109,7 @@
 			<artifactId>jjwt</artifactId>
 			<version>0.9.1</version>
 		</dependency>
+
         <dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations</artifactId>
@@ -117,6 +118,14 @@
         </dependency>
 
     </dependencies>
+
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc- openapi-ui</artifactId>
+			<version>1.6.11</version>
+		</dependency>
+
+	</dependencies>
 
 	<build>
 		<plugins>
