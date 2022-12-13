@@ -3,6 +3,7 @@ package com.dh.consultorioOdontologico.service;
 
 import com.dh.consultorioOdontologico.entity.dto.EnderecoDTO;
 import com.dh.consultorioOdontologico.entity.Endereco;
+import com.dh.consultorioOdontologico.exception.ResourceNotFoundException;
 import com.dh.consultorioOdontologico.repository.EnderecoRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.log4j.Logger;
@@ -40,11 +41,12 @@ public class EnderecoService {
         return enderecoDTOList;
     }
 
-    public Optional<Endereco> buscarEnderecoPorId(Long id){
+    public Optional<Endereco> buscarEnderecoPorId(Long id) throws ResourceNotFoundException {
         Optional<Endereco> endereco = repository.findById((id));
         logger.info("Buscando endereço.");
         if (endereco.isEmpty()) {
         logger.error("O endereço informado não existe.");
+        throw new ResourceNotFoundException("O endereço não existe.");
         }
         repository.findById(id);
         logger.info("Endereço encontrado com sucesso.");
