@@ -4,12 +4,13 @@ import com.dh.consultorioOdontologico.entity.Consulta;
 import com.dh.consultorioOdontologico.entity.Dentista;
 import com.dh.consultorioOdontologico.entity.Paciente;
 import com.dh.consultorioOdontologico.entity.dto.ConsultaDTO;
+import com.dh.consultorioOdontologico.exception.ResourceNotFoundException;
 import com.dh.consultorioOdontologico.repository.ConsultaRepository;
 import com.dh.consultorioOdontologico.repository.DentistaRepository;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.dh.consultorioOdontologico.repository.PacienteRepository;
 
 import org.apache.log4j.Logger;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,6 +18,7 @@ import org.springframework.stereotype.Service;
 
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -59,6 +61,7 @@ public class ConsultaService {
             consulta.setIdDentista(dentista.get().getId());
             consulta.setIdPaciente(paciente.get().getId());
             consulta.setChave(consultaDTO.setChave());
+            consulta.setDataConsulta(Timestamp.from(consultaDTO.getDataConsulta().toInstant().plus(3, ChronoUnit.HOURS)));
             consultaRepository.save(consulta);
            return new ResponseEntity("Consulta do paciente de RG: " + consultaDTO.getRgPaciente() + " com dentista de matrícula: " + consultaDTO.getMatriculaDentista() + " salva.", HttpStatus.CREATED);
         } catch (Exception e){
@@ -75,12 +78,7 @@ public class ConsultaService {
         for (Consulta consulta : listaConsulta){
             Optional<Paciente> paciente = pacienteRepository.findById(consulta.getIdPaciente());
             Optional<Dentista> dentista = dentistaRepository.findById(consulta.getIdDentista());
-            //ConsultaDTO consultaDTO = new ConsultaDTO(paciente.get().getRg(), dentista.get().getMatricula(), consulta.getDataConsulta(), consulta.getChave());
-            ConsultaDTO consultaDTO = new ConsultaDTO();
-            consultaDTO.setRgPaciente(paciente.get().getRg());
-            consultaDTO.setMatriculaDentista(dentista.get().getMatricula());
-            consultaDTO.setDataConsulta(consulta.getDataConsulta());
-            consultaDTO.setChave(consulta.getChave());
+            ConsultaDTO consultaDTO = new ConsultaDTO(paciente.get().getRg(), dentista.get().getMatricula(), Timestamp.from(consulta.getDataConsulta().toInstant().plus(-3,ChronoUnit.HOURS)), consulta.getChave());
             listaConsultaDTO.add(consultaDTO);
         }
         logger.info("Trazendo a lista de consultas marcadas.");
@@ -88,17 +86,14 @@ public class ConsultaService {
         return listaConsultaDTO;
     }
 
-    public ResponseEntity deletarConsulta(ConsultaDTO consultaDTO){
+    public ResponseEntity deletarConsulta(ConsultaDTO consultaDTO) {
         try{
             logger.info("Buscando consulta para deletar.");
-            System.out.println(consultaDTO.getChave());
             Optional<Consulta> consulta = consultaRepository.findByChave(consultaDTO.getChave());
-            System.out.println(consulta.get().getChave());
-            System.out.println(consulta.get().getId());
             consultaRepository.delete(consulta.get());
             logger.info("Deletando consulta pedida.");
             return new ResponseEntity("Consulta deletada com sucesso", HttpStatus.OK);
-        }catch (Exception e) {
+        }catch (RuntimeException e) {
             logger.error("Erro ao deletar consulta.");
             return new ResponseEntity("A consulta que você deseja excluir não existe!", HttpStatus.NOT_FOUND);
         }
@@ -109,7 +104,7 @@ public class ConsultaService {
         List<Consulta> listaConsultas = consultaRepository.findAll();
         Optional<Dentista> dentista = Optional.ofNullable(dentistaRepository.findByMatricula(consultaDTO.getMatriculaDentista()));
         for(Consulta consulta : listaConsultas)
-            if(dentista.get().getId() == consulta.getIdDentista() && consulta.getDataConsulta().equals(consulta.getDataConsulta())){
+            if(dentista.get().getId() == consulta.getIdDentista() && consulta.getDataConsulta().equals(consultaDTO.getDataConsulta())){
                 logger.warn("Médico indisponível para consulta.");
                 return true;
             }
@@ -117,21 +112,30 @@ public class ConsultaService {
         return false;
     }
 
-    public ResponseEntity alterarConsultaParcial(ConsultaDTO consultaDTO) {
+    public ResponseEntity alterarConsulta(ConsultaDTO consultaDTO) {
         try{
             logger.info("Buscando consulta para realizar alteração.");
             Optional<Consulta> consulta = consultaRepository.findByChave(consultaDTO.getChave());
+            if(consulta.isEmpty())
+                throw new ResourceNotFoundException("Consulta não encontrada");
             Optional<Dentista> dentista = Optional.ofNullable(dentistaRepository.findByMatricula(consultaDTO.getMatriculaDentista()));
+            if(dentista.isEmpty())
+                throw new ResourceNotFoundException("Dentista com matrícula " + consultaDTO.getMatriculaDentista() + " não encontrado para salvar a nova consulta");
             Optional<Paciente> paciente = Optional.ofNullable(pacienteRepository.findByRg(consultaDTO.getRgPaciente()));
-            if(String.valueOf(consultaDTO.getMatriculaDentista()) != null)
-                logger.info("Alterando dentista da consulta.");
-            consulta.get().setIdDentista(dentista.get().getId());
-            if(consultaDTO.getRgPaciente() != null)
+            if(paciente.isEmpty())
+                throw new ResourceNotFoundException("Paciente com rg " + consultaDTO.getRgPaciente() + " nao encontrado para salvar a nova consulta");
+            if(dentista.get().getId() != consulta.get().getIdDentista()) {
+                logger.info("Alterando dentista da consulta");
+                consulta.get().setIdDentista(dentista.get().getId());
+            }
+            if(paciente.get().getId() != consulta.get().getIdPaciente()) {
                 logger.info("Alterando paciente da consulta");
-            consulta.get().setIdPaciente(paciente.get().getId());
-            if(consultaDTO.getDataConsulta() != null)
+                consulta.get().setIdPaciente(paciente.get().getId());
+            }
+            if(consultaDTO.getDataConsulta() != consulta.get().getDataConsulta()){
                 logger.info("alterando data da consulta");
-            consulta.get().setDataConsulta(consultaDTO.getDataConsulta());
+                consulta.get().setDataConsulta(Timestamp.from(consultaDTO.getDataConsulta().toInstant().plus(3, ChronoUnit.HOURS)));
+            }
             consultaDTO.setChave();
             consulta.get().setChave(consultaDTO.getChave());
             consultaRepository.save(consulta.get());
@@ -143,4 +147,31 @@ public class ConsultaService {
         }
     }
 
+    public List<ConsultaDTO> buscarConsultasPaciente(String rgPaciente) throws ResourceNotFoundException {
+        Optional<Paciente> paciente = Optional.ofNullable(pacienteRepository.findByRg(rgPaciente));
+        if(paciente.isEmpty())
+            throw new ResourceNotFoundException("Não há paciente cadastrado com o rg: " + rgPaciente);
+        List<Consulta> consultaList = consultaRepository.findAllByIdPaciente(paciente.get().getId());
+        List<ConsultaDTO> consultaDTOList = new ArrayList();
+        for(Consulta consulta : consultaList){
+            Optional<Dentista> dentista = dentistaRepository.findById(consulta.getIdDentista());
+            ConsultaDTO consultaDTO = new ConsultaDTO(paciente.get().getRg(), dentista.get().getMatricula(), Timestamp.from(consulta.getDataConsulta().toInstant().plus(-3,ChronoUnit.HOURS)),consulta.getChave());
+            consultaDTOList.add(consultaDTO);
+        }
+        return consultaDTOList;
+    }
+
+    public List<ConsultaDTO> buscarConsultasDentista(int matriculaDentista) throws ResourceNotFoundException {
+        Optional<Dentista> dentista = Optional.ofNullable(dentistaRepository.findByMatricula(matriculaDentista));
+        if(dentista.isEmpty())
+            throw new ResourceNotFoundException("Não há dentista cadastrado no sistema com a matrícula: " + matriculaDentista);
+        List<Consulta> consultaList = consultaRepository.findAllByIdDentista(dentista.get().getId());
+        List<ConsultaDTO> consultaDTOList = new ArrayList();
+        for(Consulta consulta : consultaList){
+            Optional<Paciente> paciente = pacienteRepository.findById(consulta.getIdPaciente());
+            ConsultaDTO consultaDTO = new ConsultaDTO(paciente.get().getRg(),dentista.get().getMatricula(),Timestamp.from(consulta.getDataConsulta().toInstant().plus(-3,ChronoUnit.HOURS)),consulta.getChave());
+            consultaDTOList.add(consultaDTO);
+        }
+        return consultaDTOList;
+    }
 }
