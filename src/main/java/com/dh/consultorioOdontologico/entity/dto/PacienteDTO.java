@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.persistence.CascadeType;
+import javax.persistence.OneToOne;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -33,4 +35,7 @@ public class PacienteDTO {
         ObjectMapper mapper = new ObjectMapper();
         return this.endereco = mapper.convertValue(endereco, EnderecoDTO.class);
    }*/
+
+    @OneToOne(cascade = CascadeType.ALL)
+    UsuarioDTO usuario;
 }

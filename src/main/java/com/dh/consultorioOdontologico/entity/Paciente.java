@@ -34,4 +34,7 @@ public class Paciente {
     private Endereco endereco;
     @Column(nullable = false)
     private Timestamp dataRegistro;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    Usuario usuario;
 }

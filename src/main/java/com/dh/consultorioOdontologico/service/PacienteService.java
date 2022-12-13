@@ -40,7 +40,6 @@ public class PacienteService {
 
     public Paciente salvar(PacienteDTO pacienteDTO){
         ObjectMapper mapper = new ObjectMapper();
-        System.out.println("Arrg");
         logger.info("Iniciando operação para salvar o paciente.");
         Endereco endereco = mapper.convertValue(pacienteDTO.getEndereco(), Endereco.class);
         Paciente paciente = mapper.convertValue(pacienteDTO, Paciente.class);
