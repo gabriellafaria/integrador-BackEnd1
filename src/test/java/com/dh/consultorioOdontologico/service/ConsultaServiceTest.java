@@ -37,8 +37,7 @@ class ConsultaServiceTest {
     @Autowired
     DentistaService dentistaService;
     ObjectMapper mapper = new ObjectMapper();
-    @BeforeEach
-    public void incluir(){
+    @BeforeEach public void incluir(){
         Dentista dentista1 = new Dentista(1L, "Marlene", "Santos", 123,null);
         Dentista dentista2 = new Dentista(2L, "Mariana", "Nunes", 456, null);
         EnderecoDTO enderecoDTO1 = new EnderecoDTO();
@@ -66,15 +65,13 @@ class ConsultaServiceTest {
         consultaDTO.setDataConsulta(Timestamp.valueOf("2022-12-21 00:00:00"));
     }
 
-    @Test
-    public void buscarTodasConsultas(){
+    @Test public void buscarTodasConsultas(){
         List<ConsultaDTO> consultaDTOList = consultaService.buscarTodasConsultas();
         System.out.println(consultaDTOList);
         Assertions.assertTrue(consultaDTOList.size() >= 1);
     }
 
-    @Test
-    public void salvarConsulta(){
+    @Test public void salvarConsulta(){
         ConsultaDTO consultaDTO = new ConsultaDTO();
         consultaDTO.setRgPaciente("789101");
         consultaDTO.setMatriculaDentista(456);
@@ -85,15 +82,13 @@ class ConsultaServiceTest {
         Assertions.assertEquals("Created",resultado.getStatusCode().getReasonPhrase());
     }
 
-    @Test
-    public void deletarConsulta(){
+    @Test public void deletarConsulta(){
         ConsultaDTO consultaDTO = consultaDeTeste();
         ResponseEntity resultado = consultaService.deletarConsulta(consultaDTO);
         Assertions.assertEquals("OK", resultado.getStatusCode().getReasonPhrase());
     }
 
-    @Test
-    public void deletarConsultaInexistente(){
+    @Test public void deletarConsultaInexistente(){
         ConsultaDTO consultaDTO = new ConsultaDTO();
         consultaDTO.setRgPaciente("123456");
         consultaDTO.setMatriculaDentista(123);
@@ -104,31 +99,42 @@ class ConsultaServiceTest {
         Assertions.assertEquals("Not Found", resultado.getStatusCode().getReasonPhrase());
     }
 
-    @Test
-    public void marcarConsultaComMedicoIndisponivel(){
+    @Test public void marcarConsultaComMedicoIndisponivel(){
         ConsultaDTO consultaDTO = consultaDeTeste();
         consultaDTO.setRgPaciente("789101");
         ResponseEntity resultado = consultaService.salvar(consultaDTO);
         Assertions.assertEquals("Not Acceptable", resultado.getStatusCode().getReasonPhrase());
     }
 
-    @Test
-    public void marcarConsultaComPacienteNaoCadastrado(){
+    @Test public void marcarConsultaComPacienteNaoCadastrado(){
         ConsultaDTO consultaDTO = consultaDeTeste();
         consultaDTO.setRgPaciente("1357911");
         ResponseEntity resultado = consultaService.salvar(consultaDTO);
         Assertions.assertEquals("Not Found", resultado.getStatusCode().getReasonPhrase());
     }
 
-    @Test void marcarConsultaAnteriorADataAtual(){
+    @Test public void marcarConsultaAnteriorADataAtual(){
         ConsultaDTO consultaDTO = consultaDeTeste();
         consultaDTO.setDataConsulta(Timestamp.from(Timestamp.valueOf("2022-12-11 00:00:00").toInstant().plus(-3, ChronoUnit.HOURS)));
         ResponseEntity resultado = consultaService.salvar(consultaDTO);
         Assertions.assertEquals("Forbidden", resultado.getStatusCode().getReasonPhrase());
     }
 
-    @AfterEach
-    public void deletarDados() throws ResourceNotFoundException {
+    @Test public void buscarConsultaPorPaciente() throws ResourceNotFoundException {
+        ConsultaDTO consultaDTO = consultaDeTeste();
+        List<ConsultaDTO> consultaDTOList = consultaService.buscarConsultasPaciente(consultaDTO.getRgPaciente());
+        System.out.println(consultaDTOList);
+        Assertions.assertTrue(consultaDTOList.size() >= 1);
+    }
+
+    @Test public void buscarConsultaPorDentista() throws ResourceNotFoundException {
+        ConsultaDTO consultaDTO = consultaDeTeste();
+        List<ConsultaDTO> consultaDTOList = consultaService.buscarConsultasDentista(consultaDTO.getMatriculaDentista());
+        System.out.println(consultaDTOList);
+        Assertions.assertTrue(consultaDTOList.size() >= 1);
+    }
+
+    @AfterEach public void deletarDados() throws ResourceNotFoundException {
         Optional<Paciente> pacienteDTO1 = pacienteService.deletar("123456");
         Optional<Paciente> pacienteDTO2 = pacienteService.deletar("789101");
         ResponseEntity dentista1 = dentistaService.deletar(123);
