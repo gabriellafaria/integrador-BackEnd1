@@ -23,7 +23,7 @@ public class Usuario implements UserDetails {
     private Long id;
     @Column(unique = true, nullable = false, length = 20)
     private String username;
-    @Column(unique = true, nullable = false, length = 100)
+    @Column(nullable = false, length = 100)
     private String password;
 
     @ManyToMany(fetch = FetchType.EAGER)
