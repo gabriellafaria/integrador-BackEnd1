@@ -18,10 +18,13 @@ public class CreateUserRun implements ApplicationRunner {
     public void run(ApplicationArguments args) throws Exception {
         BCryptPasswordEncoder bCrypt = new BCryptPasswordEncoder();
 
-        Usuario usuario = new Usuario();
-        usuario.setPassword(bCrypt.encode("123456"));
-        usuario.setUsername("Sabrina");
+        if(repository.findAll().isEmpty()) {
 
-        repository.save(usuario);
+            Usuario usuario = new Usuario();
+            usuario.setPassword(bCrypt.encode("123456"));
+            usuario.setUsername("Sabrina");
+
+            repository.save(usuario);
+        }
     }
 }
