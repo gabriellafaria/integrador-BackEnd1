@@ -30,8 +30,6 @@ function cadastrarPaciente(){
         },
         body: JSON.stringify(data)       
     })
-    // .then(res => res.json())
-    // .then(data => console.log(data))
      .catch(err => console.log(err))
 }
 
@@ -89,7 +87,6 @@ function buscarPacientes(){
         })
 
         document.getElementById('pacienteTabela').appendChild(tbody);
-        console.log(data);
     })
 }
 
@@ -138,7 +135,3 @@ function buscarPorRg(){
 
 
 const buscarButton = document.getElementById('buscar-paciente');
-
-// buscarButton.addEventListener('click', (event) => {
-//     buscarPacientes();
-// })
