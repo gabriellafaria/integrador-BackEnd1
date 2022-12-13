@@ -24,4 +24,7 @@ public class Dentista {
     @Column(nullable = false, unique = true)
     private int matricula;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    Usuario usuario;
+
 }
