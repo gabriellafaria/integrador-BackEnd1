@@ -27,7 +27,6 @@ public class AutenticacaoViaTokenFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         String token = recuperarToken(request);
-
         boolean valido = service.verificaToken(token);
 
         if(valido){

@@ -35,7 +35,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf().disable()
                 .authorizeRequests()
                 .antMatchers(HttpMethod.GET, "/dentista").permitAll()
-                //.antMatchers(HttpMethod.POST, "/auth").permitAll()
                 .antMatchers("/auth","/v3/api-docs/**","/swagger-ui/**").permitAll()
                 .anyRequest().authenticated()
                 .and().cors()

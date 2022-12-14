@@ -9,7 +9,6 @@ import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
-import java.time.ZoneId;
 import java.util.Date;
 
 @Service
@@ -23,12 +22,10 @@ public class TokenService {
 
     public String gerarToken(Authentication authentication) {
         Usuario userLogado = (Usuario) authentication.getPrincipal();
-        //Date dataHoje = new Date();
-        //Date dataExpiracao = new Date(dataHoje.getTime() + Long.parseLong(this.expiracao));
+        Date dataHoje = new Date();
+        Date dataExpiracao = new Date(dataHoje.getTime() + Long.parseLong(this.expiracao));
         LocalDate localDateHoje = LocalDate.now();
         LocalDate localDateExpiracao = localDateHoje.plusDays(1);
-        Date dataHoje = Date.from(localDateHoje.atStartOfDay(ZoneId.systemDefault()).toInstant());
-        Date dataExpiracao = Date.from(localDateExpiracao.atStartOfDay(ZoneId.systemDefault()).toInstant());
 
         String token = Jwts.builder()
                 .setIssuer("Api DH Consultório Odontológico")

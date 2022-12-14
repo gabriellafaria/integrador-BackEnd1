@@ -2,12 +2,9 @@ package com.dh.consultorioOdontologico.service;
 
 import com.dh.consultorioOdontologico.entity.Dentista;
 import com.dh.consultorioOdontologico.entity.Paciente;
-import com.dh.consultorioOdontologico.entity.Perfil;
-import com.dh.consultorioOdontologico.entity.Usuario;
 import com.dh.consultorioOdontologico.entity.dto.ConsultaDTO;
 import com.dh.consultorioOdontologico.entity.dto.EnderecoDTO;
 import com.dh.consultorioOdontologico.entity.dto.PacienteDTO;
-import com.dh.consultorioOdontologico.entity.dto.UsuarioDTO;
 import com.dh.consultorioOdontologico.exception.ResourceNotFoundException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.AfterEach;
@@ -20,10 +17,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.ResponseEntity;
 
 import java.sql.Timestamp;
-import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 

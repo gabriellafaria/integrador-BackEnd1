@@ -87,5 +87,4 @@ public class EnderecoController {
             return new ResponseEntity("Não foi possível deletar o endereço.", HttpStatus.NOT_FOUND);
         }
     }
-
 }

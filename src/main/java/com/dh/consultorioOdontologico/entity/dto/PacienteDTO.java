@@ -31,11 +31,6 @@ public class PacienteDTO {
 
     private Timestamp dataRegistro;
 
-   /*public EnderecoDTO setEnderecoDTO(Endereco endereco){
-        ObjectMapper mapper = new ObjectMapper();
-        return this.endereco = mapper.convertValue(endereco, EnderecoDTO.class);
-   }*/
-
     @OneToOne(cascade = CascadeType.ALL)
     UsuarioDTO usuario;
 }

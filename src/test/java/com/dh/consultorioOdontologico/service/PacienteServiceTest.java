@@ -1,6 +1,5 @@
 package com.dh.consultorioOdontologico.service;
 
-import com.dh.consultorioOdontologico.entity.Endereco;
 import com.dh.consultorioOdontologico.entity.Paciente;
 import com.dh.consultorioOdontologico.entity.dto.EnderecoDTO;
 import com.dh.consultorioOdontologico.entity.dto.PacienteDTO;
@@ -59,14 +58,6 @@ class PacienteServiceTest {
         Assertions.assertNotNull(paciente);
     }
 
-//    @Test
-//    public void deletar() throws ResourceNotFoundException {
-//        PacienteDTO paciente = pacienteService.buscarPorRg("123456");
-//        Paciente pacienteAlterado = mapper.convertValue(paciente, Paciente.class);
-//        pacienteService.deletar(paciente.getRg());
-//        Assertions.assertNull(pacienteAlterado.getId());
-//    }
-
     @Test
     public void alterarTudo() throws ResourceNotFoundException, Exceptions {
         PacienteDTO pacienteDTO = pacienteService.buscarPorRg("123456");
@@ -92,7 +83,6 @@ class PacienteServiceTest {
         Assertions.assertFalse(nomeAnterior.equals(paciente.getNome()));
     }
 
-    //TESTES NEGATIVOS
     @Test
     public void salvarComMesmoRG(){
         EnderecoDTO endereco = new EnderecoDTO();
