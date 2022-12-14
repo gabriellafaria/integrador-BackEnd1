@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/endereco.css">
+    <script src="./js/enderecoScript.js" defer></script>
+    <title>Busca de endereços</title>
+</head>
+<body>
+    <div class="container-endereco">
+        <div class="image-endereco">
+            <img src="./img/undraw_address_re_yaoj.svg">
+        </div>
+
+        <div class="form-endereco">
+            <div class="form-header">
+                <div class="title">
+                    <h1>Buscar endereços</h1>
+                    <h3>*Pagina em construção</h3>
+                </div>
+            </div>
+            <form action="">
+                <div class="input-group">
+                    <div class="input-endereco">
+                        <label for="id">ID</label>
+                        <input id="id" type="text" class="id" name="id" placeholder="ID do endereço">
+                    </div>
+                </div>
+                <div class="buttons-endereco">
+                    <div class="buscar-button buscar-id">
+                        <button type="button" onclick="buscarPorId()">Buscar endereço por Id</button>
+                    </div>
+                    <div class="buscar-button buscar-endereco">
+                        <button id="buscar-endereco" onclick="buscarEnderecos()" type="button">Buscar todos os endereços</button>
+                    </div>
+                    <div class="cadastrar-button">
+                        <button onclick="window.location.href = './cadastro_endereco.html'" type="button">Cadastrar endereços</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="exibir_enderecos">
+            <table id="enderecoTabela">
+                <thead>
+                    <tr>
+                    <th id="ruaTabela">Rua</th>
+                    <th id="numeroTabela">Numero</th>
+                    <th id="cidadeTabela">Cidade</th>
+                    <th id="estadoTabela">Estado</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
