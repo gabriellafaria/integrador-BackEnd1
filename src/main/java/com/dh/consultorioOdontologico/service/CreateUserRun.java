@@ -22,7 +22,7 @@ public class CreateUserRun implements ApplicationRunner {
 
             Usuario usuario = new Usuario();
             usuario.setPassword(bCrypt.encode("123456"));
-            usuario.setUsername("admin");
+            usuario.setUsername("adminn");
 
             repository.save(usuario);
         }
