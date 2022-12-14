@@ -33,22 +33,32 @@
                         <input id="numero" type="number" class="numero" name="numero" placeholder="123" required>
 
                         <label for="cidade">Cidade</label>
-                        <input id="cidade" type="text" class="cidade" name="cidade" placeholder="Nome da cidade" required>
+                        <input id="cidade" type="text" class="cidade" name="cidade" placeholder="Nome da cidade"
+                            required>
 
                         <label for="estado">Estado</label>
                         <input id="estado" type="text" class="sigla_estado" name="estado" placeholder="SP" required>
 
                     </div>
                 </div>
-                <div class="cadastrar-button">
-                    <button><a href="#">Cadastrar</a></button>
+                <div class="buttons">
+                    <span class="cadastrar-button">
+                        <button>Cadastrar</button>
+                    </span>
+                    <span class="limpar-button">
+                        <button type="reset">Limpar</button>
+                    </span>
+                    <span class="limpar-button">
+                        <button type="button" onclick="window.location.href = './enderecos.html'">Buscar endereços</button>
+                    </span>
                 </div>
-            </form>
         </div>
+        </form>
+    </div>
 
     </div>
 
-    
+
 </body>
 
 </html>
