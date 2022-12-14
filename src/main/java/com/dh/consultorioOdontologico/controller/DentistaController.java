@@ -38,7 +38,6 @@ public class DentistaController {
         }
     }
 
-
     @PatchMapping()
     public ResponseEntity patchDentista(@RequestBody @Valid DentistaDTO dentistaDTO) {
         DentistaDTO dentistaDTOModificado = dentistaService.patchDentista((dentistaDTO));
@@ -57,5 +56,4 @@ public class DentistaController {
     public ResponseEntity deletar(@RequestParam("matricula") int matricula) throws ResourceNotFoundException {
         return dentistaService.deletar(matricula);
     }
-
 }

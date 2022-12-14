@@ -14,6 +14,7 @@ public class Dentista {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @NotBlank
 
     @Column(nullable = false, length = 100)
@@ -25,5 +26,4 @@ public class Dentista {
 
     @OneToOne(cascade = CascadeType.ALL)
     Usuario usuario;
-
 }

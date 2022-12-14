@@ -1,9 +1,9 @@
 package com.dh.consultorioOdontologico.service;
 
 import com.dh.consultorioOdontologico.entity.Dentista;
+import com.dh.consultorioOdontologico.entity.Usuario;
 import com.dh.consultorioOdontologico.entity.dto.DentistaDTO;
 import com.dh.consultorioOdontologico.exception.ResourceNotFoundException;
-import com.dh.consultorioOdontologico.repository.DentistaRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -16,27 +16,32 @@ public class DentistaServiceTest {
 
     @Autowired
     DentistaService service;
-    DentistaRepository repository;
     ObjectMapper mapper = new ObjectMapper();
 
     @Test
     void postDentista(){
+        Usuario usuario = new Usuario();
+        usuario.setUsername("duascaras");
+        usuario.setPassword("batma");
         Dentista dentista = new Dentista();
         dentista.setNome("Harvey");
         dentista.setSobrenome("Dent");
         dentista.setMatricula(987654);
+        dentista.setUsuario(usuario);
         Dentista dentistaSalvo = service.salvar(dentista);
         Assertions.assertNotNull(dentistaSalvo.getId());
-
-        //System.out.println("Dentista " + dentistaSalvo.getNome() + " " + dentistaSalvo.getSobrenome() + " cadastrado com sucesso!");
     }
 
     @Test
     void patchDentista(){
+        Usuario usuario = new Usuario();
+        usuario.setUsername("semcabeca");
+        usuario.setPassword("feriadonacional");
         Dentista dentista = new Dentista();
         dentista.setNome("Tira");
         dentista.setSobrenome("Dentes");
         dentista.setMatricula(123456);
+        dentista.setUsuario(usuario);
         service.salvar(dentista);
 
         String nomeDentista = dentista.getNome();
@@ -45,22 +50,28 @@ public class DentistaServiceTest {
         DentistaDTO dentistaSalvoDTO = mapper.convertValue(dentista, DentistaDTO.class);
         DentistaDTO dentistaDTOModificado = service.patchDentista(dentistaSalvoDTO);
         Assertions.assertFalse(dentistaDTOModificado.getNome().equals(nomeDentista));
-
-        //System.out.println("Informação modificada com sucesso: " + dentistaDTOModificado.getNome());
     }
 
     @Test
     void getAllDentistas(){
+        Usuario usuario = new Usuario();
+        usuario.setUsername("semcabeca");
+        usuario.setPassword("feriadonacional");
         Dentista dentista = new Dentista();
         dentista.setNome("Tira");
         dentista.setSobrenome("Dentes");
         dentista.setMatricula(123456);
+        dentista.setUsuario(usuario);
         service.salvar(dentista);
 
+        Usuario usuario2 = new Usuario();
+        usuario.setUsername("duascaras");
+        usuario.setPassword("batma");
         Dentista dentista2 = new Dentista();
         dentista2.setNome("Harvey");
         dentista2.setSobrenome("Dent");
         dentista2.setMatricula(987654);
+        dentista.setUsuario(usuario2);
         service.salvar(dentista2);
 
         System.out.println(service.buscar());
@@ -68,19 +79,24 @@ public class DentistaServiceTest {
 
     @Test
     void getMatriculaDentista() throws ResourceNotFoundException {
+        Usuario usuario = new Usuario();
+        usuario.setUsername("duascaras");
+        usuario.setPassword("batma");
         Dentista dentista = new Dentista();
         dentista.setNome("Harvey");
         dentista.setSobrenome("Dent");
         dentista.setMatricula(987654);
+        dentista.setUsuario(usuario);
         service.salvar(dentista);
 
         service.buscarPorMatricula(dentista.getMatricula());
-
-        //System.out.println(service.buscarPorMatricula(dentista.getMatricula()));
     }
 
     @Test
     void PutDentista() throws ResourceNotFoundException{
+        Usuario usuario = new Usuario();
+        usuario.setUsername("semcabeca");
+        usuario.setPassword("feriadonacional");
         Dentista dentista = new Dentista();
         dentista.setNome("Tira");
         dentista.setSobrenome("Dentes");
@@ -97,12 +113,13 @@ public class DentistaServiceTest {
 
         Assertions.assertFalse(dentistaDTOModificado.equals(nomeDentista));
         Assertions.assertFalse(dentistaDTOModificado.equals(sobrenomeDentista));
-
-        System.out.println("Informações do dentista " + dentista.getNome() + " " + dentista.getSobrenome() + " modificadas com sucesso.");
     }
 
     @Test
     void DeleteDentista() throws ResourceNotFoundException {
+        Usuario usuario = new Usuario();
+        usuario.setUsername("duascaras");
+        usuario.setPassword("batma");
         Dentista dentista = new Dentista();
         dentista.setNome("Harvey");
         dentista.setSobrenome("Dent");
@@ -112,7 +129,5 @@ public class DentistaServiceTest {
         service.deletar(dentista.getMatricula());
 
         Assertions.assertTrue(service.buscar().isEmpty());
-
-       System.out.println("Dentista " + dentista.getNome() + " deletado com sucesso.");
     }
 }

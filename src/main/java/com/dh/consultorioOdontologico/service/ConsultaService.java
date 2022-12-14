@@ -10,7 +10,6 @@ import com.dh.consultorioOdontologico.repository.DentistaRepository;
 import com.dh.consultorioOdontologico.repository.PacienteRepository;
 
 import org.apache.log4j.Logger;
-import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
